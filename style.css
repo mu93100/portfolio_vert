@@ -4,10 +4,9 @@
 } */
 * {
     box-sizing: border-box;
-    /* border: 1px dotted lightpink; */ */
+    border: 1px dotted lightpink; 
     cursor: crosshair;
 }
-
 body {
     /* border: 1px dotted rgb(230, 28, 180); */
     /* margin: 0 1rem 0 1rem; */
@@ -15,15 +14,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-/*main {
-    background-image: url(/img/Frame1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: aquamarine;
-    height: 100rem; 
-}*/
-
 /* ouvrir un bloc text depuis la nav avec design figma */
 /* #mon-image {
     display: none;
@@ -38,11 +28,9 @@ body {
     width: max-content;
     margin-top: 20px;
 }
-
 #fond_a_propos {
     width: 100%;
 }
-
 .close-btn {
     position: absolute;
     top: 50px;
@@ -59,14 +47,13 @@ body {
     text-align: center;*/
     transition: background 0.2s;
 }
-
 .close-btn:hover {
     text-shadow: 0.02em 0.02em 0.03em white,
         0 0 1em blue,
         0 0 0.12em blue;
 }
 
-
+/* ---------F O O T E R------------- */
 footer{
     display: flex;
     flex-direction: column;
@@ -106,25 +93,22 @@ footer div{
 .marquee-text {
     display: inline-block;
     white-space: nowrap;
-    font-size: 5rem;
+    font-size: 6rem;
     font-family: "Doto", sans-serif;
-    /* font-optical-sizing: auto; */
     font-weight: 700;
     color: white;
-    /* font-style: normal; */
-    /* font-variation-settings:
-        "ROND" 0; */
     letter-spacing: .15rem;
-    text-shadow: 0.02em 0.02em 0.03em rgb(3, 253, 66),
-        0.015em 0.015em 0.01em rgb(0, 0, 0),
+    text-shadow: 0.02em 0.02em 0.03em white,
+        0.015em 0.015em 0.0051em rgb(242, 108, 5),
+        /* 0.015em 0.015em 0.01em rgb(0, 0, 0),  */
         0 0 0.1em rgb(3, 253, 66),
         0 0 0.2em rgb(135, 255, 165);
 
     /* text-shadow: 0.02em 0.02em 0.03em white,
         0 0 .5em blue,
         0 0 0.12em #0000ff; */
-    /* animation: defilement 11s linear infinite; */
-    /* Animation qui part de la droite de l'écran et sort complètement à gauche */
+    /* animation: defilement 11s linear infinite;  */
+    /* Animation qui part de la droite de l'écran et sort complètement à gauche*/
 }
 
 @keyframes defilement {
@@ -141,6 +125,6 @@ footer div{
 }
 
 .disparu {
-    opacity: 0;
+    display: none;
     pointer-events: none;
 }

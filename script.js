@@ -1,9 +1,8 @@
 // texte défilant
 function disparaitre() {
     document.getElementById('marqueeContainer').classList.add('disparu');
-    // On retire l'événement pour éviter tout autre clic
-    document.getElementById('marqueeContainer').onclick = null;
 }
+document.body.addEventListener('click', disparaitre);
 
 // a propos
 let bouton = document.getElementById('afficher_a_propos');
