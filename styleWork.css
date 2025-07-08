@@ -1,0 +1,45 @@
+*{
+    /* border: 1px dotted rgb(0, 255, 64); */
+}
+.containerPortfolio{
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px dotted rgb(0, 162, 255);
+
+}
+.containerWork{
+    height: fit-content; 
+    background-image: url(/img/airbn_zik.png);
+    background-repeat: no-repeat; 
+    background-size: contain;
+    margin: 0;
+    width: 20rem;
+    height: 30rem;
+    /* padding: 3rem; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px dotted rgb(255, 200, 0); */
+
+}
+/* .work{
+    position: absolute; top: 6.8%; left: 0.7%;
+    background-image: url(/img/airbnZik.png);
+    background-repeat: no-repeat; 
+    background-size: contain;
+    width: 98.5%;
+    height: 5rem;
+} */
+.workText{
+    position: absolute; top: 58%; left: 1.4px;
+    font-family: "Mingzat", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal; 
+    line-height: 1.8;
+}
+.workText a{
+    font-size: .6rem;
+    font-weight: 100;
+    /* padding-top: -20px; */
+}
