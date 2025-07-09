@@ -4,6 +4,7 @@
 } */
 * {
     box-sizing: border-box;
+    margin: 0;
     /* border: 1px dotted lightpink;  */
     cursor: crosshair;
 }

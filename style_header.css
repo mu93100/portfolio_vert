@@ -9,10 +9,13 @@ header {
     z-index: 1000;
     background: #fff;
 }
-.container_left, .container_right {
+.container{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
+}
+.container_mobile{
+    display: none;
 }
 /* dégradé */
 /* header div{
@@ -42,7 +45,10 @@ header {
     margin: 0;
     /* border: 1px dotted rgb(28, 230, 95); */
 }
-.name, .dev, .ultra, ul {
+.green_mil{
+    display: none;
+}
+.name, .dev, .ultra, ul, .cv, .contact, .portfolio{
     height: 100%;
     font-family: "Doto", sans-serif;
     font-size: 1.1rem;
@@ -58,24 +64,38 @@ header {
 
 }
 
-.containerLogo {
-    display: flex;
-    justify-content: end;
-    flex-direction: row;
-}
 /* FIN dégradé */
 
 /* Styles de base pour le NAV */
-
 
 .nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     /* align-items: end; */
+}
+.nav ul li {
+    margin: 0 1rem;
+}
+.nav ul li a {
+    display: block;
+    text-decoration: none;
+    border-bottom: 0.1em solid transparent; /* lien qui ne bougent pas */
+    transition: border-color 0.3s; /* Pour une animation fluide */
+    /* transition: background-color 0.3s, color 0.3s; */
+    /* border-radius: 4px; */
+}
+
+/* .nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    /* align-items: end;
 }
 .nav ul li {
     padding-right: 2rem;
@@ -84,15 +104,15 @@ header {
 .nav ul li a {
     display: block;
     text-decoration: none;
-    border-bottom: 0.12em dotted transparent; /* lien qui ne bougent pas */
+    border-bottom: 0.12em dotted transparent; /* lien qui ne bougent pas 
     transition: border-color 0.3s; /* Pour une animation fluide */
-    /* transition: background-color 0.3s, color 0.3s; */
+    /* transition: background-color 0.3s, color 0.3s; 
     border-radius: 3px;
     color: black;
-}
+} */
 .nav ul li a:hover,
 .nav ul li a:focus {
-    border-bottom: 0.12em dotted black;
+    border-bottom: 0.12rem solid black;
 }
 /* 
 Téléphones (portrait)		≤ 600	@media (max-width: 600px)
@@ -102,25 +122,49 @@ Laptops / Desktops		≥ 992	@media (min-width: 992px)
 Grands écrans			≥ 1200	@media (min-width: 1200px) */
 
 @media (max-width: 768px) {
+    header{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .container_mobile{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .container .nav{
+        display: none;
+    }
+    .container_right{
+        display: none;
+    }
     .name, .dev, .ultra, ul { font-size: 1rem; }
     .nav ul {
-        display: none;
-        justify-content: end;
+        justify-content: start;
     }
     .nav_mobile ul li a{
         list-style: none;
         margin: 0;
         padding: 0;
         display: flex;
-        justify-content: center;
-        /* align-items: end; */
+        justify-content: start;
+        text-decoration: none;
+        border-bottom: 0.12em dotted transparent; /* lien qui ne bougent pas */
+        transition: border-color 0.3s; /* Pour une animation fluide */
+        /* transition: background-color 0.3s, color 0.3s; */
+        border-radius: 3px;
+        color: black;
+    }
+    
+    .green, .green1, .green2{
+        padding: 0 0 0 3rem;
+    }
+    .green_mil{
         display: block;
-    text-decoration: none;
-    border-bottom: 0.12em dotted transparent; /* lien qui ne bougent pas */
-    transition: border-color 0.3s; /* Pour une animation fluide */
-    /* transition: background-color 0.3s, color 0.3s; */
-    border-radius: 3px;
-    color: black;
+        background: linear-gradient(to top, rgba(255, 255, 255) 10%, rgb(135, 255, 165, 0.2));
+        height: 1.8rem;
     }
 
 }
+
+
+
