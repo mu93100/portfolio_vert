@@ -1,18 +1,19 @@
 
 header {
     display: flex;
-    flex-direction: column;
-    /* align-items: end; */
-    /* padding: 2rem 2rem 0.2rem .3rem; */
-    margin: 0;
+    justify-content: space-between;
     padding: 0;
-    /* border: 1px dotted rgb(28, 230, 95); */
+    /* border: 1px dotted rgb(230, 149, 28); */
     position: sticky;
     top: 0;
     z-index: 1000;
     background: #fff;
 }
-
+.container_left, .container_right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
 /* dégradé */
 /* header div{
     background-color: rgb(135, 255, 165);
@@ -42,6 +43,7 @@ header {
     /* border: 1px dotted rgb(28, 230, 95); */
 }
 .name, .dev, .ultra, ul {
+    height: 100%;
     font-family: "Doto", sans-serif;
     font-size: 1.1rem;
     font-weight: 500;
@@ -50,21 +52,11 @@ header {
     text-shadow: 0.02em 0.02em 0.03em rgb(228, 15, 15),
         1  1 1 .5em rgb(236, 11, 11),
         0 0 0.12em rgb(239, 9, 9);
-    padding: 0;
+    padding: 0.25rem 0 0 0;
     margin:  0;
     /* border: 1px dotted rgb(23, 23, 235); */
 
 }
-/* .name, .dev {
-    margin: 0 0 0 1rem;
-} */
-/* {
-    margin: 0 0 0 3rem;
-    padding: 0;
-    align-self: center;
-    align-items: center;
-    border: 1px dotted lightpink;
-} */
 
 .containerLogo {
     display: flex;
@@ -72,28 +64,6 @@ header {
     flex-direction: row;
 }
 /* FIN dégradé */
-
-/* .name {
-    font-family: "Doto", sans-serif;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: black;
-    letter-spacing: .15rem; 
-    /* padding: 0 0 0 1rem; 
-    margin: 0;
-} */
-
-
-/* .logo {
-    background-image: url(/img/logo_m.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    width: 4rem;
-    height: auto;
-    padding: 0;
-    border: 1px dotted rgb(28, 230, 95);
-} */
 
 /* Styles de base pour le NAV */
 
@@ -103,26 +73,54 @@ header {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     /* align-items: end; */
 }
 .nav ul li {
-    margin: 0 1rem;
+    padding-right: 2rem;
+    align-items: end;
 }
 .nav ul li a {
     display: block;
-    /* padding: 15px 10px; */
     text-decoration: none;
-    font-weight: 600;
-    border-bottom: 0.12 em solid transparent; /* lien qui ne bougent pas */
+    border-bottom: 0.12em dotted transparent; /* lien qui ne bougent pas */
     transition: border-color 0.3s; /* Pour une animation fluide */
     /* transition: background-color 0.3s, color 0.3s; */
-    /* border-radius: 4px; */
+    border-radius: 3px;
     color: black;
 }
 .nav ul li a:hover,
 .nav ul li a:focus {
-    /* color: #ffd700; */
-    /* Jaune doré au survol */
-    border-bottom: 0.12em solid black;
+    border-bottom: 0.12em dotted black;
+}
+/* 
+Téléphones (portrait)		≤ 600	@media (max-width: 600px)
+Tablettes (portrait/paysage)	601 – 991	@media (min-width: 600px)
+Tablettes (paysage)		≥ 768	@media (min-width: 768px)
+Laptops / Desktops		≥ 992	@media (min-width: 992px)
+Grands écrans			≥ 1200	@media (min-width: 1200px) */
+
+@media (max-width: 768px) {
+    .name, .dev, .ultra, ul { font-size: 1rem; }
+    .nav ul {
+        display: none;
+        justify-content: end;
+    }
+    .nav_mobile ul li a{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        /* align-items: end; */
+        display: block;
+    text-decoration: none;
+    border-bottom: 0.12em dotted transparent; /* lien qui ne bougent pas */
+    transition: border-color 0.3s; /* Pour une animation fluide */
+    /* transition: background-color 0.3s, color 0.3s; */
+    border-radius: 3px;
+    color: black;
+    }
+
 }
