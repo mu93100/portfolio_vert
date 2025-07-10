@@ -72,7 +72,6 @@
       </div> -->
 
 
-
     <div class="container_contact">
       <div>
         <h2 class="font">contact</h2>
@@ -186,3 +185,96 @@
   </script>
 </body>
 </html> --> 
+
+
+
+-------------------------------------
+
+<!-- HTML -->
+<div class="cards-container">
+  <div class="card">
+    <img src="https://via.placeholder.com/300x180" alt="Projet 1">
+    <div class="card-content">
+      <h3>Projet 1</h3>
+      <p>Description de mon premier projet. Un texte court pour présenter le contenu.</p>
+      <a href="#">Voir plus</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/300x180" alt="Projet 2">
+    <div class="card-content">
+      <h3>Projet 2</h3>
+      <p>Une autre description de projet, avec une image et un lien.</p>
+      <a href="#">Voir plus</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/300x180" alt="Projet 3">
+    <div class="card-content">
+      <h3>Projet 3</h3>
+      <p>Encore un projet pour compléter la galerie de cards.</p>
+      <a href="#">Voir plus</a>
+    </div>
+  </div>
+</div>
+css
+/* CSS */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  overflow: hidden;
+  width: 300px;
+  transition: box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.25rem;
+}
+
+.card-content p {
+  flex: 1;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.card-content a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.card-content a:hover {
+  color: #0d47a1;
+}
