@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900\\\&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styleFont.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style_header.css">
   </head>
 
   <body>
@@ -68,7 +69,7 @@
       <!-- <button id="afficher-btn">Afficher l'image</button> -->
       <!-- <div id="image-container">
         <button class="close-btn" id="close-btn">fermer</button>
-        <img id="fond_a_propos" src="/img/Frame1.png" alt="fond_a_propos" />
+        <img id="fond_a_propos" src="./img/Frame1.png" alt="fond_a_propos" />
       </div> -->
 
 
@@ -80,22 +81,32 @@
       </div>
     </div>
 
-    <div class="container_work">
-      <div>
-        <div class=""></div>
-        <p></p>
+    <div class="container_work"> <!--   cards-container -->
+      <div class="card">
+        <img src="./img/devops.png" alt="Projet 1">
+        <div class="card-content">
+          <h3>Projet 1</h3>
+          <p>Description de mon premier projet. Un texte court pour présenter le contenu.</p>
+          <a href="#">Voir plus</a>
+        </div>
       </div>
-
-      <div>
-        <div class=""></div>
-        <p></p>
-      </div>      
-
-      <div>
-        <div class=""></div>
-        <p></p>
-      </div>    </div>
-
+      <div class="card">
+        <img src="./img/klikfast.jpg" alt="Projet 2">
+        <div class="card-content">
+          <h3>Projet 2</h3>
+          <p>Une autre description de projet, avec une image et un lien.</p>
+          <a href="#">Voir plus</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./img/lltv.jpg" alt="Projet 3">
+        <div class="card-content">
+          <h3>Projet 3</h3>
+          <p>Encore un projet pour compléter la galerie de cards.</p>
+          <a href="#">Voir plus</a>
+        </div>
+      </div>
+    </div>
 
     <footer>
       <div class="green2"></div>
@@ -190,33 +201,7 @@
 
 -------------------------------------
 
-<!-- HTML -->
-<div class="cards-container">
-  <div class="card">
-    <img src="https://via.placeholder.com/300x180" alt="Projet 1">
-    <div class="card-content">
-      <h3>Projet 1</h3>
-      <p>Description de mon premier projet. Un texte court pour présenter le contenu.</p>
-      <a href="#">Voir plus</a>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://via.placeholder.com/300x180" alt="Projet 2">
-    <div class="card-content">
-      <h3>Projet 2</h3>
-      <p>Une autre description de projet, avec une image et un lien.</p>
-      <a href="#">Voir plus</a>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://via.placeholder.com/300x180" alt="Projet 3">
-    <div class="card-content">
-      <h3>Projet 3</h3>
-      <p>Encore un projet pour compléter la galerie de cards.</p>
-      <a href="#">Voir plus</a>
-    </div>
-  </div>
-</div>
+
 css
 /* CSS */
 .cards-container {
