@@ -8,13 +8,20 @@
     /* border: 1px dotted lightpink;  */
     cursor: crosshair;
 }
+.font{
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
 body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 main{
     flex: 1;
+    width: 100%;
 }
 /* ouvrir un bloc text depuis la nav avec design figma */
 /* #mon-image {
@@ -55,32 +62,6 @@ main{
         0 0 0.12em blue;
 }
 
-/* ---------F O O T E R------------- */
-footer{
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    /* border: 1px dotted rgb(255, 0, 81); */
-}
-footer div{
-    /* border: 1px dotted blue; */
-}
-/* Responsive : menu vertical sur petits écrans */
-@media (max-width: 600px) {
-    .nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav ul li {
-        /* margin: 10px 0; */
-    }
-}
-
-
-
-
-
 
 /*-----------------------------text défilant------------------------------------------  */
 .marquee-container {
@@ -88,7 +69,7 @@ footer div{
     /* masque ce qui déborde */
     width: 100%;
     /* largeur de la fenêtre */
-    padding: 20rem 0;
+    padding: 15rem 0 2rem 0;
     box-sizing: border-box;
 }
 
@@ -129,4 +110,49 @@ footer div{
 .disparu {
     display: none;
     pointer-events: none;
+}
+
+
+/*-----------------------------contact------------------------------------------  */
+.container_contact{
+    background-image: url(/img/contact_bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 60%;
+    height: 25rem;
+    margin: 10rem auto 2rem 8rem;
+    position: relative;
+    padding: 0.2rem 1rem ;
+    
+}
+.container_contact a{
+    color: rgba(4, 243, 64, 0.9);
+}
+h2{
+    font-weight: 900;
+    font-size: 150%;
+
+}
+
+
+/* ---------F O O T E R------------- */
+footer{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* border: 1px dotted rgb(255, 0, 81); */
+}
+footer div{
+    /* border: 1px dotted blue; */
+}
+/* Responsive : menu vertical sur petits écrans */
+@media (max-width: 600px) {
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul li {
+        /* margin: 10px 0; */
+    }
 }

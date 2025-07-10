@@ -1,4 +1,3 @@
-
 header {
     display: flex;
     justify-content: space-between;
@@ -9,7 +8,7 @@ header {
     z-index: 1000;
     background: #fff;
 }
-.container{
+.container_header{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -18,19 +17,13 @@ header {
     display: none;
 }
 /* dégradé */
-/* header div{
-    background-color: rgb(135, 255, 165);
-    height: 1.8rem;
-} */
 .green {
     background: linear-gradient(rgba(255, 255, 255), 0.5%, rgba(135, 255, 165, 0.3) 3% , rgba(135, 255, 165, 0.7) 40%, rgba(135, 255, 165, 0.9) );     height: 1.8rem;
-    /* border: 1px dotted lightpink;  */
     padding: 0 3rem;
 }
 .green1 {
     background: linear-gradient(rgba(255, 255, 255), 2%, rgba(135, 255, 165, 0.07) 1% , rgba(135, 255, 165, 0.3) 40%, rgb(135, 255, 165, 0.5));
     height: 1.8rem;
-    /* border: 1px dotted rgb(235, 23, 23); */
     padding: 0 3rem;
 }
 .green2{
@@ -43,43 +36,43 @@ header {
     align-items: end;
     padding: 0 3rem;
     margin: 0;
-    /* border: 1px dotted rgb(28, 230, 95); */
 }
 .green_mil{
     display: none;
 }
-.name, .dev, .ultra, ul, .cv, .contact, .portfolio{
+/* F I N dégradé */
+.name, .dev, .ultra, ul li a, .cv, .contact, .portfolio, .nav_mobile li a {
     height: 100%;
     font-family: "Doto", sans-serif;
     font-size: 1.1rem;
     font-weight: 500;
     color: black;
     letter-spacing: .15rem; 
-    text-shadow: 0.02em 0.02em 0.03em rgb(228, 15, 15),
-        1  1 1 .5em rgb(236, 11, 11),
-        0 0 0.12em rgb(239, 9, 9);
+    text-shadow: 0.02em 0.02em 0.003em rgb(255, 255, 255),
+        0.015em 0.015em 0.0051em rgb(255, 255, 255),
+        0 0 0.1em rgb(255, 255, 255),
+        0 0 0.2em rgb(255, 255, 255);
+        /* 0.015em 0.015em 0.01em rgb(0, 0, 0),  */
     padding: 0.25rem 0 0 0;
-    margin:  0;
-    /* border: 1px dotted rgb(23, 23, 235); */
-
+    margin: 0;
 }
-
+.name { font-weight: 900;}
+/* .dev { font-weight: 700;} */
 /* FIN dégradé */
 
 /* Styles de base pour le NAV */
 
 .nav ul {
-    list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    /* align-items: end; */
 }
 .nav ul li {
     margin: 0 1rem;
 }
-.nav ul li a {
+.nav ul li a, .nav_mobile ul li {
     display: block;
     text-decoration: none;
     border-bottom: 0.1em solid transparent; /* lien qui ne bougent pas */
@@ -111,8 +104,12 @@ header {
     color: black;
 } */
 .nav ul li a:hover,
-.nav ul li a:focus {
-    border-bottom: 0.12rem solid black;
+.nav ul li a:focus  {
+    border-bottom: 0.1rem solid black;
+}
+.nav_mobile ul li a:hover,
+.nav_mobile ul li a:focus  {
+    border-bottom: 0.1rem solid black;
 }
 /* 
 Téléphones (portrait)		≤ 600	@media (max-width: 600px)
@@ -126,39 +123,45 @@ Grands écrans			≥ 1200	@media (min-width: 1200px) */
         flex-wrap: wrap;
         flex-direction: column;
     }
-    .container_mobile{
+    .container_mobile,
+    .container_header .nav { display: none; }
+    .name, .dev, .ultra, ul, .nav_mobile li a { font-size: 1rem; }
+    
+    .container_mobile {
         display: flex;
         flex-direction: column;
         width: 100%;
+        margin: 0;
+        padding: 0; 
     }
-    .container .nav{
-        display: none;
-    }
-    .container_right{
-        display: none;
-    }
-    .name, .dev, .ultra, ul { font-size: 1rem; }
-    .nav ul {
-        justify-content: start;
-    }
-    .nav_mobile ul li a{
-        list-style: none;
+
+    .nav_mobile ul {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+    }
+    .nav_mobile ul li {
+        list-style: none;
+    }
+
+    .nav_mobile ul li a {
+        list-style: none;
         display: flex;
         justify-content: start;
         text-decoration: none;
-        border-bottom: 0.12em dotted transparent; /* lien qui ne bougent pas */
+        border-bottom: 0.1em solid transparent; /* lien qui ne bougent pas */
         transition: border-color 0.3s; /* Pour une animation fluide */
         /* transition: background-color 0.3s, color 0.3s; */
-        border-radius: 3px;
+        /* border-radius: 3px; */
         color: black;
     }
     
-    .green, .green1, .green2{
+    .green, .green1, .green2 {
         padding: 0 0 0 3rem;
+        margin: 0;
+        align-items: start;
     }
-    .green_mil{
+    .green_mil {
         display: block;
         background: linear-gradient(to top, rgba(255, 255, 255) 10%, rgb(135, 255, 165, 0.2));
         height: 1.8rem;

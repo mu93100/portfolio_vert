@@ -8,14 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style_header.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900\\\&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styleFont.css">
     <link rel="stylesheet" href="./style.css">
   </head>
 
   <body>
     <header>
-      <div class="container">
+      <div class="container_header">
         <div class="green">
           <p class="name">muriel ehlinger</p></div>
         <div class="green1"><p class="dev">développeuse web</p></div>
@@ -24,25 +24,15 @@
           <div class="nav">
             <ul>
               <li><a href="portfolio">portfolio</a></li> 
-              <li><a href="cv">CV</a></li>
-              <!-- <li><a id="afficher_a_propos">à propos</a></li> -->
-              <li><a href="contact">contact</a></li>
+              <li><a id="afficher_a_propos" href="cv">CV</a></li>
+              <li><a id="afficher_a_propos">à propos</a></li>
+              <li><a id="afficher_a_propos"href="contact">contact</a></li>
             </ul>
           </div>
         </div>
       </div>
 
       <div class="green_mil"></div>
-
-      <!-- <div class="container_right">   
-        <div class="nav">
-            <ul>
-              <li class="portfolio green"><a href="portfolio">portfolio</a></li>
-              <li class="cv green1"><a href="cv">CV</a></li>
-              <li class="contact green2"><a href="contact">contact</a></li>
-            </ul>
-        </div>
-      </div> -->
 
       <div class="container_mobile">   
         <div class="nav_mobile">
@@ -76,16 +66,31 @@
       </div>
 
       <!-- <button id="afficher-btn">Afficher l'image</button> -->
-      <div id="image-container">
+      <!-- <div id="image-container">
         <button class="close-btn" id="close-btn">fermer</button>
         <img id="fond_a_propos" src="/img/Frame1.png" alt="fond_a_propos" />
-      </div>
-    </main>
+      </div> -->
+<div class="ma-div" style="width: 50vw;
+  height: 200px;
+  border: 1px solid #333;
+  container-type: inline-size;">
+  <span style="font-size: 10cqw;">Texte qui s’adapte à la taille de la div</span>
+</div>
 
+    <div class="container_contact">
+      <div>
+        <h2 class="font">contact</h2>
+        <a class="font" href="mailto:murielehlinger@gmail.com">murielehlinger@gmail.com</a>
+        <p class="font">(+33)6 86 42 01 35</p>
+      </div>
+    </div>
     <footer>
       <div class="green2"></div>
       <div class="green1"></div>
       <div class="green"></div>
+
+    </main>
+
     </footer>
 
     <script src="./script.js"></script>
