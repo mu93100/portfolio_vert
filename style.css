@@ -29,7 +29,7 @@ main{
     /* L'image est cachée au départ */
 /* max-width: 300px; */
 /*} */
-
+/*-----------------------------a propos------------------------------------------  */
 #image-container {
     display: none;
     /* Caché au départ */
@@ -63,13 +63,65 @@ main{
 }
 
 
+/*-----------------------------contact------------------------------------------  */
+.container_contact{
+    background-image: url(/img/contact_bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 60vw;
+    max-width: 30rem;
+    height: 40rem;
+    container-type: inline-size;
+    margin: 10rem auto 2rem 8rem;
+    position: relative;
+    padding: 0.08rem 1rem ;
+}
+.container_contact a{
+    color: rgba(4, 243, 64, 0.9);
+}
+h2{
+    font-weight: 900;
+    font-size: 150%;
+    font-size: clamp(1.1rem, 4cqw, 3rem);
+    padding-bottom: 6rem;
+}
+.container_contact a, p{
+    font-size: clamp(.8rem, 2.5cqw, 1.1rem);
+    padding-top: .8rem;
+}
+
+
+
+
+
+/* ---------F O O T E R------------- */
+footer{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* border: 1px dotted rgb(255, 0, 81); */
+}
+footer div{
+    /* border: 1px dotted blue; */
+}
+
+
+/* ------------------------  Responsive M O B I L E ----------------------*/
+@media (max-width: 768px) {
+    .container_contact p{
+    padding-top: .6rem;
+    }
+    } 
+
+
+
 /*-----------------------------text défilant------------------------------------------  */
 .marquee-container {
     overflow: hidden;
     /* masque ce qui déborde */
     width: 100%;
     /* largeur de la fenêtre */
-    padding: 15rem 0 2rem 0;
+    padding: 12rem 0 2rem 0;
     box-sizing: border-box;
 }
 
@@ -101,10 +153,8 @@ main{
 
     /* le text est déjà un peu sur la page et défile dés l'ouverture */
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-100%); /* Finit totalement hors écran à gauche */
     }
-
-    /* Finit totalement hors écran à gauche */
 }
 
 .disparu {
@@ -113,62 +163,3 @@ main{
 }
 
 
-/*-----------------------------contact------------------------------------------  */
-.container_contact{
-    background-image: url(/img/contact_bg.svg);
-    background-repeat: no-repeat;
-    background-size: contain;/* 
-    width: 60%;
-    height: 25rem;
-    margin: 10rem auto 2rem 8rem;
-    position: relative;
-    padding: 0.2rem 1rem ; */
-
-    width: 60vw;
-    height: 25rem;
-    container-type: inline-size;
-    margin: 10rem auto 2rem 8rem;
-    position: relative;
-    padding: 0.08rem 1rem ;
-}
-.container_contact a{
-    color: rgba(4, 243, 64, 0.9);
-}
-h2{
-    font-weight: 900;
-    font-size: 150%;
-    font-size: 5cqw;
-    padding-bottom: 5rem;
-}
-.container_contact a, p{
-    font-size: 3cqw;
-    padding-top: .8rem;
-}
-
-
-
-
-
-
-
-/* ---------F O O T E R------------- */
-footer{
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    /* border: 1px dotted rgb(255, 0, 81); */
-}
-footer div{
-    /* border: 1px dotted blue; */
-}
-/* Responsive : menu vertical sur petits écrans */
-@media (max-width: 600px) {
-    .nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav ul li {
-        /* margin: 10px 0; */
-    }
-}
