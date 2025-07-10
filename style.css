@@ -117,13 +117,19 @@ main{
 .container_contact{
     background-image: url(/img/contact_bg.svg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain;/* 
     width: 60%;
     height: 25rem;
     margin: 10rem auto 2rem 8rem;
     position: relative;
-    padding: 0.2rem 1rem ;
-    
+    padding: 0.2rem 1rem ; */
+
+    width: 60vw;
+    height: 25rem;
+    container-type: inline-size;
+    margin: 10rem auto 2rem 8rem;
+    position: relative;
+    padding: 0.08rem 1rem ;
 }
 .container_contact a{
     color: rgba(4, 243, 64, 0.9);
@@ -131,8 +137,18 @@ main{
 h2{
     font-weight: 900;
     font-size: 150%;
-
+    font-size: 5cqw;
+    padding-bottom: 5rem;
 }
+.container_contact a, p{
+    font-size: 3cqw;
+    padding-top: .8rem;
+}
+
+
+
+
+
 
 
 /* ---------F O O T E R------------- */
