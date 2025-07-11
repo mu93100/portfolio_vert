@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    /* border: 1px dotted lightpink;  */
+    border: 1px dotted lightpink; 
     cursor: crosshair;
 }
 .font{
@@ -61,12 +61,12 @@ main{
 
 /*-----------------------------contact------------------------------------------  */
 .container_contact{
-    background-image: url(/img/contact_bg.svg);
+    background-image: url(./img/contact_bg.svg);
     background-repeat: no-repeat;
     background-size: contain;
     width: 60vw;
     max-width: 30rem;
-    height: 40rem;
+    height: 25rem;
     container-type: inline-size;
     margin: 10rem auto 2rem 8rem;
     position: relative;
@@ -85,10 +85,66 @@ h2{
     font-size: clamp(.8rem, 2.5cqw, 1.1rem);
     padding-top: .8rem;
 }
+/* ----------- card work ------------ */
+.container_work {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+    /* margin: 40px 0; */
+    height: 20rem;
+    width: 100%;
+    padding: 3rem;
+}
 
+.card {
+    /* overflow: hidden; */
+    width: 37%;
+    /* transition: box-shadow 0.3s; */
+    display: flex;
+    flex-direction: column;
+}
 
+.card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
 
+.card img {
+    width: 100%;
+    height: 25rem;
+    object-fit: contain;
+}
 
+.card-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content h3 {
+    margin: 0 0 12px 0;
+    font-size: 1.25rem;
+}
+
+.card-content p {
+    flex: 1;
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 16px;
+}
+
+.card-content a {
+    color: #1976d2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.card-content a:hover {
+    color: #0d47a1;
+}
 
 /* ---------F O O T E R------------- */
 footer{

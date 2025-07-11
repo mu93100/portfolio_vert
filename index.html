@@ -81,27 +81,51 @@
       </div>
     </div>
 
+
     <div class="container_work"> <!--   cards-container -->
       <div class="card">
-        <img src="./img/devops.png" alt="Projet 1">
+        <img src="./img/devops.jpg" alt="Projet DevOps">
         <div class="card-content">
-          <h3>Projet 1</h3>
           <p>Description de mon premier projet. Un texte court pour présenter le contenu.</p>
           <a href="#">Voir plus</a>
         </div>
       </div>
+
       <div class="card">
-        <img src="./img/klikfast.jpg" alt="Projet 2">
+        <img src="./img/montreuil.jpg" alt="Wordpress">
         <div class="card-content">
-          <h3>Projet 2</h3>
           <p>Une autre description de projet, avec une image et un lien.</p>
           <a href="#">Voir plus</a>
         </div>
       </div>
+
       <div class="card">
-        <img src="./img/lltv.jpg" alt="Projet 3">
+        <img src="./img/lltv.jpg" alt="Graphisme print LLTV">
         <div class="card-content">
-          <h3>Projet 3</h3>
+          <p>Encore un projet pour compléter la galerie de cards.</p>
+          <a href="#">Voir plus</a>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="./img/no_code.jpg" alt="No Code">
+        <div class="card-content">
+          <p>Description de mon premier projet. Un texte court pour présenter le contenu.</p>
+          <a href="#">Voir plus</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./img/php.jpg" alt="BDD PHP">
+        <div class="card-content">
+          <p>Une autre description de projet, avec une image et un lien.</p>
+          <a href="#">Voir plus</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./img/php_animal.jpg" alt="Formulaire en PHP">
+        <div class="card-content">
           <p>Encore un projet pour compléter la galerie de cards.</p>
           <a href="#">Voir plus</a>
         </div>
@@ -196,70 +220,3 @@
   </script>
 </body>
 </html> --> 
-
-
-
--------------------------------------
-
-
-css
-/* CSS */
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
-  margin: 40px 0;
-}
-
-.card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-  overflow: hidden;
-  width: 300px;
-  transition: box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
-}
-
-.card:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-}
-
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 20px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card-content h3 {
-  margin: 0 0 12px 0;
-  font-size: 1.25rem;
-}
-
-.card-content p {
-  flex: 1;
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 16px;
-}
-
-.card-content a {
-  color: #1976d2;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.2s;
-}
-
-.card-content a:hover {
-  color: #0d47a1;
-}
