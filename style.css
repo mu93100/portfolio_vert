@@ -3,14 +3,14 @@
     margin: 0;
     border: 1px dotted lightpink; 
     cursor: crosshair;
-}
-.font{
     font-family: "League Spartan", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    line-height: 1.8rem;
 }
 body {
     margin: 0;
+    height: auto;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -59,7 +59,7 @@ main{
 }
 
 
-/*-----------------------------contact------------------------------------------  */
+/* --------------- C O N T A C T ---------------- */
 .container_contact{
     background-image: url(./img/contact_bg.svg);
     background-repeat: no-repeat;
@@ -69,7 +69,7 @@ main{
     height: 25rem;
     container-type: inline-size;
     margin: 10rem auto 2rem 8rem;
-    position: relative;
+    /* position: relative; */
     padding: 0.08rem 1rem ;
 }
 .container_contact a{
@@ -85,67 +85,50 @@ h2{
     font-size: clamp(.8rem, 2.5cqw, 1.1rem);
     padding-top: .8rem;
 }
-/* ----------- card work ------------ */
+/* --------------- C A R D   W O R K ---------------- */
 .container_work {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: space-around;
-    /* margin: 40px 0; */
-    height: 20rem;
+    height: auto;
     width: 100%;
     padding: 3rem;
 }
-
 .card {
-    /* overflow: hidden; */
     width: 37%;
-    /* transition: box-shadow 0.3s; */
     display: flex;
     flex-direction: column;
+    padding-top: 4rem;
+    position: relative;
 }
-
-.card:hover {
-    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-}
-
 .card img {
     width: 100%;
-    height: 25rem;
+    height: 19rem;
     object-fit: contain;
+    position: absolute; top: 0;left: 0;
 }
-
 .card-content {
-    padding: 20px;
+    padding: 0;
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
-
-.card-content h3 {
-    margin: 0 0 12px 0;
-    font-size: 1.25rem;
-}
-
 .card-content p {
     flex: 1;
     font-size: 1rem;
     color: #444;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
-
 .card-content a {
-    color: #1976d2;
+    color: black;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.2s;
 }
-
 .card-content a:hover {
-    color: #0d47a1;
+    color: rgb(4, 243, 111);
 }
-
 /* ---------F O O T E R------------- */
 footer{
     display: flex;
