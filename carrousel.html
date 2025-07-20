@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Page avec Carrousel</title>
+    <!-----------------C L A U D E --------------->
+    <style>
+
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .carousel-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .slide:nth-child(1) { background: linear-gradient(45deg, #FF6B6B, #4ECDC4); }
+        .slide:nth-child(2) { background: linear-gradient(45deg, #A8E6CF, #FFD93D); }
+        .slide:nth-child(3) { background: linear-gradient(45deg, #FF8A80, #EA80FC); }
+        .slide:nth-child(4) { background: linear-gradient(45deg, #81C784, #64B5F6); }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.8);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .nav-btn:hover {
+            background: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .prev {
+            left: 15px;
+        }
+
+        .next {
+            right: 15px;
+        }
+
+        .indicators {
+            text-align: center;
+            padding: 20px;
+            background: white;
+        }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #717171;
+        }
+
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        .content {
+            padding: 30px;
+            background: white;
+            text-align: center;
+        }
+
+        .content h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎠 Mon Carrousel Simple</h1>
+    
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="slides" id="slides">
+                <div class="slide">
+                    <div>
+                        <h2>Slide 1</h2>
+                        <p>Première image du carrousel</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div>
+                        <h2>Slide 2</h2>
+                        <p>Deuxième image du carrousel</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div>
+                        <h2>Slide 3</h2>
+                        <p>Troisième image du carrousel</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div>
+                        <h2>Slide 4</h2>
+                        <p>Quatrième image du carrousel</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="nav-btn prev" onclick="changeSlide(-1)">‹</button>
+            <button class="nav-btn next" onclick="changeSlide(1)">›</button>
+        </div>
+        
+        <div class="indicators">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        
+        <div class="content">
+            <h2>Bienvenue sur ma page</h2>
+            <p>Ce carrousel simple vous permet de naviguer entre différentes slides avec les flèches ou en cliquant sur les points indicateurs ci-dessus.</p>
+        </div>
+    </div>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.getElementById('slides');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = 4;
+
+        function showSlide(index) {
+            // S'assurer que l'index est dans les limites
+            if (index >= totalSlides) currentSlideIndex = 0;
+            else if (index < 0) currentSlideIndex = totalSlides - 1;
+            else currentSlideIndex = index;
+
+            // Déplacer les slides
+            const translateX = -currentSlideIndex * 100;
+            slides.style.transform = `translateX(${translateX}%)`;
+
+            // Mettre à jour les indicateurs
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[currentSlideIndex].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlideIndex + direction);
+        }
+
+        function currentSlide(index) {
+            showSlide(index - 1);
+        }
+
+        // Auto-play (optionnel)
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+    </script>
+
+<!----------------- P E R P L E X I T Y --------------->
+<style>
+.modal {
+    display: none; 
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(255, 255, 255, 0.8); z-index: 9999; justify-content: center; align-items: center;
+  }
+  .modal.active { display: flex; }
+  .modal-content {
+    background: white; padding: 0; border-radius: 8px; box-shadow: 0 0 16px #0006;
+    max-width: 80vw; max-height: 80vh; position: relative; display: flex; flex-direction: column; align-items: stretch;
+  }
+  .carousel-container { position: relative; width: 50rem; height: auto; overflow: hidden; }
+  .carousel-image {
+    width: 100%; height: 100%; object-fit: contain; background: #111;
+    display: none;
+  }
+  .carousel-image.active { display: block; }
+
+  .arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    font-size: 2rem; background: #fff8; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer;
+    z-index: 1;
+    transition: background 0.2s;
+  }
+  .arrow.left { left: 12px; }
+  .arrow.right { right: 12px; }
+  .arrow:hover { background: #fff; }
+
+  .close-btn {
+    position: absolute; top: 10px; right: 10px; font-size: 2rem;
+    background: none; border: none; cursor: pointer;
+    color: #444;
+  }
+  .carousel-indicators {
+    display: flex; justify-content: center; margin: 10px 0;
+  }
+  .carousel-indicators span {
+    display: inline-block; width: 10px; height: 10px; margin: 0 4px;
+    border-radius: 50%; background: #ccc; cursor: pointer;
+  }
+  .carousel-indicators span.active { background: #555; }
+</style>
+</head>
+<body>
+
+<button id="openModalBtn">Ouvrir la galerie</button>
+
+<div id="myModal" class="modal">
+<div class="modal-content">
+  <button class="close-btn" id="closeModalBtn">&times;</button>
+  <div class="carousel-container">
+    <button class="arrow left" id="prevBtn">&#8249;</button>
+    <img src="https://picsum.photos/id/1011/500/320" class="carousel-image active" alt="1">
+    <img src="https://picsum.photos/id/1025/500/320" class="carousel-image" alt="2">
+    <img src="https://picsum.photos/id/1035/500/320" class="carousel-image" alt="3">
+    <button class="arrow right" id="nextBtn">&#8250;</button>
+  </div>
+  <div class="carousel-indicators" id="indicators"></div>
+</div>
+</div>
+
+<script>
+const modal = document.getElementById('myModal');
+const openBtn = document.getElementById('openModalBtn');
+const closeBtn = document.getElementById('closeModalBtn');
+const images = document.querySelectorAll('.carousel-image');
+const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prevBtn');
+const indicators = document.getElementById('indicators');
+let current = 0;
+
+function showImage(index) {
+  images.forEach((img,i) => img.classList.toggle('active', i===index));
+  document.querySelectorAll('.carousel-indicators span').forEach((dot,i)=>
+    dot.classList.toggle('active', i===index)
+  );
+}
+function nextImage() {
+  current = (current + 1) % images.length;
+  showImage(current);
+}
+function prevImage() {
+  current = (current - 1 + images.length) % images.length;
+  showImage(current);
+}
+openBtn.onclick = () => { modal.classList.add('active'); showImage(current); };
+closeBtn.onclick = () => modal.classList.remove('active');
+nextBtn.onclick = nextImage;
+prevBtn.onclick = prevImage;
+
+// Dots
+for(let i=0; i<images.length; i++) {
+  let dot = document.createElement('span');
+  dot.onclick = ()=>{current=i; showImage(i);};
+  if(i===current) dot.classList.add('active');
+  indicators.appendChild(dot);
+}
+
+// Fermer modal si clic dehors
+modal.onclick = e => { if (e.target === modal) modal.classList.remove('active'); };
+// Escape keyboard
+window.addEventListener('keydown', (e)=>{
+  if(modal.classList.contains('active')) {
+    if(e.key==='Escape') modal.classList.remove('active');
+    if(e.key==='ArrowLeft') prevImage();
+    if(e.key==='ArrowRight') nextImage();
+  }
+});
+</script>
+
+    
+</body>

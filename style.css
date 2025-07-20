@@ -1,11 +1,12 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    border: 1px dotted lightpink; 
+    /* border: 1px dotted lightpink;  */
     cursor: crosshair;
     font-family: "League Spartan", sans-serif;
     font-optical-sizing: auto;
-    font-style: normal;
+    /* font-style: normal; */
+    font-size: 0.85rem;
     line-height: 1.8rem;
 }
 body {
@@ -104,12 +105,12 @@ h2{
 }
 .card img {
     width: 100%;
-    height: 19rem;
+    height: auto;
     object-fit: contain;
-    position: absolute; top: 0;left: 0;
+    /* position: absolute; top: 0;left: 0; */
 }
 .card-content {
-    padding: 0;
+    padding: 1rem 0 0 0;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -142,13 +143,21 @@ footer div{
 
 
 /* ------------------------  Responsive M O B I L E ----------------------*/
-@media (max-width: 768px) {
-    .container_contact p{
+/* @media screen and (max-width: 767px) {
+    .container_contact {
+        width: 80%;
+        margin: 6rem auto 2rem 3rem;
+        }
+    .container_contact p {
+    padding-top: .6rem;
+    }
+}  
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container_contact p {
     padding-top: .6rem;
     }
     } 
-
-
+*/
 
 /*-----------------------------text défilant------------------------------------------  */
 .marquee-container {
@@ -196,5 +205,6 @@ footer div{
     display: none;
     pointer-events: none;
 }
+/*----------------------------- F I N text défilant------------------------------------------  */
 
 
