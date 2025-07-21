@@ -4,11 +4,12 @@
     /* border: 1px dotted lightpink; */
     cursor: crosshair;
     font-family: "League Spartan", sans-serif;
+    font-weight: 300;
     font-optical-sizing: auto;
     /* font-style: light; */
     font-size: 0.85rem;
     line-height: 1.8rem;
-    letter-spacing: 0.02rem; 
+    letter-spacing: 0.05rem; 
 }
 
 body {
@@ -160,7 +161,7 @@ main {
     width: 45%;
     /* align-self: flex-end; */
     min-height: 35rem;
-    background-image: url(../img/contact_bg.svg);
+    background-image: url(../img/contact.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     /* min-height: 25rem; */
@@ -238,6 +239,9 @@ h2 {
     color: rgb(4, 243, 111);
 }
 
+.merci_mobile{
+    display: none;
+}
 /* ---------F O O T E R------------- */
 footer {
     display: flex;
@@ -252,12 +256,12 @@ footer {
 .copyR{
     font-size: 0.7rem;
     color: rgb(26, 46, 25);
-    transform: rotate(270deg);
+    transform: rotate(90deg);
     transform-origin:  center;
     margin: 0;
     padding: 0;
     z-index: 10;
-    position: absolute; top: 1rem; right: -1.8rem;
+    position: absolute; top: 1rem; left: -3rem;
 }
 
 
@@ -331,6 +335,12 @@ footer {
     }
     .card-content{
         margin-left: 3rem;
+    }
+    .merci{
+        display: none;
+    }
+    .merci_mobile{
+        display: block;
     }
     /*  T E X T E   D E F I L A N T   M O B I L E  */
     .marquee_container {
