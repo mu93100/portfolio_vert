@@ -5,13 +5,15 @@
     cursor: crosshair;
     font-family: "League Spartan", sans-serif;
     font-optical-sizing: auto;
-    /* font-style: normal; */
+    /* font-style: light; */
     font-size: 0.85rem;
     line-height: 1.8rem;
+    letter-spacing: 0.02rem; 
 }
 
 body {
     margin: 0;
+    padding: 0;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -21,6 +23,8 @@ body {
 main {
     flex: 1;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ouvrir un bloc text depuis la nav avec design figma */
@@ -34,15 +38,15 @@ main {
 .marquee_container {
     overflow: hidden; /* masque ce qui déborde */
     width: 100%; /* largeur de la fenêtre */
-    padding: 12rem 0 2rem 0;
-    margin: 4% 0 20rem 0;
+    padding: 23rem 0 20rem 0;
+    /* margin: 4% 0 20rem 0; */
     box-sizing: border-box;
 }
 
 .marquee_text, .marquee_text_mobile {
     display: inline-block;
     white-space: nowrap;
-    font-size: 6rem;
+    font-size: 9rem;
     font-family: "Doto", sans-serif;
     font-weight: 700;
     color: white;
@@ -57,7 +61,7 @@ main {
         0 0 .5em blue,
         0 0 0.12em #0000ff; */ 
         /* text shadow bleu */
-    animation: defilement 8s linear infinite; 
+    animation: defilement 8.5s linear infinite; 
     /* Animation qui part de la droite de l'écran et sort complètement à gauche*/
 }
 @keyframes defilement {
@@ -79,6 +83,37 @@ main {
 .marquee_text_mobile {
     animation: none !important;
 }
+/*----------------------------- F L E C H E S ------------------------------------------  */
+#ar{ font-size: 1.5rem;}
+#arrow{
+    transition: opacity 0.3s;
+    width: 100%;
+    padding-bottom: 4rem;
+}
+#arrow.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+#arrow1, #arrow2, #arrow3, #arrow4, #arrow5{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.2rem;
+    /* padding: 0.8rem 50%; */
+    opacity: 0; /* toutes cachées au départ */
+    animation: appear-then-blink 3s linear infinite;
+    /* animation: blink 3s linear infinite; */
+}
+@keyframes appear-then-blink {
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 0; }  
+}
+#arrow1{ animation-delay: 1.5s; }
+#arrow2{ animation-delay: 1.9s; }
+#arrow3{ animation-delay: 2.3s; }
+#arrow4{ animation-delay: 2.7s }
+#arrow5{ animation-delay: 3.1s; }
 
 /*-----------------------------a propos------------------------------------------  */
 #image-container {
@@ -91,6 +126,7 @@ main {
 
 #fond_a_propos {
     width: 100%;
+    margin: 2rem;
 }
 
 .close-btn {
@@ -115,20 +151,24 @@ main {
         0 0 1em blue,
         0 0 0.12em blue;
 }
-
-
 /* --------------- C O N T A C T ---------------- */
+#contact {
+    scroll-margin-top: 11rem; 
+}
+
 .container_contact {
+    width: 45%;
+    /* align-self: flex-end; */
+    min-height: 35rem;
     background-image: url(../img/contact_bg.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 55%;
-    min-height: 70rem;
     /* min-height: 25rem; */
-    container-type: inline-size;
-    margin: 20rem 8rem 2rem auto;
+    /* container-type: inline-size; */
+    margin: 5rem 10rem 20rem auto;
     padding: 0.15rem 0.7rem;
-    align-self: end;
+    margin-left: auto;
+    /* align-self: end; */
 }
 
 h2 {
@@ -147,14 +187,18 @@ h2 {
     color: rgba(4, 243, 64, 0.9);
 }
 /* --------------- C A R D   W O R K ---------------- */
+#portfolio {
+    scroll-margin-top: 11rem; 
+}
+
 .container_work {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: space-around;
     height: auto;
-    width: 100%;
-    padding: 3rem;
+    padding: 0 3rem;    
 }
 
 .card {
@@ -181,12 +225,12 @@ h2 {
 .card-content p {
     flex: 1;
     font-size: 1rem;
-    color: #444;
+    color: #000000;
     margin-bottom: 1rem;
 }
 
 .card-content a {
-    color: black;
+    color: rgb(26, 46, 25);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.2s;
@@ -202,18 +246,39 @@ footer {
     flex-direction: column;
     height: auto;
     /* border: 1px dotted rgb(255, 0, 81); */
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
-footer div {
-    /* border: 1px dotted blue; */
+.copyR{
+    font-size: 0.7rem;
+    color: rgb(26, 46, 25);
+    transform: rotate(270deg);
+    transform-origin:  center;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+    position: absolute; top: 1rem; right: -1.8rem;
 }
+
+
+
 
 
 /* ------------------------  R E S P O N S I V E  ----------------------*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .marquee_container{
+        padding: 20rem 0 20rem 0;
+    }
+    #arrow{
+        transition: opacity 0.3s;
+        width: 100%;
+        padding-bottom: 8rem;
+    }
     .container_contact {
         width: 60%;
-        margin: 6rem 8rem 2rem auto;
+        margin: 5rem 4rem 20rem auto;
     }
 
     .container_contact p {
@@ -223,8 +288,9 @@ footer div {
 
 @media screen and (max-width: 767px) {
     .container_contact {
-        width: 70%;
-        margin: 20rem 2rem 2rem 7rem;
+        width: 55%;
+        min-height: 22rem;
+        margin: 10rem 3rem 10rem auto;
     }
 
     .container_contact p {
@@ -232,11 +298,23 @@ footer div {
     }
 
     .container_work {
-        padding: 1rem;
+        padding: 1rem auto 1.5rem 0;
+        padding-left: 0;
+        margin-left: 0;
+        flex-direction: column;
+        justify-content: start;
+        gap: O;
+        flex-wrap: nowrap;
     }
 
     .card {
         padding-top: 3rem;
+        width: 88%;
+        margin-left: 0;
+        justify-content: start;
+    }
+    .card-content{
+        margin-left: 3rem;
     }
     /*  T E X T E   D E F I L A N T   M O B I L E  */
     .marquee_container {
@@ -252,7 +330,7 @@ footer div {
         display: flex;
         flex-direction: column;
         justify-content: start;
-        margin: 5rem 0;
+        margin: 5rem 0 22rem 0;
         position: relative;
         container-type: inline-size;
 
@@ -267,6 +345,12 @@ footer div {
         margin: 0;
         /* white-space: nowrap; */
     }
+    #contact {
+        scroll-margin-top: 19rem; 
+    }
+    #portfolio {
+        scroll-margin-top: 15rem; 
+    }
     @container (min-width: 300px) {
         .marquee_text_mobile .text2 {
             font-size: 3.5rem;
@@ -279,19 +363,19 @@ footer div {
     }
 
     .ligne2 {
-        top: 4.2rem;
+        top: 4.7rem;
         animation: arrive 1s ease forwards;
         animation-delay: 0.3s;
     }
 
     .ligne3 {
-        top: 8.4rem;
+        top: 9.4rem;
         animation: arrive 1s ease forwards;
         animation-delay: 0.6s;
     }
 
     .ligne4 {
-        top: 12.6rem;
+        top: 14.1rem;
         animation: arrive 1s ease forwards;
         animation-delay: 0.9s;
     }
