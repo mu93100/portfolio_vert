@@ -35,7 +35,7 @@ main {
     overflow: hidden; /* masque ce qui déborde */
     width: 100%; /* largeur de la fenêtre */
     padding: 12rem 0 2rem 0;
-    margin: 8rem 0;
+    margin: 4% 0 20rem 0;
     box-sizing: border-box;
 }
 
@@ -119,11 +119,12 @@ main {
 
 /* --------------- C O N T A C T ---------------- */
 .container_contact {
-    background-image: url(/img/contact_bg.svg);
+    background-image: url(../img/contact_bg.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    max-width: 35rem;
-    min-height: 25rem;
+    width: 55%;
+    min-height: 70rem;
+    /* min-height: 25rem; */
     container-type: inline-size;
     margin: 20rem 8rem 2rem auto;
     padding: 0.15rem 0.7rem;
@@ -253,20 +254,24 @@ footer div {
         justify-content: start;
         margin: 5rem 0;
         position: relative;
+        container-type: inline-size;
+
     }
-
-
 
     .marquee_text_mobile .text2 {
         opacity: 0;
         font-family: "Doto", sans-serif;    
-        font-size: 3.9rem;
+        /* font-size: 3.9rem; */
         position: absolute;
         left: 0; /* Position finale */
         margin: 0;
         /* white-space: nowrap; */
     }
-
+    @container (min-width: 300px) {
+        .marquee_text_mobile .text2 {
+            font-size: 3.5rem;
+        }
+    }
     .ligne1 {
         top: 0rem;
         animation: arrive 1s ease forwards;

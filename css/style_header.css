@@ -107,7 +107,7 @@ Tablettes (portrait/paysage)	601 – 991	@media (min-width: 600px)
 Tablettes (paysage)		≥ 768	@media (min-width: 768px)
 Laptops / Desktops		≥ 992	@media (min-width: 992px)
 Grands écrans			≥ 1200	@media (min-width: 1200px) */
-
+/* ------------------------  R E S P O N S I V E  ----------------------*/
 @media (max-width: 768px) {
     header{
         flex-wrap: wrap;
