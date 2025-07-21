@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    border: 1px dotted lightpink; 
+    border: 1px dotted lightpink;
     cursor: crosshair;
     font-family: "League Spartan", sans-serif;
     font-optical-sizing: auto;
@@ -9,6 +9,7 @@
     font-size: 0.85rem;
     line-height: 1.8rem;
 }
+
 body {
     margin: 0;
     height: auto;
@@ -16,10 +17,12 @@ body {
     flex-direction: column;
     width: 100%;
 }
-main{
+
+main {
     flex: 1;
     width: 100%;
 }
+
 /* ouvrir un bloc text depuis la nav avec design figma */
 /* #mon-image {
     display: none;
@@ -34,9 +37,11 @@ main{
     width: max-content;
     margin-top: 20px;
 }
+
 #fond_a_propos {
     width: 100%;
 }
+
 .close-btn {
     position: absolute;
     top: 50px;
@@ -53,6 +58,7 @@ main{
     text-align: center;*/
     transition: background 0.2s;
 }
+
 .close-btn:hover {
     text-shadow: 0.02em 0.02em 0.03em white,
         0 0 1em blue,
@@ -61,30 +67,32 @@ main{
 
 
 /* --------------- C O N T A C T ---------------- */
-.container_contact{
-    background-image: url(./img/contact_bg.svg);
+.container_contact {
+    background-image: url(/img/contact_bg.svg);
     background-repeat: no-repeat;
     background-size: contain;
     max-width: 35rem;
     min-height: 25rem;
     container-type: inline-size;
-    margin: 10rem 8rem 2rem auto;
-    /* position: relative; */
-    padding: 0.08rem 0 ;
+    margin: 20rem 8rem 2rem auto;
+    padding: 0 0.5rem;
     align-self: end;
 }
-.container_contact a{
-    color: rgba(4, 243, 64, 0.9);
-}
-h2{
+
+h2 {
     font-weight: 900;
     font-size: 160%;
     /* font-size: clamp(1.1rem, 4cqw, 3rem); */
-    padding-bottom: 6rem;
+    margin-bottom: 6rem;
 }
-.container_contact a, p{
+
+.container_contact a, p {
     font-size: clamp(.8rem, 2.5cqw, 1.1rem);
     padding-top: .3rem;
+}
+
+.container_contact a {
+    color: rgba(4, 243, 64, 0.9);
 }
 /* --------------- C A R D   W O R K ---------------- */
 .container_work {
@@ -96,6 +104,7 @@ h2{
     width: 100%;
     padding: 3rem;
 }
+
 .card {
     width: 37%;
     display: flex;
@@ -103,40 +112,47 @@ h2{
     padding-top: 4rem;
     /* position: relative; */
 }
+
 .card img {
     width: 100%;
     height: auto;
     object-fit: contain;
 }
+
 .card-content {
     padding: 1rem 0 0 0;
     flex: 1;
     display: flex;
     flex-direction: column;
 }
+
 .card-content p {
     flex: 1;
     font-size: 1rem;
     color: #444;
     margin-bottom: 1rem;
 }
+
 .card-content a {
     color: black;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.2s;
 }
+
 .card-content a:hover {
     color: rgb(4, 243, 111);
 }
+
 /* ---------F O O T E R------------- */
-footer{
+footer {
     display: flex;
     flex-direction: column;
     height: auto;
     /* border: 1px dotted rgb(255, 0, 81); */
 }
-footer div{
+
+footer div {
     /* border: 1px dotted blue; */
 }
 
@@ -147,75 +163,46 @@ footer div{
         width: 60%;
         margin: 6rem 8rem 2rem auto;
     }
+
     .container_contact p {
-    padding-top: .1rem;
+        padding-top: .1rem;
     }
-} 
+
+}
+
 @media screen and (max-width: 767px) {
     .container_contact {
         width: 70%;
-        margin: 7rem 2rem 2rem 7rem;
+        margin: 20rem 2rem 2rem 7rem;
     }
+
     .container_contact p {
-    padding-top: .2rem;
+        padding-top: .2rem;
     }
-    .container_work{
+
+    .container_work {
         padding: 1rem;
     }
-    .card{
+
+    .card {
         padding-top: 3rem;
     }
 
-}  
-
-
-
-/*-----------------------------text défilant------------------------------------------  */
-.marquee-container {
-    overflow: hidden;
-    /* masque ce qui déborde */
-    width: 100%;
-    /* largeur de la fenêtre */
-    padding: 12rem 0 2rem 0;
-    box-sizing: border-box;
-}
-
-.marquee-text {
-    display: inline-block;
-    white-space: nowrap;
-    font-size: 6rem;
-    font-family: "Doto", sans-serif;
-    font-weight: 700;
-    color: white;
-    letter-spacing: .15rem;
-    text-shadow: 0.02em 0.02em 0.03em white,
-        0.015em 0.015em 0.0051em rgb(242, 108, 5),
-        /* 0.015em 0.015em 0.01em rgb(0, 0, 0),  */
-        0 0 0.1em rgb(3, 253, 66),
-        0 0 0.2em rgb(135, 255, 165);
-
-    /* text-shadow: 0.02em 0.02em 0.03em white,
-        0 0 .5em blue,
-        0 0 0.12em #0000ff; */
-    /* animation: defilement 11s linear infinite;  */
-    /* Animation qui part de la droite de l'écran et sort complètement à gauche*/
-}
-
-@keyframes defilement {
-    0% {
-        transform: translateX(80%);
+    .marquee_container {
+        display: none;
     }
 
-    /* le text est déjà un peu sur la page et défile dés l'ouverture */
-    100% {
-        transform: translateX(-100%); /* Finit totalement hors écran à gauche */
+    .marquee_text {
+        overflow: hidden;
+        font-size: 4rem;
+        font-weight: 700;
+        letter-spacing: .15rem;
+    }
+
+    .marquee_container_mobile {
+        /* overflow: hidden; */
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
     }
 }
-
-.disparu {
-    display: none;
-    pointer-events: none;
-}
-/*----------------------------- F I N text défilant------------------------------------------  */
-
-

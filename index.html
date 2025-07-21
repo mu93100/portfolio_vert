@@ -8,9 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900\\\&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styleFont.css">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./style_header.css">
+    <link rel="stylesheet" href="./css/style_header.css">
+    <link rel="stylesheet" href="./css/styleFont.css">
+    <link rel="stylesheet" href="/css/texte_defilant.css">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
 
   <body>
@@ -32,6 +33,7 @@
             </ul>
           </div>
         </div>
+        
       </div>
 
       <div class="green_mil"></div>
@@ -51,17 +53,26 @@
 
     <main>
       <!--  texte défilant -->
-      <div class="marquee-container" id="marqueeContainer" onclick="disparaitre()">
-        <span class="marquee-text">Je recherche un stage du 08/09 au 31/10/25</span>
+      <div class="marquee_container" id="marqueeContainer" onclick="disparaitre()">
+        <div class="marquee_text">Je recherche un stage du 08/09 au 31/10/25</div>
       </div>
 
+      <div class="marquee_container_mobile" id="marqueeContainerMobile" onclick="disparaitre()">
+        <div class="marquee_text_mobile">
+          <div class="text2 ligne1">Je recherche</div>
+          <div class="text2 ligne2">un stage</div>
+          <div class="text2 ligne3">du 08/09</div>
+          <div class="text2 ligne4">au 31/10/25</div>
+        </div>
+      </div>
       <!-- <button id="afficher-btn">Afficher l'image</button> -->
       <!-- <div id="image-container">
         <button class="close-btn" id="close-btn">fermer</button>
         <img id="fond_a_propos" src="./img/Frame1.png" alt="fond_a_propos" />
       </div> -->
 
-<!--------------- C O N T A C T ---------------->
+  
+      <!--------------- C O N T A C T ---------------->
       <div class="container_contact">
         <div>
           <h2 class="font">contact</h2>
@@ -70,7 +81,7 @@
         </div>
       </div>
 
-<!--------------- C A R D   W O R K ---------------->
+      <!--------------- C A R D   W O R K ---------------->
       <div class="container_work"> <!--   cards-container -->
         <div class="card">
           <img src="./img/devops.jpg" alt="Projet DevOps">
@@ -173,10 +184,9 @@
         
       </div>
 
-</body>
-</html>
+
     </main>
-<!--------------- F O O T E R ---------------->
+    <!--------------- F O O T E R ---------------->
     <footer>
         <div class="green2"></div>
         <div class="green1"></div>

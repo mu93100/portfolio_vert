@@ -4,6 +4,11 @@ function disparaitre() {
 }
 document.body.addEventListener('click', disparaitre);
 
+// texte défilant_mobile
+function disparaitre() {
+    document.getElementById('marqueeContainerMobile').classList.add('disparu');
+}
+document.body.addEventListener('click', disparaitre);
 // a propos
 let bouton = document.getElementById('afficher_a_propos');
 let imageContainer = document.getElementById('image-container');
