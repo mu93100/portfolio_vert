@@ -181,11 +181,9 @@ h2 {
 .container_contact a, p {
     font-size: clamp(.8rem, 2.5cqw, 1.1rem);
     padding-top: .3rem;
+    color: rgb(26, 46, 25);
 }
 
-.container_contact a {
-    color: rgba(4, 243, 64, 0.9);
-}
 /* --------------- C A R D   W O R K ---------------- */
 #portfolio {
     scroll-margin-top: 11rem; 
@@ -266,6 +264,10 @@ footer {
 
 
 
+
+
+
+
 /* ------------------------  R E S P O N S I V E  ----------------------*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .marquee_container{
@@ -286,19 +288,33 @@ footer {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 767px) {
     .container_contact {
-        width: 55%;
+        width: 60%;
         min-height: 22rem;
-        margin: 10rem 3rem 10rem auto;
+        margin: 10rem 4rem 15rem auto;
     }
 
-    .container_contact p {
+    .container_contact p, .container_contact a {
         padding-top: .2rem;
+        font-size: small;
     }
-
+    /* #portfolio {
+        scroll-margin-top: 26rem; 
+    } */
+    
     .container_work {
-        padding: 1rem auto 1.5rem 0;
+        padding: 3rem auto 1.5rem 0;
         padding-left: 0;
         margin-left: 0;
         flex-direction: column;
@@ -330,7 +346,7 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: start;
-        margin: 5rem 0 22rem 0;
+        margin: 2rem 0 22rem 0;
         position: relative;
         container-type: inline-size;
 
