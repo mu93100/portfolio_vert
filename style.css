@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    /* border: 1px dotted lightpink;  */
+    border: 1px dotted lightpink; 
     cursor: crosshair;
     font-family: "League Spartan", sans-serif;
     font-optical-sizing: auto;
@@ -65,26 +65,26 @@ main{
     background-image: url(./img/contact_bg.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 60vw;
-    max-width: 30rem;
-    height: 25rem;
+    max-width: 35rem;
+    min-height: 25rem;
     container-type: inline-size;
-    margin: 10rem auto 2rem 8rem;
+    margin: 10rem 8rem 2rem auto;
     /* position: relative; */
-    padding: 0.08rem 1rem ;
+    padding: 0.08rem 0 ;
+    align-self: end;
 }
 .container_contact a{
     color: rgba(4, 243, 64, 0.9);
 }
 h2{
     font-weight: 900;
-    font-size: 150%;
-    font-size: clamp(1.1rem, 4cqw, 3rem);
+    font-size: 160%;
+    /* font-size: clamp(1.1rem, 4cqw, 3rem); */
     padding-bottom: 6rem;
 }
 .container_contact a, p{
     font-size: clamp(.8rem, 2.5cqw, 1.1rem);
-    padding-top: .8rem;
+    padding-top: .3rem;
 }
 /* --------------- C A R D   W O R K ---------------- */
 .container_work {
@@ -101,13 +101,12 @@ h2{
     display: flex;
     flex-direction: column;
     padding-top: 4rem;
-    position: relative;
+    /* position: relative; */
 }
 .card img {
     width: 100%;
     height: auto;
     object-fit: contain;
-    /* position: absolute; top: 0;left: 0; */
 }
 .card-content {
     padding: 1rem 0 0 0;
@@ -143,21 +142,33 @@ footer div{
 
 
 /* ------------------------  Responsive M O B I L E ----------------------*/
-/* @media screen and (max-width: 767px) {
-    .container_contact {
-        width: 80%;
-        margin: 6rem auto 2rem 3rem;
-        }
-    .container_contact p {
-    padding-top: .6rem;
-    }
-}  
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .container_contact p {
-    padding-top: .6rem;
+    .container_contact {
+        width: 60%;
+        margin: 6rem 8rem 2rem auto;
     }
-    } 
-*/
+    .container_contact p {
+    padding-top: .1rem;
+    }
+} 
+@media screen and (max-width: 767px) {
+    .container_contact {
+        width: 70%;
+        margin: 7rem 2rem 2rem 7rem;
+    }
+    .container_contact p {
+    padding-top: .2rem;
+    }
+    .container_work{
+        padding: 1rem;
+    }
+    .card{
+        padding-top: 3rem;
+    }
+
+}  
+
+
 
 /*-----------------------------text défilant------------------------------------------  */
 .marquee-container {
