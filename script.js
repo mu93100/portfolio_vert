@@ -58,6 +58,17 @@ document.querySelectorAll('.card').forEach(card => {
     const openBtn = card.querySelector('.openModalBtn');
     const closeBtn = card.querySelector('.closeModalBtn');
     const modal = card.querySelector('.modalDetail');
+    const cardImg = card.querySelector('.card_img');
+
+    cardImg.addEventListener('mouseover', () => {
+        cardImg.style.opacity = '0.5';
+        openBtn.style.opacity = '1';
+    });
+
+    cardImg.addEventListener('mouseleave', () => {
+        cardImg.style.opacity = '1';
+        openBtn.style.opacity = '0';
+    });
     openBtn.addEventListener('click', () => {
         modal.style.display = 'flex';
     });

@@ -216,14 +216,70 @@ h2 {
     flex-direction: column;
     padding-top: 4rem;
 }  
-.card_img {
+    .card_img {
     width: 100%;
     height: auto;
     object-fit: contain;
     position: relative; 
-}
+} 
+
 /* ---------------- M O D A L ---------------  */
-.modalDetail{
+/* .card_img_img{
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+.openModalBtn {
+    display: none;
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../img//openModal.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10rem;
+    height: 10rem;
+    opacity: 1;
+}
+.card_img_img:hover {
+    opacity: 0.5;
+}
+.card_img_img:hover .openModalBtn {
+    display: block;
+} */
+.card_img {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  position: relative; /* obligatoire pour le positionnement absolu du bouton */
+}
+
+.card_img:hover {
+  opacity: 0.5;
+}
+
+.openModalBtn {
+  opacity: 0;
+  pointer-events: none; /* ne gêne pas le hover */
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  /* transform: translate(-50%, -50%); */
+  background-image: url(../img/openModal.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 10rem;
+  height: 10rem;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+.card_img:hover {
+    opacity: 0.5;
+}
+.openModalBtn {
+  opacity: 1;
+  pointer-events: auto; /* bouton accessible au clic uniquement au hover */
+}
+
+
+.modalDetail {
     width: 100%;
     display: none;
     flex-direction: column;
@@ -231,20 +287,12 @@ h2 {
     align-items: center;
     background-color: rgba(255, 255, 255, 0.8);
 }
-.modalDetail img{
+.modalDetail img {
     width: 100vw;
     min-height: 45rem;
     height: auto;
 }
-.openModalBtn{
-    background-image: url(../img/detail.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 4rem;
-    height: 4rem;
-    position: absolute; top: 50%; left: 50%;
-}
-.closeModalBtn{
+.closeModalBtn {
     background-image: url(../img/retour.jpg);
     background-repeat: no-repeat;
     background-size: contain;
