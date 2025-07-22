@@ -51,6 +51,22 @@ links.forEach(link => {
     // Sinon (desktop), tu peux ignorer ou garder le comportement
     });
 })
+
+// modal Detail cardWork
+
+document.querySelectorAll('.card').forEach(card => {
+    const openBtn = card.querySelector('.openModalBtn');
+    const closeBtn = card.querySelector('.closeModalBtn');
+    const modal = card.querySelector('.modalDetail');
+    openBtn.addEventListener('click', () => {
+        modal.style.display = 'flex';
+    });
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+});
+
+
 // a propos
 let bouton = document.getElementById('afficher_a_propos');
 let imageContainer = document.getElementById('image-container');
