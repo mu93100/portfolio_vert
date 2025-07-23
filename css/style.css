@@ -26,6 +26,7 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin: 1rem;
 }
 
 /* ouvrir un bloc text depuis la nav avec design figma */
@@ -35,7 +36,7 @@ main {
 /* max-width: 300px; */
 /*} */
 
-/*-----------------------------text défilant------------------------------------------  */
+/* ------------------------- T E X T E   D E F I L A N T --------------------------- */
 .marquee_container {
     overflow: hidden; /* masque ce qui déborde */
     width: 100%; /* largeur de la fenêtre */
@@ -84,8 +85,8 @@ main {
 .marquee_text_mobile {
     animation: none !important;
 }
-/*----------------------------- F L E C H E S ------------------------------------------  */
-#ar{ font-size: 1.5rem;}
+/*----------------------- F L E C H E ------------------------  */
+
 #arrow{
     transition: opacity 0.3s;
     width: 100%;
@@ -116,7 +117,7 @@ main {
 #arrow4{ animation-delay: 2.7s }
 #arrow5{ animation-delay: 3.1s; }
 
-/*-----------------------------a propos------------------------------------------  */
+/*---------------------a propos--------------------  */
 #image-container {
     display: none;
     /* Caché au départ */
@@ -136,14 +137,6 @@ main {
     right: 50px;
     background: none;
     border: none;
-    /*
-    font-size: 20px;
-    color: #333;
-    border-radius: 15%;
-    width: 28px;
-    height: 28px; 
-    line-height: 24px;
-    text-align: center;*/
     transition: background 0.2s;
 }
 
@@ -176,8 +169,8 @@ h1 {
     font-weight: 900;
     font-size: clamp(1rem, 2.5cqw, 2.2rem);
 /* 
-    font-size: 250%; */
-    /* font-size: clamp(1.1rem, 4cqw, 3rem); */
+    font-size: 250%; 
+    font-size: clamp(1.1rem, 4cqw, 3rem); */
     margin-bottom: 6rem;
 }
 
@@ -187,6 +180,9 @@ h1 {
     color: rgb(26, 46, 25);
 }
 
+a :hover {
+    color: rgb(4, 243, 111); 
+}
 /* --------------- C A R D   W O R K ---------------- */
 #portfolio {
     scroll-margin-top: 11rem; 
@@ -303,7 +299,7 @@ h1 {
     transition: color 0.2s;
 }
 
-.card-content a:hover {
+.container_contact a:hover, .card-content a:hover {
     color: rgb(4, 243, 111);
 }
 
@@ -322,14 +318,14 @@ footer {
 }
 
 .copyR{
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     color: rgb(26, 46, 25);
-    transform: rotate(90deg);
+    transform: rotate(270deg);
     transform-origin:  center;
     margin: 0;
     padding: 0;
     z-index: 10;
-    position: absolute; top: 1rem; left: -3rem;
+    position: absolute; top: 1rem; right: -3rem;
 }
 
 
@@ -429,7 +425,8 @@ footer {
     .marquee_text_mobile .text2 {
         opacity: 0;
         font-family: "Doto", sans-serif;    
-        /* font-size: 3.9rem; */
+        font-size: 3.9rem;
+        font-weight: 700;
         position: absolute;
         left: 0; /* Position finale */
         margin: 0;
@@ -441,9 +438,9 @@ footer {
     #portfolio {
         scroll-margin-top: 15rem; 
     }
-    @container (min-width: 300px) {
+    /* @container (min-width: 300px) {
         .marquee_text_mobile .text2 { font-size: 3.5rem; }
-    }
+    } */
     .ligne1 {
         top: 0rem;
         animation: arrive 1s ease forwards;
@@ -483,11 +480,10 @@ footer {
         flex-direction: column;
         padding-left: 0;
         margin: 0;
-
     }
     .modalDetail img {
-        max-width: auto;
-        max-height: 80vh;
+        max-width: 100vw;
+        max-height: 70vh;
         margin: 0 0 2.5rem 0;
         padding: 0;
     }
