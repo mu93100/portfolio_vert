@@ -26,13 +26,26 @@
           <div class="nav">
             <ul>
               <li><a href="#portfolio" class="nav-link">portfolio</a></li> <!--#truc === on scroll jusqu'à id ="truc"-->
-              <li><a id="afficher_cv" href="#cv" class="nav-link">CV</a></li>
+              <li><a id="cv" href="#cv" class="nav-link openModalBtn" role="button" data-img="./img">CV</a></li>
               <li><a id="afficher_a_propos" class="nav-link">à propos</a></li>
               <li><a href="#contact" class="nav-link">contact</a></li>
             </ul>
           </div>
         </div>
       </div>
+<div><img src="./img/cv_muriel_ehlinger_poles.jpg" alt=""></div>
+      <div class="card">
+        <div class="card_img_container">
+          <img class="card_img" src="./img/devops.jpg" alt="Projet DevOps">
+          <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/devops_img.jpeg"></div>
+        </div>
+        <div class="card-content">
+          <p>DevOps<br>Docker</p>
+          <a href="https://mu93100.github.io/klikFast">Voir le site</a>
+          <a href="https://github.com/mu93100/klikFast.git">Voir le code</a>
+        </div>
+      </div>
+
 
       <div class="green_mil"></div>
 
@@ -46,16 +59,14 @@
             </ul>
         </div>
       </div>
-
     </header>
 
     
-    
     <main>
-      <div class="mma" id="marqueeContainer">
+      <div class="mma">
         <div class="mma_text">Je recherche un stage du 08/09 au 31/10/25</div>
       </div>
-      <!--  texte défilant -->
+      <!--------------  T E X T   défilant -------------->
       <div class="marquee_container" id="marqueeContainer">
         <div class="marquee_text">Je recherche un stage du 08/09 au 31/10/25</div>
       </div>
@@ -73,7 +84,7 @@
         <button class="close-btn" id="close-btn">fermer</button>
         <img id="fond_a_propos" src="./img/Frame1.png" alt="fond_a_propos" />
       </div> -->
-
+      <!--------------  F L E C H E S  -------------->
       <div id="arrow">
         <div id="arrow1">⎣   ⎣   ⎦   ⎦</div>
         <div id="arrow2">⎣  ⎣  ⎦</div>
@@ -238,14 +249,13 @@
 
         <div class="card">
           <div class="card_img_container">
-            <img class="card_img" class="merci" src="./img/merci.jpg" alt="M E R C I">
-            <img class="card_img" class="merci_mobile" src="./img/merci_mobile.jpg" alt="M E R C I">
+            <img class="card_img merci_mobile" src="./img/merci_mobile.jpg" alt="M E R C I">
           </div>
           <div class="card-content">
-            <p>MERCI</p>
+            <p class="merci_mobile_p">MERCI</p>
           </div>
         </div>
-
+        <div class="merci">merci</div>
       </div>
       
       <!--------------- M O D A L S   C A R D   W O R K ---------------->
@@ -258,6 +268,8 @@
         <img id="modalImg" src="" alt="Détail DevOps">
         <div class="closeModalBtn"></div>
       </div>
+
+      
 
     </main>
     <!--------------- F O O T E R ---------------->
