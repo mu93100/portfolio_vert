@@ -29,14 +29,37 @@ main {
     margin: 1rem;
 }
 
-/* ouvrir un bloc text depuis la nav avec design figma */
-/* #mon-image {
-    display: none;
-    /* L'image est cachée au départ */
-/* max-width: 300px; */
-/*} */
-
 /* ------------------------- T E X T E   D E F I L A N T --------------------------- */
+.mma {
+    overflow: hidden; /* masque ce qui déborde */
+    width: 100%; /* largeur de la fenêtre */
+    padding: 23rem 0 20rem 0;
+    /* margin: 4% 0 20rem 0; */
+    box-sizing: border-box;
+}
+
+.mma_text {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 6rem;
+    font-family: "Doto", sans-serif;
+    font-weight: 700;
+    color: white;
+    letter-spacing: .15rem;
+    text-shadow: 0.02em 0.02em 0.03em white,
+        0.015em 0.015em 0.0051em rgb(242, 108, 5),
+        0.015em 0.015em 0.01em rgb(0, 0, 0), 
+        0 0 0.1em rgb(1, 148, 38),
+        0 0 0.2em rgb(5, 252, 66);
+
+    /* text-shadow: 0.02em 0.02em 0.03em white,
+        0 0 .5em blue,
+        0 0 0.12em #0000ff; */ 
+        /* text shadow bleu */
+    /* animation: defilement 8.5s linear infinite;  */
+    /* Animation qui part de la droite de l'écran et sort complètement à gauche*/
+}
+
 .marquee_container {
     overflow: hidden; /* masque ce qui déborde */
     width: 100%; /* largeur de la fenêtre */
@@ -48,7 +71,7 @@ main {
 .marquee_text, .marquee_text_mobile {
     display: inline-block;
     white-space: nowrap;
-    font-size: 9rem;
+    font-size: 6rem;
     font-family: "Doto", sans-serif;
     font-weight: 700;
     color: white;
@@ -63,7 +86,7 @@ main {
         0 0 .5em blue,
         0 0 0.12em #0000ff; */ 
         /* text shadow bleu */
-    animation: defilement 8.5s linear infinite; 
+    /* animation: defilement 8.5s linear infinite;  */
     /* Animation qui part de la droite de l'écran et sort complètement à gauche*/
 }
 @keyframes defilement {
@@ -406,6 +429,20 @@ footer {
         display: block;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /*  T E X T E   D E F I L A N T   M O B I L E  */
     .marquee_container {
         display: none;
@@ -425,7 +462,7 @@ footer {
     .marquee_text_mobile .text2 {
         opacity: 0;
         font-family: "Doto", sans-serif;    
-        font-size: 3.9rem;
+        /* font-size: 3.9rem; */
         font-weight: 700;
         position: absolute;
         left: 0; /* Position finale */
@@ -438,9 +475,9 @@ footer {
     #portfolio {
         scroll-margin-top: 15rem; 
     }
-    /* @container (min-width: 300px) {
-        .marquee_text_mobile .text2 { font-size: 3.5rem; }
-    } */
+    @container (min-width: 300px) {
+        .marquee_text_mobile .text2 { font-size: 3.9rem; }
+    }
     .ligne1 {
         top: 0rem;
         animation: arrive 1s ease forwards;
