@@ -486,14 +486,14 @@ footer {
 
     }
     .modalDetail img {
-        max-width: 100vw;
-        max-height: 90vh;
+        max-width: auto;
+        max-height: 80vh;
         margin: 0 0 2.5rem 0;
         padding: 0;
     }
     .modalDetail2 {
         width: 100vw;
-        height: 90vh;
+        height: 100vh;
         display: none;
         flex-direction: column;
         padding-left: 0;
