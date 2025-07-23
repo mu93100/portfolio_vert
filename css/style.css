@@ -276,8 +276,36 @@ a :hover {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(253, 250, 236, 0.8); /* plus sombre pour bien voir */
-    display: none;                     /* bien cachée par défaut */
+    /* background-color: rgba(253, 250, 236, 0.8);  */
+    /* background-color: rgb(237, 230, 10, 0.9) ; */
+
+    background-color: rgba(255, 255, 255, 0.9) ;
+    /* background: linear-gradient(rgba(255, 255, 255, 0.7), 38%, 
+    rgba(248, 4, 208, 0.9)); */
+    /* background: linear-gradient( rgba(255, 255, 255, 0.5) 10%, 
+    rgba(135, 255, 165, 0.3) 3% , 
+    rgba(135, 255, 165, 0.7) 40%, 
+    rgba(135, 255, 165, 0.9) );      */
+/* rgb(3, 253, 66),
+        0 0 0.2em rgb(135, 255, 165) 
+        rgba(135, 255, 165, 0.3) 3% , 
+                                rgba(135, 255, 165, 0.7) 40%, 
+                                rgba(135, 255, 165, 0.9) );
+background: linear-gradient(rgba(255, 255, 255), 0.5%, 
+                                rgba(135, 255, 165, 0.3) 3% , 
+                                rgba(135, 255, 165, 0.7) 40%, 
+                                rgba(135, 255, 165, 0.9) );     
+
+    background: linear-gradient(rgba(255, 255, 255), 2%, 
+                                rgba(135, 255, 165, 0.07) 1% , 
+                                rgba(135, 255, 165, 0.3) 40%, 
+                                rgb(135, 255, 165, 0.5));
+
+}
+.green2{
+    background: linear-gradient(to bottom, rgba(255, 255, 255) 10%, 
+                                            rgb(135, 255, 165, 0.2));*/
+    display: none;                     
     /* flex-direction: column; */
     justify-content: center;
     align-items: center;
