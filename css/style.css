@@ -242,9 +242,7 @@ h1 {
     background-size: contain;
     width: 4rem;
     height: 4rem;
-    transition: opacity 0.3s ease;
-    cursor: pointer;  /*   A ENLEVER   */
-    
+    transition: opacity 0.3s ease;    
 }
 .card_img_container:hover .card_img{
     opacity: 0.3;
@@ -282,7 +280,6 @@ h1 {
     width: 4rem;
     height: 4rem;
     margin-left: 2rem;
-    /* cursor: pointer; */
 }
 /* ---------------- F I N   M O D A L ---------------  */
 .card-content {
@@ -509,6 +506,5 @@ footer {
         width: 5rem;
         height: 5rem;
         margin-left: 0;
-        /* cursor: pointer; */
     }
     }
