@@ -52,7 +52,7 @@ links.forEach(link => {
     });
 })
 
-// modal Detail cardWork
+// --------------- M O D A L S   C A R D   W O R K ----------------
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.querySelector('.modalDetail');
     const modalImg = document.getElementById('modalImg');

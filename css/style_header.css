@@ -88,7 +88,7 @@ header {
     margin: 0;
     text-decoration: none;
     border-bottom: 0.1rem solid transparent; /* lien qui ne bougent pas */
-    transition: border-color 0.3s; /* Pour une animation fluide */
+    transition: border-color 0.3s; /* pour animation fluide */
     height: 2rem;
     /* border: 1px dotted lightpink;  */
 }
@@ -97,7 +97,7 @@ header {
     display: flex; /* display et justify === border sur toute la div et non pas que sur le mot */
     justify-content: start;
     text-decoration: none;
-    transition: border-color 0.3s; /* Pour une animation fluide */
+    transition: border-color 0.3s; /* pour animation fluide */
 }
 .nav .nav-link:hover  {
     border-bottom: 0.1rem solid black;
