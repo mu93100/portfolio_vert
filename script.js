@@ -2,14 +2,14 @@
 function disparaitre() {
     // ça cache le container en desktop si présent
     let containerDeskop = document.getElementById('marqueeContainer');
-    if(containerDeskop) {containerDeskop.classList.add('disparu')};
+    if (containerDeskop) { containerDeskop.classList.add('disparu') };
 
     let arrow = document.getElementById('arrow');
-    if (arrow) {arrow.classList.add('disparu')};
+    if (arrow) { arrow.classList.add('disparu') };
 
     // ça cache le container en mobile si présent
     let containerMobile = document.getElementById('marqueeContainerMobile');
-    if(containerMobile) {containerMobile.classList.add('disparu')};
+    if (containerMobile) { containerMobile.classList.add('disparu') };
 }
 function handleScroll() {
     if (window.scrollY > 100) {
@@ -42,40 +42,103 @@ document.body.addEventListener('click', disparaitre);
 const links = document.querySelectorAll('.nav-link');
 
 links.forEach(link => {
-    link.addEventListener('click', function(e) {
-    // Vérifie la largeur de fenêtre pour n'agir qu'en mobile...
-    
+    link.addEventListener('click', function (e) {
+        // Vérifie la largeur de fenêtre pour n'agir qu'en mobile...
+
         links.forEach(l => l.classList.remove('active'));
         this.classList.add('active');
-    
-    // Sinon (desktop), tu peux ignorer ou garder le comportement
+
+        // Sinon (desktop), tu peux ignorer ou garder le comportement
     });
 })
 
 // modal Detail cardWork
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.querySelector('.modalDetail');
+    const modalImg = document.getElementById('modalImg');
+    const closeBtn = modal.querySelector('.closeModalBtn');
 
-document.querySelectorAll('.card').forEach(card => {
-    const openBtn = card.querySelector('.openModalBtn');
-    const closeBtn = card.querySelector('.closeModalBtn');
-    const modal = card.querySelector('.modalDetail');
-    const cardImg = card.querySelector('.card_img');
-
-    cardImg.addEventListener('mouseover', () => {
-        cardImg.style.opacity = '0.5';
-        openBtn.style.opacity = '1';
+    document.querySelectorAll('.openModalBtn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const src = btn.getAttribute('data-img');
+            if (src && modalImg) {
+                modalImg.src = src;
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // bloque fond
+                modal.setAttribute('aria-hidden', 'false');
+            }
+        });
     });
 
-    cardImg.addEventListener('mouseleave', () => {
-        cardImg.style.opacity = '1';
-        openBtn.style.opacity = '0';
-    });
-    openBtn.addEventListener('click', () => {
-        modal.style.display = 'flex';
-    });
-    closeBtn.addEventListener('click', () => {
+    const closeModal = () => {
         modal.style.display = 'none';
+        if (modalImg) modalImg.src = '';
+        document.body.style.overflow = ''; // débloque fond
+        modal.setAttribute('aria-hidden', 'true');
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', e => {
+        if (e.target === modal) { // clic hors image ferme modale
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            closeModal();
+        }
     });
 });
+
+// // Sélection des éléments modale et image modale
+// const modal = document.querySelector('.modalDetail');
+// const modalImg = document.getElementById('modalImg');
+// const closeBtn = modal.querySelector('.closeModalBtn');
+// // Sélection de tous les boutons 'ouvrir modale'
+// const openBtns = document.querySelectorAll('.openModalBtn');
+
+// openBtns.forEach(btn => {
+//     btn.addEventListener('click', () => {
+//         // Récupère l'URL de l'image depuis l'attribut data-img
+//         const imgSrc = btn.getAttribute('data-img');
+
+//         // Si l'image existe, met à jour la source de l'image modale
+//         if (imgSrc) {
+//             modalImg.src = imgSrc;
+//             modal.style.display = 'flex';
+
+//             // Optionnel : empêche le scroll page quand modale ouverte
+//             document.body.style.overflow = 'hidden';
+//         }
+//     });
+// });
+
+// // Fermeture de la modale au clic sur le bouton close
+// closeBtn.addEventListener('click', () => {
+//     modal.style.display = 'none';
+//     modalImg.src = ''; // nettoie l'image pour éviter flash d'ancienne image
+//     document.body.style.overflow = ''; // réactive le scroll page
+// });
+
+// // Fermeture modale au clic sur le fond (hors image)
+// modal.addEventListener('click', (e) => {
+//     if (e.target === modal) {
+//         modal.style.display = 'none';
+//         modalImg.src = '';
+//         document.body.style.overflow = '';
+//     }
+// });
+
+// // Optionnel : fermeture au clavier (touche Escape)
+// document.addEventListener('keydown', (e) => {
+//     if (e.key === "Escape" && modal.style.display === 'flex') {
+//         modal.style.display = 'none';
+//         modalImg.src = '';
+//         document.body.style.overflow = '';
+//     }
+// });
 
 
 // a propos

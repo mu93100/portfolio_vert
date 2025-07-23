@@ -49,6 +49,8 @@
 
     </header>
 
+    <!---------- M O D A L E S ------>
+    
     <main>
       <!--  texte défilant -->
       <div class="marquee_container" id="marqueeContainer">
@@ -89,7 +91,7 @@
       <!--------------- C O N T A C T ---------------->
       <div class="container_contact" id="contact">
         <div>
-          <h2 class="font">contact</h2>
+          <h1 class="font">contact</h1>
           <a class="font" href="mailto:murielehlinger@gmail.com">murielehlinger@gmail.com</a>
           <p class="font">(+33)6 86 42 01 35</p>
         </div>
@@ -99,17 +101,10 @@
       
       <div class="container_work" id="portfolio"> <!--   cards-container -->
         <div class="card">
-          <div class="card_img">
+          <div class="card_img_container">
             <img class="card_img" src="./img/devops.jpg" alt="Projet DevOps">
+            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/devops_img.jpeg"></div>
           </div>
-          <div class="openModalBtn" role="button" alt="detail"></div>
-
-        
-          <div class="modalDetail">
-            <img src="../img/devops_img.jpeg" alt="detail DevOps">
-            <div class="closeModalBtn" alt="retour"></div>
-          </div>
-
           <div class="card-content">
             <p>DevOps<br>Docker</p>
             <a href="https://mu93100.github.io/klikFast">Voir le site</a>
@@ -118,7 +113,10 @@
         </div>
 
         <div class="card">
-          <img src="./img/montreuil.jpg" alt="Wordpress">
+          <div class="card_img_container">
+            <img class="card_img" src="./img/montreuil.jpg" alt="Wordpress">
+            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/montreuil_img.jpeg"></div>
+          </div>  
           <div class="card-content">
             <p>WORDPRESS</p>
             <a href="">Voir le site</a>
@@ -127,25 +125,21 @@
         </div>
 
         <div class="card">
-          <img src="./img/lltv.jpg" alt="Graphisme web LLTV">
+          <div class="card_img_container">
+            <img class="card_img" src="./img/lltv.jpg" alt="Graphisme web LLTV">
+            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/lltv_img.jpeg"></div>
+          </div>  
           <div class="card-content">
-            <p>GRAPHISME Site LLTV<br>LOGO<br>Mise en page</p>
-            <a href="#">Voir le site</a>
-            <a href="#">Voir le code</a>
+            <p>GRAPHISME Site LookLikeTV<br>LOGO<br>Mise en page</p>
+            <a href="https://www.lookliketv.com/">Voir le site</a>
           </div>
         </div>
 
         <div class="card">
-          <img src="./img/cineffable.jpg" alt="Graphisme print recherche">
-          <div class="card-content">
-            <p>GRAPHISME print</p>
-            <a href="#">Voir le site</a>
-            <a href="#">Voir le code</a>
+          <div class="card_img_container">
+            <img class="card_img" src="./img/cineffable.jpg" alt="Graphisme print recherche">
+            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/cineffable_img.jpg"></div>
           </div>
-        </div>
-
-        <div class="card">
-          <img src="./img/familia.jpg" alt="Graphisme print">
           <div class="card-content">
             <p>GRAPHISME print</p>
             <a href="#">Voir le site</a>
@@ -154,7 +148,10 @@
         </div>
 
         <div class="card">
-          <img src="./img/cineffable.jpg" alt="Graphisme print recherche">
+          <div class="card_img_container">
+            <img class="card_img" src="./img/familia.jpg" alt="Graphisme print">
+            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/familia2_img.jpg"></div>
+          </div>
           <div class="card-content">
             <p>GRAPHISME print</p>
             <a href="#">Voir le site</a>
@@ -163,7 +160,10 @@
         </div>
 
         <div class="card">
-          <img src="./img/voeux.jpg" alt="Graphisme print">
+          <div class="card_img_container">
+            <img class="card_img" src="./img/cineffable.jpg" alt="Graphisme print recherche">
+            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/familia_img.jpg"></div>
+          </div>
           <div class="card-content">
             <p>GRAPHISME print</p>
             <a href="#">Voir le site</a>
@@ -172,7 +172,26 @@
         </div>
 
         <div class="card">
-          <img src="./img/no_code.jpg" alt="No Code">
+          <div class="card_img_container">
+            <img class="card_img" src="./img/voeux.jpg" alt="Graphisme print">
+            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/voeux_img.jpeg"></div>
+          </div>
+          <div class="card-content">
+            <p>GRAPHISME print</p>
+            <a href="#">Voir le site</a>
+            <a href="#">Voir le code</a>
+          </div>
+        </div>
+
+
+        <!-- <img src="./img/familia2_img.jpg" alt=""> -->
+
+
+        <div class="card">
+          <div class="card_img_container">
+            <img class="card_img" src="./img/no_code.jpg" alt="No Code">
+            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/airbnzik_img.jpeg"></div>
+          </div>
           <div class="card-content">
             <p>No-code<br>AIRTABLE<br>SOFTR </p>
             <a href="https://airbnzikmu.preview.softr.app/?show-toolbar=true">Voir le site</a>
@@ -180,7 +199,10 @@
         </div>
 
         <div class="card">
-          <img src="./img/php.jpg" alt="BDD PHP">
+          <div class="card_img_container">
+            <img class="card_img" src="./img/php.jpg" alt="BDD PHP">
+            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img"></div>
+          </div>
           <div class="card-content">
             <p>Base de données<br>PhpMyAdmin</p> POP up carroussel
             <a href="#">Voir le site</a>
@@ -189,7 +211,10 @@
         </div>
 
         <div class="card">
-          <img src="./img/php_animal.jpg" alt="Formulaire en PHP">
+          <div class="card_img_container">
+            <img class="card_img" src="./img/php_animal.jpg" alt="Formulaire en PHP">
+            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/animal_img.jpeg"></div>
+          </div>
           <div class="card-content">
             <p>PHP<br>HTML<br>CSS<br>JS</p>
             <a href="https://muriel.babinux.com ">Voir le site</a>
@@ -198,7 +223,10 @@
         </div>
 
         <div class="card">
-          <img src="./img/bougie.jpg" alt="html css">
+          <div class="card_img_container">
+            <img class="card_img" src="./img/bougie.jpg" alt="html css">
+            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/bougie_img.jpeg"></div>
+          </div>
           <div class="card-content">
             <p>HTML<br>CSS</p>
             <a href="#">Voir le site</a>
@@ -207,17 +235,22 @@
         </div>
 
         <div class="card">
-          <img class="merci" src="./img/merci.jpg" alt="M E R C I">
-          <img class="merci_mobile" src="./img/merci_mobile.jpg" alt="M E R C I">
+          <div class="card_img_container">
+            <img class="card_img" class="merci" src="./img/merci.jpg" alt="M E R C I">
+            <img class="card_img" class="merci_mobile" src="./img/merci_mobile.jpg" alt="M E R C I">
+          </div>
           <div class="card-content">
             <p>MERCI</p>
           </div>
         </div>
 
       </div>
-
+      
       <!--------------- M O D A L S   C A R D   W O R K ---------------->
-
+      <div class="modalDetail" style="display:none;">
+        <img id="modalImg" src="" alt="Détail DevOps">
+        <div class="closeModalBtn"></div>
+      </div>
 
     </main>
     <!--------------- F O O T E R ---------------->
