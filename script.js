@@ -54,47 +54,37 @@ links.forEach(link => {
         }
 })
 // --------------- M O D A L    C V ----------------
-document.addEventListener('DOMContentLoaded', () => {
-    const modalCv = document.querySelector('.modalCv');
-    const modalImgCv = document.getElementById('modalImgCv');
-    const closeBtnCv = modal.querySelector('.closeModalCvBtn');
+// document.addEventListener('DOMContentLoaded', () => {
+//     const modalCv = document.querySelector('.modalCv');
+//     const modalImgCv = document.getElementById('modalImgCv');
+//     const closeBtnCv = modal.querySelector('.closeModalCvBtn');
+//     const openCv = document.querySelector('.openModalCvBtn'); 
+//         openCv.addEventListener('click') {
+//                 modalCv.style.display = 'flex';
+//                 document.body.style.overflow = 'hidden'; // bloque fond/ pas de défilement possible
+//             }
+//     });
 
-    const cv = document.querySelectorAll('.openModalCvBtn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const src = btn.getAttribute('data-img');
+    // const closeModalCv = () => {
+    //     modal.style.display = 'none';
+    //     document.body.style.overflow = ''; // débloque fond
+    // }
 
-            if (src && modalImg) {
-                modalImg.src = src;
-                modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // bloque fond/ pas de défilement possible
-                modal.setAttribute('aria-hidden', 'false'); // === modal visible, super pour accessibilité
-            }
-        });
-    });
+    // closeBtnCv.addEventListener('click', closeModalCv);
 
-    const closeModal = () => {
-        modal.style.display = 'none';
+    // // fermeture si on click en dehors de l’img
+    // modal.addEventListener('click', e => {
+    //     if (e.target === modal) { // clic hors image ferme modale
+    //         closeModal();
+    //     }
+    // });
+    // // fermeture au clavier / avec echap
+    // document.addEventListener('keydown', e => {
+    //     if (e.key === 'Escape' && modal.style.display === 'flex') {
+    //         closeModal();
+    //     }
+    // });
 
-        if (modalImg) modalImg.src = '';
-        document.body.style.overflow = ''; // débloque fond
-        modal.setAttribute('aria-hidden', 'true');
-    }
-
-    closeBtn.addEventListener('click', closeModal);
-
-    // fermeture si on click en dehors de l’img
-    modal.addEventListener('click', e => {
-        if (e.target === modal) { // clic hors image ferme modale
-            closeModal();
-        }
-    });
-    // fermeture au clavier / avec echap
-    document.addEventListener('keydown', e => {
-        if (e.key === 'Escape' && modal.style.display === 'flex') {
-            closeModal();
-        }
-    });
-});
 
 // --------------- M O D A L   C A R D   W O R K ----------------
 document.addEventListener('DOMContentLoaded', () => {
