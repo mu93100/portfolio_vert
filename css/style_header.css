@@ -69,7 +69,7 @@ header {
 .nav ul li {
     margin: 0 1rem;
 }
-.nav ul li a, .nav_mobile ul li a{
+.nav ul li a, .nav_mobile ul li a, #cv{
     display: block;
 }
 
@@ -79,7 +79,7 @@ header {
     box-sizing: border-box;
 }
 
-.name, .dev, .ultra, .nav ul li a, .cv, .contact, .portfolio, .nav_mobile ul li a {
+.name, .dev, .ultra, .nav ul li a, #cv, .contact, .portfolio, .nav_mobile ul li a {
     width: 100%; 
     font-family: "Doto", sans-serif;
     font-size: 1.1rem;
@@ -106,13 +106,96 @@ header {
     text-decoration: none;
     transition: border-color 0.3s; /* pour animation fluide */
 }
-.nav .nav-link:hover  {
+.nav_link:hover, #cv:hover {
     border-bottom: 0.1rem solid black;
 } 
-.nav_mobile .nav-link.active {
+.nav_mobile .nav_link.active, #cv.active {
     border-bottom: 0.1rem solid black;
 } 
- 
+/* ---------------- M O D A L   C V ---------------  */
+.modalCv, .modalCv a{
+    width: 100%;
+    height: 100%;
+}
+
+.openModalCvBtn {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../img/openModal.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 4rem;
+    height: 4rem;
+    transition: opacity 0.3s ease;    
+}
+.card_img_container:hover .card_img{
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+.card_img_container:hover .openModalCvBtn {
+    opacity: 1;
+}
+.modalCv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: rgba(253, 250, 236, 0.8);  */
+    /* background-color: rgb(237, 230, 10, 0.9) ; */
+
+    background-color: rgba(255, 255, 255, 0.9) ;
+    /* background: linear-gradient(rgba(255, 255, 255, 0.7), 38%, 
+    rgba(248, 4, 208, 0.9)); */
+    /* background: linear-gradient( rgba(255, 255, 255, 0.5) 10%, 
+    rgba(135, 255, 165, 0.3) 3% , 
+    rgba(135, 255, 165, 0.7) 40%, 
+    rgba(135, 255, 165, 0.9) );      */
+/* rgb(3, 253, 66),
+        0 0 0.2em rgb(135, 255, 165) 
+        rgba(135, 255, 165, 0.3) 3% , 
+                                rgba(135, 255, 165, 0.7) 40%, 
+                                rgba(135, 255, 165, 0.9) );
+background: linear-gradient(rgba(255, 255, 255), 0.5%, 
+                                rgba(135, 255, 165, 0.3) 3% , 
+                                rgba(135, 255, 165, 0.7) 40%, 
+                                rgba(135, 255, 165, 0.9) );     
+
+    background: linear-gradient(rgba(255, 255, 255), 2%, 
+                                rgba(135, 255, 165, 0.07) 1% , 
+                                rgba(135, 255, 165, 0.3) 40%, 
+                                rgb(135, 255, 165, 0.5));
+
+
+    background: linear-gradient(to bottom, rgba(255, 255, 255) 10%, 
+                                            rgb(135, 255, 165, 0.2));*/
+    display: none;                     
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    padding-left: 5rem;
+    z-index: 9999;
+}
+
+.modalCv img {
+    max-width: 70vw;
+    max-height: 90vh;
+    object-fit: contain;
+    box-shadow: 0 0 15px rgb(135, 255, 165, 0.7);
+}
+
+.openModalCvBtn {
+    background-image: url(../img/retour.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 4rem;
+    height: 4rem;
+    margin-left: 2rem;
+}
+
 /* 
 Téléphones (portrait)		≤ 600	@media (max-width: 600px)
 Tablettes (portrait/paysage)	601 – 991	@media (min-width: 600px)

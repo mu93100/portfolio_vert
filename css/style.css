@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    border: 1px dotted lightpink;
+    /* border: 1px dotted lightpink; */
     cursor: crosshair;
     font-family: "League Spartan", sans-serif;
     font-weight: 300;
@@ -239,7 +239,6 @@ a :hover {
     position: relative;
 }  
 
-/* ---------------- M O D A L ---------------  */
 .card_img_container{
     position: relative;
     width: 100%;
@@ -250,7 +249,7 @@ a :hover {
     display: block;
     transition: opacity 0.3s ease;
 } 
-
+/* ---------------- M O D A L   C A R D   W O R K---------------  */
 .openModalBtn {
     opacity: 0;
     position: absolute;

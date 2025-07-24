@@ -1,14 +1,14 @@
 // texte défilant
 function disparaitre() {
     // ça cache le container en desktop si présent
-    let containerDeskop = document.getElementById('marqueeContainer');
+    const containerDeskop = document.getElementById('marqueeContainer');
     if (containerDeskop) { containerDeskop.classList.add('disparu') };
 
-    let arrow = document.getElementById('arrow');
+    const arrow = document.getElementById('arrow');
     if (arrow) { arrow.classList.add('disparu') };
 
     // ça cache le container en mobile si présent
-    let containerMobile = document.getElementById('marqueeContainerMobile');
+    const containerMobile = document.getElementById('marqueeContainerMobile');
     if (containerMobile) { containerMobile.classList.add('disparu') };
 }
 function handleScroll() {
@@ -38,21 +38,65 @@ document.body.addEventListener('click', disparaitre);
 
 
 
-// links N A V
-const links = document.querySelectorAll('.nav-link');
+// links  N A V   M O B I L E 
+const links = document.querySelectorAll('.nav_link');
 
 links.forEach(link => {
     link.addEventListener('click', function (e) {
-        // Vérifie la largeur de fenêtre pour n'agir qu'en mobile...
-
         links.forEach(l => l.classList.remove('active'));
         this.classList.add('active');
 
+        
         // Sinon (desktop), tu peux ignorer ou garder le comportement
     });
+    if ('nav_link:hover', 'cv:hover') {
+            this.classList.remove('active');
+        }
 })
+// --------------- M O D A L    C V ----------------
+document.addEventListener('DOMContentLoaded', () => {
+    const modalCv = document.querySelector('.modalCv');
+    const modalImgCv = document.getElementById('modalImgCv');
+    const closeBtnCv = modal.querySelector('.closeModalCvBtn');
 
-// --------------- M O D A L S   C A R D   W O R K ----------------
+    const cv = document.querySelectorAll('.openModalCvBtn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const src = btn.getAttribute('data-img');
+
+            if (src && modalImg) {
+                modalImg.src = src;
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // bloque fond/ pas de défilement possible
+                modal.setAttribute('aria-hidden', 'false'); // === modal visible, super pour accessibilité
+            }
+        });
+    });
+
+    const closeModal = () => {
+        modal.style.display = 'none';
+
+        if (modalImg) modalImg.src = '';
+        document.body.style.overflow = ''; // débloque fond
+        modal.setAttribute('aria-hidden', 'true');
+    }
+
+    closeBtn.addEventListener('click', closeModal);
+
+    // fermeture si on click en dehors de l’img
+    modal.addEventListener('click', e => {
+        if (e.target === modal) { // clic hors image ferme modale
+            closeModal();
+        }
+    });
+    // fermeture au clavier / avec echap
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            closeModal();
+        }
+    });
+});
+
+// --------------- M O D A L   C A R D   W O R K ----------------
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.querySelector('.modalDetail');
     const modalImg = document.getElementById('modalImg');
@@ -61,17 +105,19 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.openModalBtn').forEach(btn => {
         btn.addEventListener('click', () => {
             const src = btn.getAttribute('data-img');
+
             if (src && modalImg) {
                 modalImg.src = src;
                 modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // bloque fond
-                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden'; // bloque fond/ pas de défilement possible
+                modal.setAttribute('aria-hidden', 'false'); // === modal visible, super pour accessibilité
             }
         });
     });
 
     const closeModal = () => {
         modal.style.display = 'none';
+
         if (modalImg) modalImg.src = '';
         document.body.style.overflow = ''; // débloque fond
         modal.setAttribute('aria-hidden', 'true');
@@ -79,12 +125,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     closeBtn.addEventListener('click', closeModal);
 
+    // fermeture si on click en dehors de l’img
     modal.addEventListener('click', e => {
         if (e.target === modal) { // clic hors image ferme modale
             closeModal();
         }
     });
-
+    // fermeture au clavier / avec echap
     document.addEventListener('keydown', e => {
         if (e.key === 'Escape' && modal.style.display === 'flex') {
             closeModal();
@@ -142,9 +189,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // a propos
-let bouton = document.getElementById('afficher_a_propos');
-let imageContainer = document.getElementById('image-container');
-let closeBtn = document.getElementById('close-btn');
+const bouton = document.getElementById('afficher_a_propos');
+const imageContainer = document.getElementById('image-container');
+const closeBtn = document.getElementById('close-btn');
 
 bouton.addEventListener('click', function () {
     imageContainer.style.display = 'block'; // Affiche le conteneur avec l'image

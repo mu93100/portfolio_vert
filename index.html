@@ -25,37 +25,31 @@
           </div>
           <div class="nav">
             <ul>
-              <li><a href="#portfolio" class="nav-link">portfolio</a></li> <!--#truc === on scroll jusqu'à id ="truc"-->
-              <li><a id="cv" href="#cv" class="nav-link openModalBtn" role="button" data-img="./img">CV</a></li>
-              <li><a id="afficher_a_propos" class="nav-link">à propos</a></li>
-              <li><a href="#contact" class="nav-link">contact</a></li>
+              <li><a href="#portfolio" class="nav_link">portfolio</a></li> <!--#truc === scroll jusqu'à id ="truc"-->
+              <li><a id="cv" class="nav_link openModalCvBtn" role="button" data-img="./img/cv.jpg">cv</a></li>
+              <li><a href="#contact" class="nav_link">contact</a></li>
             </ul>
           </div>
         </div>
       </div>
-<div><img src="./img/cv_muriel_ehlinger_poles.jpg" alt=""></div>
-      <div class="card">
-        <div class="card_img_container">
-          <img class="card_img" src="./img/devops.jpg" alt="Projet DevOps">
-          <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/devops_img.jpeg"></div>
-        </div>
-        <div class="card-content">
-          <p>DevOps<br>Docker</p>
-          <a href="https://mu93100.github.io/klikFast">Voir le site</a>
-          <a href="https://github.com/mu93100/klikFast.git">Voir le code</a>
-        </div>
-      </div>
 
+<!-- MODALE
+<li><a id="cv" class=" openModalCvBtn" role="button" 
+        data-img="./img/cv.jpg">CV</a></li>
+
+      <div class="modalCv" style="display:none;">
+        <img id="modalImgCv" src="" alt="C V">
+        <div class="closeModalCvBtn"></div>
+      </div> -->
 
       <div class="green_mil"></div>
 
       <div class="container_mobile">   
         <div class="nav_mobile">
             <ul>
-              <li class="portfolio green2"><a href="#portfolio" class="nav-link">portfolio</a></li>
-              <li class="cv green1"><a href="#cv" class="nav-link">cv</a></li>
-              <!-- <li><a id="afficher_a_propos">à propos</a></li> -->
-              <li class="contact green"><a href="#contact" class="nav-link">contact</a></li>
+              <li class="portfolio green2"><a href="#portfolio" class="nav_link">portfolio</a></li>
+              <li class="green1"><a id="cv_mobile" class="nav_link openModalCvBtn" role="button" data-img="./img/cv.jpg">cv</a></li>
+              <li class="contact green"><a href="#contact" class="nav_link">contact</a></li>
             </ul>
         </div>
       </div>
@@ -63,9 +57,9 @@
 
     
     <main>
-      <div class="mma">
+      <!-- <div class="mma">
         <div class="mma_text">Je recherche un stage du 08/09 au 31/10/25</div>
-      </div>
+      </div> -->
       <!--------------  T E X T   défilant -------------->
       <div class="marquee_container" id="marqueeContainer">
         <div class="marquee_text">Je recherche un stage du 08/09 au 31/10/25</div>
@@ -99,8 +93,8 @@
         <div id="arrow4">↓</div>
         <div id="arrow5">↓</div> 
       </div> -->
-  
-  
+>
+
       <!--------------- C O N T A C T ---------------->
       <div class="container_contact" id="contact">
         <div>
@@ -196,10 +190,6 @@
           </div>
         </div>
 
-
-        <!-- <img src="./img/familia2_img.jpg" alt=""> -->
-
-
         <div class="card">
           <div class="card_img_container">
             <img class="card_img" src="./img/no_code.jpg" alt="No Code">
@@ -258,18 +248,22 @@
         <div class="merci">merci</div>
       </div>
       
-      <!--------------- M O D A L S   C A R D   W O R K ---------------->
+      <!--------------- M O D A L   C A R D S ---------------->
       <div class="modalDetail" style="display:none;">
-        <img id="modalImg" src="" alt="Détail DevOps">
+        <img id="modalImg" src="" alt="Détail">
         <div class="closeModalBtn"></div>
       </div>
 
-      <div class="modalDetail2" style="display:none;">
-        <img id="modalImg" src="" alt="Détail DevOps">
-        <div class="closeModalBtn"></div>
+      <!--------------- M O D A L   C V ----------------> 
+  
+        <!-- <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/devops_img.jpeg"></div> -->
+  
+      <div class="modalCv" style="display:none;">
+        <a href="mailto:murielehlinger@gmail.com">
+          <img id="modalImgCv" src="" alt="C V">
+        </a>
+        <div class="closeModalCvBtn"></div>
       </div>
-
-      
 
     </main>
     <!--------------- F O O T E R ---------------->
