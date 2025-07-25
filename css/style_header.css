@@ -8,38 +8,42 @@ header {
     z-index: 1000;
     background-color: white;
 }
-.container_header{
+
+.container_header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    
+
 }
-.container_mobile{
+
+.container_mobile {
     display: none;
 }
 
 /* dégradé */
 .green {
-    background: linear-gradient(rgba(255, 255, 255), 0.5%, 
-                                rgba(135, 255, 165, 0.3) 3% , 
-                                rgba(135, 255, 165, 0.7) 40%, 
-                                rgba(135, 255, 165, 0.9) );     
+    background: linear-gradient(rgba(255, 255, 255), 0.5%,
+            rgba(135, 255, 165, 0.3) 3%,
+            rgba(135, 255, 165, 0.7) 40%,
+            rgba(135, 255, 165, 0.9));
     height: 2rem;
     padding: 0 3rem;
     margin: 0;
 }
+
 .green1 {
-    background: linear-gradient(rgba(255, 255, 255), 2%, 
-                                rgba(135, 255, 165, 0.07) 1% , 
-                                rgba(135, 255, 165, 0.3) 40%, 
-                                rgb(135, 255, 165, 0.5));
+    background: linear-gradient(rgba(255, 255, 255), 2%,
+            rgba(135, 255, 165, 0.07) 1%,
+            rgba(135, 255, 165, 0.3) 40%,
+            rgb(135, 255, 165, 0.5));
     height: 2rem;
     padding: 0 3rem;
     margin: 0;
 }
-.green2{
-    background: linear-gradient(to bottom, rgba(255, 255, 255) 10%, 
-                                            rgb(135, 255, 165, 0.2));
+
+.green2 {
+    background: linear-gradient(to bottom, rgba(255, 255, 255) 10%,
+            rgb(135, 255, 165, 0.2));
     height: 2rem !important;
     display: flex;
     flex-direction: row;
@@ -49,11 +53,13 @@ header {
     padding: 0 3rem;
     margin: 0;
 }
-.green_mil{
+
+.green_mil {
     background: linear-gradient(to top, rgba(255, 255, 255) 10%, rgb(135, 255, 165, 0.2));
     height: 1.8rem;
     display: none;
 }
+
 /* F I N dégradé */
 
 
@@ -66,12 +72,16 @@ header {
     justify-content: center;
     /* max-height: 100%; */
 }
+
 .nav ul li {
     margin: 0 1rem;
 }
-.nav ul li a, .nav_mobile ul li a, #cv{
+
+.nav ul li a,
+.nav_mobile ul li a,
+#cv {
     display: flex;
-        /* display: block; */
+    /* display: block; */
 }
 
 .nav_mobile ul {
@@ -80,44 +90,62 @@ header {
     box-sizing: border-box;
 }
 
-.name, .dev, .ultra, .nav ul li a, #cv, .contact, .portfolio, .nav_mobile ul li a {
-    width: 100%; 
+.name,
+.dev,
+.ultra,
+.nav ul li a,
+#cv,
+.contact,
+.portfolio,
+.nav_mobile ul li a {
+    width: 100%;
     font-family: "Doto", sans-serif;
     font-size: 1.1rem;
     font-weight: 500;
     color: black;
-    letter-spacing: .15rem; 
+    letter-spacing: .15rem;
     text-shadow: 0.02em 0.02em 0.003em rgb(255, 255, 255),
         0.015em 0.015em 0.0051em rgb(255, 255, 255),
         0 0 0.1em rgb(255, 255, 255),
         0 0 0.2em rgb(255, 255, 255);
-        /* 0.015em 0.015em 0.01em rgb(0, 0, 0),  */
+    /* 0.015em 0.015em 0.01em rgb(0, 0, 0),  */
     padding: 0.15rem 0 0 0;
     margin: 0;
     text-decoration: none;
-    border-bottom: 0.1rem solid transparent; /* lien qui ne bougent pas */
-    transition: border-color 0.3s; /* pour animation fluide */
+    border-bottom: 0.1rem solid transparent;
+    /* lien qui ne bougent pas */
+    transition: border-color 0.3s;
+    /* pour animation fluide */
     height: 2rem;
     /* border: 1px dotted lightpink;  */
 }
+
 .nav_mobile ul li a {
     padding-top: 0.1rem;
-    display: flex; /* display et justify === border sur toute la div et non pas que sur le mot */
+    display: flex;
+    /* display et justify === border sur toute la div et non pas que sur le mot */
     justify-content: start;
     text-decoration: none;
-    transition: border-color 0.3s; /* pour animation fluide */
+    transition: border-color 0.3s;
+    /* pour animation fluide */
 }
-.nav_link:hover, #cv:hover {
+
+.nav_link.active {
     border-bottom: 0.1rem solid black;
-} 
-.nav_mobile .nav_link.active, #cv.active {
+}
+
+.nav_link:hover,
+.nav_link:focus {
     border-bottom: 0.1rem solid black;
-} 
+}
+
 /* ---------------- M O D A L   C V ---------------  */
-.modalCv, .modalCv a{
+.modalCv,
+.modalCv a {
     width: 100%;
     height: 100%;
 }
+
 /* 
 .openModalCvBtn {
     opacity: 0;
@@ -142,14 +170,14 @@ header {
     /* background-color: rgba(253, 250, 236, 0.8);  */
     /* background-color: rgb(237, 230, 10, 0.9) ; */
 
-    background-color: rgba(255, 255, 255, 0.9) ;
+    background-color: rgba(255, 255, 255, 0.9);
     /* background: linear-gradient(rgba(255, 255, 255, 0.7), 38%, 
     rgba(248, 4, 208, 0.9)); */
     /* background: linear-gradient( rgba(255, 255, 255, 0.5) 10%, 
     rgba(135, 255, 165, 0.3) 3% , 
     rgba(135, 255, 165, 0.7) 40%, 
     rgba(135, 255, 165, 0.9) );      */
-/* rgb(3, 253, 66),
+    /* rgb(3, 253, 66),
         0 0 0.2em rgb(135, 255, 165) 
         rgba(135, 255, 165, 0.3) 3% , 
                                 rgba(135, 255, 165, 0.7) 40%, 
@@ -167,7 +195,8 @@ background: linear-gradient(rgba(255, 255, 255), 0.5%,
 
     background: linear-gradient(to bottom, rgba(255, 255, 255) 10%, 
                                             rgb(135, 255, 165, 0.2));*/
-    display: none;  /* ------------- déjà ds HTML -------------- */
+    display: none;
+    /* ------------- déjà ds HTML -------------- */
     /* flex-direction: column; */
     justify-content: center;
     align-items: center;
@@ -182,20 +211,24 @@ background: linear-gradient(rgba(255, 255, 255), 0.5%,
     box-shadow: 0 0 15px rgb(135, 255, 165, 0.7);
 }
 
-.closeModalCvBtn, .sendEmail, .uploadCv {
+.closeModalCvBtn,
+.sendEmail,
+.uploadCv {
     background-repeat: no-repeat;
     background-size: contain;
     width: 4rem;
     height: 4rem;
     margin-left: 2rem;
-    
+
 }
+
 .sendEmail {
     background-image: url(../img/email.png);
 }
+
 .uploadCv {
     background-image: url(../img/email.png);
-    display:inline-block
+    display: inline-block
 }
 
 /* 
@@ -206,32 +239,42 @@ Laptops / Desktops		≥ 992	@media (min-width: 992px)
 Grands écrans			≥ 1200	@media (min-width: 1200px) */
 /* ------------------------  R E S P O N S I V E  ----------------------*/
 @media (max-width: 768px) {
-    header{
+    header {
         flex-wrap: wrap;
         flex-direction: column;
     }
-    .container_header .nav { display: none; }
-    .name, .dev, .ultra, ul, .nav_mobile ul li a { 
-        font-size: 1rem;     
-    }   
+
+    .container_header .nav {
+        display: none;
+    }
+
+    .name,
+    .dev,
+    .ultra,
+    ul,
+    .nav_mobile ul li a {
+        font-size: 1rem;
+    }
+
     .container_mobile {
         display: flex;
         flex-direction: column;
         width: 100%;
         margin: 0;
-        padding: 0; 
+        padding: 0;
     }
-    .green, .green1, .green2 {
+
+    .green,
+    .green1,
+    .green2 {
         padding: 0 0 0 3rem;
         margin: 0;
         align-items: start;
     }
+
     .green_mil {
-    display: flex;
+        display: flex;
         /* display: block; */
     }
-    
+
 }
-
-
-

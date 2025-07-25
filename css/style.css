@@ -63,7 +63,7 @@ main {
 .marquee_container {
     overflow: hidden; /* masque text qui déborde */
     width: 100%; /* largeur de la fenêtre */
-    padding: 23rem 0 20rem 0;
+    padding: 18rem 0 20rem 0;
     /* margin: 4% 0 20rem 0; */
     box-sizing: border-box;
 }
@@ -113,7 +113,7 @@ main {
 #arrow{
     transition: opacity 0.3s;
     width: 100%;
-    padding-bottom: 4rem;
+    padding-bottom: 10rem;
 }
 #arrow.hidden {
     opacity: 0;

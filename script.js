@@ -39,21 +39,21 @@ window.addEventListener('scroll', handleScroll);
 
 
 
-// links  N A V   M O B I L E 
-const links = document.querySelectorAll('.nav_link');
+// // links  N A V   M O B I L E 
+// const links = document.querySelectorAll('.nav_link');
 
-links.forEach(link => {
-    link.addEventListener('click', function (e) {
-        links.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
+// links.forEach(link => {
+//     link.addEventListener('click', function (e) {
+//         links.forEach(l => l.classList.remove('active'));
+//         this.classList.add('active');
 
         
-        // Sinon (desktop), tu peux ignorer ou garder le comportement
-    });
+//         // Sinon (desktop), tu peux ignorer ou garder le comportement
+//     });
     // if ('nav_link:hover', 'cv:hover') {
     //         this.classList.remove('active');
     //     }  j'enlève suite corrigé CLAUDE 
-})
+//})
 // --------------- M O D A L    C V ----------------
 document.addEventListener('DOMContentLoaded', () => {
     const modalCv = document.querySelector('.modalCv');
@@ -126,7 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const closeModal = () => {
         modal.style.display = 'none';
-
         if (modalImg) modalImg.src = '';
         document.body.style.overflow = ''; // débloque fond
         modal.setAttribute('aria-hidden', 'true');

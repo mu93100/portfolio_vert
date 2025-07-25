@@ -27,14 +27,38 @@ window.addEventListener('scroll', handleScroll);
 document.body.addEventListener('click', disparaitre);
 
 // links N A V M O B I L E 
-const links = document.querySelectorAll('.nav_link');
+const navLinks = document.querySelectorAll('.nav_link');
+let lastActive = null;
 
-links.forEach(link => {
-    link.addEventListener('click', function (e) {
-        links.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
+navLinks.forEach(link => {
+    // Clic = définit le lien actif
+    link.addEventListener('click', () => {
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        lastActive = link;
+    });
+
+    // Hover: retire la classe active du lien "fixe" pour que seul le hover soit visible
+    link.addEventListener('mouseenter', () => {
+        navLinks.forEach(l => l.classList.remove('active'));
+    });
+
+    // Quand la souris quitte le lien, on remet l'active sur le dernier cliqué
+    link.addEventListener('mouseleave', () => {
+        if (lastActive) lastActive.classList.add('active');
     });
 });
+
+
+// links.forEach(link => {
+//     link.addEventListener('click', function (e) {
+//         links.forEach(l => l.classList.remove('active'));
+//         this.classList.add('active');
+//     });
+//     if ('nav_link:hover', 'cv:hover') {
+//             this.classList.remove('active');
+//         }  j'enlève suite corrigé CLAUDE 
+// });
 
 // --------------- M O D A L C V - CORRIGÉ ----------------
 document.addEventListener('DOMContentLoaded', () => {
