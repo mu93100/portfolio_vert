@@ -49,17 +49,6 @@ navLinks.forEach(link => {
     });
 });
 
-
-// links.forEach(link => {
-//     link.addEventListener('click', function (e) {
-//         links.forEach(l => l.classList.remove('active'));
-//         this.classList.add('active');
-//     });
-//     if ('nav_link:hover', 'cv:hover') {
-//             this.classList.remove('active');
-//         }  j'enlève suite corrigé CLAUDE 
-// });
-
 // --------------- M O D A L C V - CORRIGÉ ----------------
 document.addEventListener('DOMContentLoaded', () => {
     const modalCv = document.querySelector('.modalCv');
@@ -167,21 +156,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// --------------- A PROPOS - CORRIGÉ ----------------
-document.addEventListener('DOMContentLoaded', () => {
-    const bouton = document.getElementById('afficher_a_propos');
-    const imageContainer = document.getElementById('image-container');
-    const closeBtn = document.getElementById('close-btn');
-
-    if (bouton && imageContainer) {
-        bouton.addEventListener('click', function () {
-            imageContainer.style.display = 'block';
-        });
-    }
-
-    if (closeBtn && imageContainer) {
-        closeBtn.addEventListener('click', function () {
-            imageContainer.style.display = 'none';
-        });
-    }
-});

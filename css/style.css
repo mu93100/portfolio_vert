@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    /* border: 1px dotted lightpink; */
+    border: 1px dotted lightpink;
     cursor: crosshair;
     font-family: "League Spartan", sans-serif;
     font-weight: 300;
@@ -26,44 +26,13 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 1rem;
 }
 
 /* ------------------------- T E X T E   D E F I L A N T --------------------------- */
-.mma {
-    overflow: hidden; /* masque ce qui déborde */
-    width: 100%; /* largeur de la fenêtre */
-    padding: 10rem 0 2rem 0;
-    /* margin: 4% 0 20rem 0; */
-    box-sizing: border-box;
-}
-
-.mma_text {
-    display: inline-block;
-    white-space: nowrap;
-    font-size: 6rem;
-    font-family: "Doto", sans-serif;
-    font-weight: 700;
-    color: white;
-    letter-spacing: .15rem;
-    text-shadow: 0.02em 0.02em 0.03em white,
-        0.015em 0.015em 0.0051em rgb(242, 108, 5),
-        0.015em 0.015em 0.01em rgb(0, 0, 0), 
-        0 0 0.1em rgb(1, 148, 38),
-        0 0 0.2em rgb(5, 252, 66);
-
-    /* text-shadow: 0.02em 0.02em 0.03em white,
-        0 0 .5em blue,
-        0 0 0.12em #0000ff; */ 
-        /* text shadow bleu */
-    /* animation: defilement 8.5s linear infinite;  */
-    /* Animation qui part de la droite de l'écran et sort complètement à gauche*/
-}
-
 .marquee_container {
     overflow: hidden; /* masque text qui déborde */
     width: 100%; /* largeur de la fenêtre */
-    padding: 18rem 0 20rem 0;
+    padding: 20rem 0 15rem 0;
     /* margin: 4% 0 20rem 0; */
     box-sizing: border-box;
 }
@@ -113,7 +82,7 @@ main {
 #arrow{
     transition: opacity 0.3s;
     width: 100%;
-    padding-bottom: 10rem;
+    padding-bottom: 15rem;
 }
 #arrow.hidden {
     opacity: 0;
@@ -140,37 +109,9 @@ main {
 #arrow4{ animation-delay: 2.7s }
 #arrow5{ animation-delay: 3.1s; }
 
-/*---------------------a propos--------------------  */
-#image-container {
-    display: none;
-    /* Caché au départ */
-    position: relative;
-    width: max-content;
-    margin-top: 20px;
-}
-
-#fond_a_propos {
-    width: 100%;
-    margin: 2rem;
-}
-
-.close-btn {
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    background: none;
-    border: none;
-    transition: background 0.2s;
-}
-
-.close-btn:hover {
-    text-shadow: 0.02em 0.02em 0.03em white,
-        0 0 1em blue,
-        0 0 0.12em blue;
-}
 /* --------------- C O N T A C T ---------------- */
 #contact {
-    scroll-margin-top: 11rem; 
+    scroll-margin-top: 19rem; 
 }
 
 .container_contact {
@@ -182,7 +123,7 @@ main {
     background-size: contain;
     /* min-height: 25rem; */
     /* container-type: inline-size; */
-    margin: 5rem 10rem 20rem auto;
+    margin: 10rem 10rem 20rem auto;
     padding: 0.7rem 0.7rem;
     margin-left: auto;
     /* align-self: end; */
@@ -191,9 +132,6 @@ main {
 h1 {
     font-weight: 900;
     font-size: clamp(1rem, 2.5cqw, 2.2rem);
-/* 
-    font-size: 250%; 
-    font-size: clamp(1.1rem, 4cqw, 3rem); */
     margin-bottom: 6rem;
 }
 
@@ -208,7 +146,7 @@ a :hover {
 }
 /* --------------- C A R D   W O R K ---------------- */
 #portfolio {
-    scroll-margin-top: 11rem; 
+    scroll-margin-top: 10rem; 
 }
 /* .ma-div {
     position: relative;

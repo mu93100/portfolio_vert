@@ -1,30 +1,18 @@
-// texte défilant
+// texte défilant + arrow disparaissent au 1er click
 function disparaitre() {
-    // ça cache le container en desktop si présent
     const containerDeskop = document.getElementById('marqueeContainer');
     if (containerDeskop) { containerDeskop.classList.add('disparu') };
 
     const arrow = document.getElementById('arrow');
     if (arrow) { arrow.classList.add('disparu') };
 
-    // ça cache le container en mobile si présent
     const containerMobile = document.getElementById('marqueeContainerMobile');
     if (containerMobile) { containerMobile.classList.add('disparu') };
 }
-
-
-// marqueeContainer et arrow : disparaissent au 1er click
 document.body.addEventListener('click', disparaitre);
 
-// function handleScroll() {
-//     if (window.scrollY > 100) {
-//         arrow.classList.add('hidden');
-//         // On retire le scrollListener, la flèche ne reviendra plus
-//         window.removeEventListener('scroll', handleScroll);
-//     }
-// }
 
-// enlever arrow si scroll
+// disparition arrow si scroll
 function handleScroll() {
     const arrow = document.getElementById('arrow');
     if (arrow && window.scrollY > 100) { // 100 : change le seuil selon ton besoin
@@ -35,25 +23,30 @@ function handleScroll() {
 }
 window.addEventListener('scroll', handleScroll);
 
+// + rajouter le link avec border qui change selon le scroll sur div contact ou portfolio ??
+// links N A V M O B I L E // claude qui marche border on click , disparait quand on mouseOver autre link 
+const navLinks = document.querySelectorAll('.nav_link');
+let lastActive = null;
 
+navLinks.forEach(link => {
+    // Clic = définit le lien actif
+    link.addEventListener('click', () => {
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        lastActive = link;
+    });
 
+    // Hover: retire la classe active du lien "fixe" pour que seul le hover soit visible
+    link.addEventListener('mouseenter', () => {
+        navLinks.forEach(l => l.classList.remove('active'));
+    });
 
+    // Quand la souris quitte le lien, on remet l'active sur le dernier cliqué
+    link.addEventListener('mouseleave', () => {
+        if (lastActive) lastActive.classList.add('active');
+    });
+});
 
-// // links  N A V   M O B I L E 
-// const links = document.querySelectorAll('.nav_link');
-
-// links.forEach(link => {
-//     link.addEventListener('click', function (e) {
-//         links.forEach(l => l.classList.remove('active'));
-//         this.classList.add('active');
-
-        
-//         // Sinon (desktop), tu peux ignorer ou garder le comportement
-//     });
-    // if ('nav_link:hover', 'cv:hover') {
-    //         this.classList.remove('active');
-    //     }  j'enlève suite corrigé CLAUDE 
-//})
 // --------------- M O D A L    C V ----------------
 document.addEventListener('DOMContentLoaded', () => {
     const modalCv = document.querySelector('.modalCv');
@@ -70,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
             modalCv.style.display = 'flex';
             document.body.style.overflow = 'hidden'; // bloque fond
         }
-    };
 
     // Fonction pour fermer modalCv
     const closeModalCv = () => {
@@ -78,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modalCv.style.display = 'none';
             document.body.style.overflow = ''; // débloque fond
         }
-    };  
+    
     // // fermeture si on click en dehors de l’img
     // modal.addEventListener('click', e => {
     //     if (e.target === modalCv) { // clic hors image ferme modale
@@ -90,11 +82,11 @@ document.addEventListener('DOMContentLoaded', () => {
     //     if (e.key === 'Escape' && modalCv.style.display === 'flex') {
     //         closeModalCv();
     //     }      
-    });
-// Fermeture avec le bouton close
-if (closeBtnCv) {
-    closeBtnCv.addEventListener('click', closeModalCv);
-}
+    // });
+    // Fermeture avec le bouton close
+    if (closeBtnCv) {
+        closeBtnCv.addEventListener('click', closeModalCv);
+    }
     // const closeModalCv = () => { ---------------MU
     //     modal.style.display = 'none';
     //     document.body.style.overflow = ''; // débloque fond
@@ -103,14 +95,24 @@ if (closeBtnCv) {
     // closeBtnCv.addEventListener('click', closeModalCv);
 
     // });
+});
+
+
 
 
 // --------------- M O D A L   C A R D   W O R K ----------------
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => { // juste pour que ts les elements soient chargés avant exe du script
     const modal = document.querySelector('.modalDetail');
     const modalImg = document.getElementById('modalImg');
     const closeBtn = modal.querySelector('.closeModalBtn');
 
+    const closeModal = () => {
+        modal.style.display = 'none';
+        if (modalImg) modalImg.src = '';
+        document.body.style.overflow = ''; // débloque fond
+        modal.setAttribute('aria-hidden', 'true');
+    }
+    // Ouverture des modales pour chaque carte
     document.querySelectorAll('.openModalBtn').forEach(btn => {
         btn.addEventListener('click', () => {
             const src = btn.getAttribute('data-img');
@@ -123,13 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    const closeModal = () => {
-        modal.style.display = 'none';
-        if (modalImg) modalImg.src = '';
-        document.body.style.overflow = ''; // débloque fond
-        modal.setAttribute('aria-hidden', 'true');
-    }
 
     closeBtn.addEventListener('click', closeModal);
 
@@ -196,15 +191,3 @@ document.addEventListener('DOMContentLoaded', () => {
 // });
 
 
-// a propos
-const bouton = document.getElementById('afficher_a_propos');
-const imageContainer = document.getElementById('image-container');
-const closeBtn = document.getElementById('close-btn');
-
-bouton.addEventListener('click', function () {
-    imageContainer.style.display = 'block'; // Affiche le conteneur avec l'image
-});
-
-closeBtn.addEventListener('click', function () {
-    imageContainer.style.display = 'none'; // Masque le conteneur avec l'image
-});
