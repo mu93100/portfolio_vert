@@ -246,7 +246,8 @@ a :hover {
 .card_img {
     width: 100%;
     height: auto;
-    display: block;
+    display: flex;
+        /* display: block; */
     transition: opacity 0.3s ease;
 } 
 /* ---------------- M O D A L   C A R D   W O R K---------------  */
@@ -477,11 +478,11 @@ footer {
         display: none;
     }
     .merci_mobile{
-        display: block;
-    }
+    display: flex;
+        /* display: block; */    }
     .merci_mobile_p {
-        display: block;
-    }
+    display: flex;
+        /* display: block; */    }
 
 
 

@@ -11,30 +11,31 @@ function disparaitre() {
     const containerMobile = document.getElementById('marqueeContainerMobile');
     if (containerMobile) { containerMobile.classList.add('disparu') };
 }
+
+
+// marqueeContainer et arrow : disparaissent au 1er click
+document.body.addEventListener('click', disparaitre);
+
+// function handleScroll() {
+//     if (window.scrollY > 100) {
+//         arrow.classList.add('hidden');
+//         // On retire le scrollListener, la flèche ne reviendra plus
+//         window.removeEventListener('scroll', handleScroll);
+//     }
+// }
+
+// enlever arrow si scroll
 function handleScroll() {
-    if (window.scrollY > 100) {
+    const arrow = document.getElementById('arrow');
+    if (arrow && window.scrollY > 100) { // 100 : change le seuil selon ton besoin
         arrow.classList.add('hidden');
         // On retire le scrollListener, la flèche ne reviendra plus
         window.removeEventListener('scroll', handleScroll);
     }
 }
-
 window.addEventListener('scroll', handleScroll);
 
-// window.addEventListener('scroll', () => {
-//     if (window.scrollY > 100) { // change le seuil selon ton besoin
-//         arrow.classList.add('hidden');
-//     } else {
-//         arrow.classList.remove('hidden');
-//     }
-// });
 
-// js
-// const arrow = document.getElementById('arrow');
-
-
-// Ou, si tu veux que **n'importe où** sur la page fasse disparaître les deux :
-document.body.addEventListener('click', disparaitre);
 
 
 
@@ -49,40 +50,58 @@ links.forEach(link => {
         
         // Sinon (desktop), tu peux ignorer ou garder le comportement
     });
-    if ('nav_link:hover', 'cv:hover') {
-            this.classList.remove('active');
-        }
+    // if ('nav_link:hover', 'cv:hover') {
+    //         this.classList.remove('active');
+    //     }  j'enlève suite corrigé CLAUDE 
 })
 // --------------- M O D A L    C V ----------------
-// document.addEventListener('DOMContentLoaded', () => {
-//     const modalCv = document.querySelector('.modalCv');
-//     const modalImgCv = document.getElementById('modalImgCv');
-//     const closeBtnCv = modal.querySelector('.closeModalCvBtn');
-//     const openCv = document.querySelector('.openModalCvBtn'); 
-//         openCv.addEventListener('click') {
-//                 modalCv.style.display = 'flex';
-//                 document.body.style.overflow = 'hidden'; // bloque fond/ pas de défilement possible
-//             }
-//     });
+document.addEventListener('DOMContentLoaded', () => {
+    const modalCv = document.querySelector('.modalCv');
+    // const modalImgCv = document.getElementById('modalImgCv'); 
+    // j'enlève suite corrigé CLAUDE : modalImgCv etait déjà en comm ds index
+    const closeBtnCv = modal.querySelector('.closeModalCvBtn');
+    const openCv = document.querySelector('.openModalCvBtn'); 
+        // openCv.addEventListener('click')  ----------- MU
+        //         modalCv.style.display = 'flex';
+        //         document.body.style.overflow = 'hidden'; // bloque fond/ pas de défilement possible
+        // Fonction pour ouvrir modalCv
+    const openModalCv = () => {
+        if (modalCv) {
+            modalCv.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // bloque fond
+        }
+    };
 
-    // const closeModalCv = () => {
+    // Fonction pour fermer modalCv
+    const closeModalCv = () => {
+        if (modalCv) {
+            modalCv.style.display = 'none';
+            document.body.style.overflow = ''; // débloque fond
+        }
+    };  
+    // // fermeture si on click en dehors de l’img
+    // modal.addEventListener('click', e => {
+    //     if (e.target === modalCv) { // clic hors image ferme modale
+    //         closeModalCv();
+    //     }
+    // });
+    // // fermeture au clavier / avec echap
+    // document.addEventListener('keydown', e => {
+    //     if (e.key === 'Escape' && modalCv.style.display === 'flex') {
+    //         closeModalCv();
+    //     }      
+    });
+// Fermeture avec le bouton close
+if (closeBtnCv) {
+    closeBtnCv.addEventListener('click', closeModalCv);
+}
+    // const closeModalCv = () => { ---------------MU
     //     modal.style.display = 'none';
     //     document.body.style.overflow = ''; // débloque fond
     // }
 
     // closeBtnCv.addEventListener('click', closeModalCv);
 
-    // // fermeture si on click en dehors de l’img
-    // modal.addEventListener('click', e => {
-    //     if (e.target === modal) { // clic hors image ferme modale
-    //         closeModal();
-    //     }
-    // });
-    // // fermeture au clavier / avec echap
-    // document.addEventListener('keydown', e => {
-    //     if (e.key === 'Escape' && modal.style.display === 'flex') {
-    //         closeModal();
-    //     }
     // });
 
 

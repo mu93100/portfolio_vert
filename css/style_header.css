@@ -70,7 +70,8 @@ header {
     margin: 0 1rem;
 }
 .nav ul li a, .nav_mobile ul li a, #cv{
-    display: block;
+    display: flex;
+        /* display: block; */
 }
 
 .nav_mobile ul {
@@ -226,7 +227,8 @@ Grands écrans			≥ 1200	@media (min-width: 1200px) */
         align-items: start;
     }
     .green_mil {
-        display: block;
+    display: flex;
+        /* display: block; */
     }
     
 }
