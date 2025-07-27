@@ -124,8 +124,7 @@ main {
     /* min-height: 25rem; */
     /* container-type: inline-size; */
     margin: 10rem 10rem 20rem auto;
-    padding: 0.7rem 0.7rem;
-    margin-left: auto;
+    padding: 0.7rem 0.7rem;  
     /* align-self: end; */
 }
 
@@ -376,17 +375,15 @@ footer {
 @media screen and (max-width: 767px) {
     .container_contact {
         width: 60%;
-        min-height: 22rem;
+        min-height: 23rem;
         margin: 10rem 4rem 15rem auto;
-        padding: 0.15rem 0.7rem 2rem auto; 
+        padding: 0.15rem 0.7rem 3rem auto; 
     }
     .container_contact p, .container_contact a {
         padding-top: 0;
         font-size: small;
     }
-    /* #portfolio {
-        scroll-margin-top: 26rem; 
-    } */  
+
     .container_work {
         padding: 3rem auto 1.5rem 0;
         padding-left: 0;
