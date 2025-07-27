@@ -141,7 +141,7 @@ h1 {
     color: rgb(26, 46, 25);
 }
 
-a :hover {
+a:hover {
     color: rgb(4, 243, 111); 
 }
 /* --------------- C A R D   W O R K ---------------- */
@@ -378,11 +378,10 @@ footer {
         width: 60%;
         min-height: 22rem;
         margin: 10rem 4rem 15rem auto;
-        padding: 0.15rem 0.7rem; 
-
+        padding: 0.15rem 0.7rem 2rem auto; 
     }
     .container_contact p, .container_contact a {
-        padding-top: .2rem;
+        padding-top: 0;
         font-size: small;
     }
     /* #portfolio {
@@ -414,18 +413,8 @@ footer {
         /* display: block; */    }
     .merci_mobile_p {
     display: flex;
-        /* display: block; */    }
-
-
-
-
-
-
-
-
-
-
-
+        /* display: block; */    
+    }
 
 
 
