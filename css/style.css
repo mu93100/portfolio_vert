@@ -375,7 +375,7 @@ footer {
 @media screen and (max-width: 767px) {
     .container_contact {
         width: 60%;
-        min-height: 23rem;
+        /* min-height: 23rem; */
         margin: 10rem 4rem 15rem auto;
         padding: 0.15rem 0.7rem 3rem auto; 
     }
@@ -441,9 +441,7 @@ footer {
         margin: 0;
         /* white-space: nowrap; */
     }
-    #contact {
-        scroll-margin-top: 19rem; 
-    }
+
     #portfolio {
         scroll-margin-top: 15rem; 
     }
