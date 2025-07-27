@@ -341,8 +341,8 @@ footer {
     transform: scale(1.5);
     transition: transform 0.2s;
     z-index:2;
-  }
-  
+}
+
 /* ------------------------  R E S P O N S I V E  ----------------------*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .marquee_container{
@@ -524,5 +524,10 @@ footer {
     .cvBtn{
         flex-direction: row;
         gap: 0;
+    }
+
+    /* ----------------------- L O U P E    C V ------------------------- */
+    .imgCv:hover {
+        transform: none;
     }
 }
