@@ -11,7 +11,6 @@ function disparaitre() {
 }
 document.body.addEventListener('click', disparaitre);
 
-
 // disparition arrow si scroll
 function handleScroll() {
     const arrow = document.getElementById('arrow');
@@ -21,7 +20,7 @@ function handleScroll() {
         window.removeEventListener('scroll', handleScroll);
     }
 }
-window.addEventListener('scroll', handleScroll);
+document.addEventListener('scroll', handleScroll);
 
 // + rajouter le link avec border qui change selon le scroll sur div contact ou portfolio ??
 // links N A V M O B I L E // claude qui marche border on click , disparait quand on mouseOver autre link 
@@ -47,54 +46,30 @@ navLinks.forEach(link => {
     });
 });
 
-// --------------- M O D A L    C V ----------------
+// // --------------- M O D A L    C V ----------------
 document.addEventListener('DOMContentLoaded', () => {
     const modalCv = document.querySelector('.modalCv');
-    // const modalImgCv = document.getElementById('modalImgCv'); 
-    // j'enlève suite corrigé CLAUDE : modalImgCv etait déjà en comm ds index
-    const closeBtnCv = modal.querySelector('.closeModalCvBtn');
-    const openCv = document.querySelector('.openModalCvBtn'); 
-        // openCv.addEventListener('click')  ----------- MU
-        //         modalCv.style.display = 'flex';
-        //         document.body.style.overflow = 'hidden'; // bloque fond/ pas de défilement possible
-        // Fonction pour ouvrir modalCv
-    const openModalCv = () => {
-        if (modalCv) {
+    const closeBtnCv = document.querySelector('.closeModalCvBtn');
+    const openCvBtn = document.querySelector('.openModalCvBtn'); // Tous les boutons CV
+    const openCvBtns = document.querySelectorAll('.openModalCvBtn'); // pour nav desktop et navMobile
+
+    // ouvrir modal CV
+    openCvBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
             modalCv.style.display = 'flex';
-            document.body.style.overflow = 'hidden'; // bloque fond
-        }
-
-    // Fonction pour fermer modalCv
-    const closeModalCv = () => {
-        if (modalCv) {
-            modalCv.style.display = 'none';
-            document.body.style.overflow = ''; // débloque fond
-        }
-    
-    // // fermeture si on click en dehors de l’img
-    // modal.addEventListener('click', e => {
-    //     if (e.target === modalCv) { // clic hors image ferme modale
-    //         closeModalCv();
-    //     }
-    // });
-    // // fermeture au clavier / avec echap
-    // document.addEventListener('keydown', e => {
-    //     if (e.key === 'Escape' && modalCv.style.display === 'flex') {
-    //         closeModalCv();
-    //     }      
-    // });
-    // Fermeture avec le bouton close
+            document.body.style.overflow = 'hidden';
+        });
+    });
+// fermer modal CV
     if (closeBtnCv) {
-        closeBtnCv.addEventListener('click', closeModalCv);
-    }
-    // const closeModalCv = () => { ---------------MU
-    //     modal.style.display = 'none';
-    //     document.body.style.overflow = ''; // débloque fond
-    // }
-
-    // closeBtnCv.addEventListener('click', closeModalCv);
-
-    // });
+        closeBtnCv.addEventListener('click', (e) => {
+            e.preventDefault();
+            modalCv.style.display = 'none';
+            document.body.style.overflow = '';
+        });
+    };
+    
 });
 
 
@@ -105,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => { // juste pour que ts les e
     const modal = document.querySelector('.modalDetail');
     const modalImg = document.getElementById('modalImg');
     const closeBtn = modal.querySelector('.closeModalBtn');
-
+    
     const closeModal = () => {
         modal.style.display = 'none';
         if (modalImg) modalImg.src = '';

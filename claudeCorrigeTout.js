@@ -21,10 +21,10 @@ function handleScroll() {
     }
 }
 
-window.addEventListener('scroll', handleScroll);
+document.addEventListener('scroll', handleScroll);
 
 // Ou, si tu veux que **n'importe où** sur la page fasse disparaître les deux :
-document.body.addEventListener('click', disparaitre);
+document.addEventListener('click', disparaitre);
 
 // links N A V M O B I L E 
 const navLinks = document.querySelectorAll('.nav_link');
@@ -78,7 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
             openModalCv();
         });
     });
-
+        // if (openModalCv) {
+        //     openModalCv.addEventListener('click', openModalCv);
+        // }
     // Fermeture avec le bouton close
     if (closeBtnCv) {
         closeBtnCv.addEventListener('click', closeModalCv);
@@ -101,6 +103,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+
+// --------------- L O U P E    C V ------------------------------------
+img.addEventListener('mouseenter', () => {
+    loupe.style.display = 'block';
+  });
+  img.addEventListener('mouseleave', () => {
+    loupe.style.display = 'none';
+  });
+  img.addEventListener('mousemove', (e) => {
+    // logique de positionnement/zoom identique à avant
+  });
 // --------------- M O D A L C A R D W O R K - CORRIGÉ ----------------
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.querySelector('.modalDetail');
