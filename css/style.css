@@ -348,17 +348,11 @@ footer {
 
 
 
-
-
-
-
-
-
-
 @media screen and (max-width: 767px) {
     .container_contact {
         width: 60%;
-        margin: 10rem 4rem 15rem auto;
+        /* margin: 10rem 4rem 15rem auto; */
+        margin: 10rem 4rem 0 auto;
         padding: 0.15rem 0.7rem 3rem auto; 
     }
 
@@ -425,7 +419,7 @@ footer {
         font-family: "Doto", sans-serif;    
         font-weight: 700;
         position: absolute;
-        left: 0; /* Position finale */
+        left: 3rem; /* Position finale */
         margin: 0;
     }
 

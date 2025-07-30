@@ -15,9 +15,15 @@ document.body.addEventListener('click', disparaitre);
 function handleScroll() {
     const arrow = document.getElementById('arrow');
     if (arrow && window.scrollY > 100) { // 100 : change le seuil selon ton besoin
-        arrow.classList.add('hidden');
-        // On retire le scrollListener, la flèche ne reviendra plus
-        window.removeEventListener('scroll', handleScroll);
+        // arrow.classList.add('hidden'); hidden n'enlève pas la taille de la div arrow
+        arrow.style.transition = 'opacity 0,3s ease'; // on prépare la transition
+        arrow.style.opacity = '0';
+        arrow.addEventListener('transitionend', () => {
+            arrow.style.display = 'none';
+        }, { once: true }); // === quand transition opacité est terminée, la div arrow disparait
+
+// n'occupe plus d'espace
+        window.removeEventListener('scroll', handleScroll); // On retire le scrollListener, la flèche ne reviendra plus
     }
 }
 document.addEventListener('scroll', handleScroll);
@@ -72,9 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
 });
 
-
-
-
 // --------------- M O D A L   C A R D   W O R K ----------------
 document.addEventListener('DOMContentLoaded', () => { // juste pour que ts les elements soient chargés avant exe du script
     const modal = document.querySelector('.modalDetail');
@@ -117,52 +120,5 @@ document.addEventListener('DOMContentLoaded', () => { // juste pour que ts les e
     });
 });
 
-// // Sélection des éléments modale et image modale
-// const modal = document.querySelector('.modalDetail');
-// const modalImg = document.getElementById('modalImg');
-// const closeBtn = modal.querySelector('.closeModalBtn');
-// // Sélection de tous les boutons 'ouvrir modale'
-// const openBtns = document.querySelectorAll('.openModalBtn');
-
-// openBtns.forEach(btn => {
-//     btn.addEventListener('click', () => {
-//         // Récupère l'URL de l'image depuis l'attribut data-img
-//         const imgSrc = btn.getAttribute('data-img');
-
-//         // Si l'image existe, met à jour la source de l'image modale
-//         if (imgSrc) {
-//             modalImg.src = imgSrc;
-//             modal.style.display = 'flex';
-
-//             // Optionnel : empêche le scroll page quand modale ouverte
-//             document.body.style.overflow = 'hidden';
-//         }
-//     });
-// });
-
-// // Fermeture de la modale au clic sur le bouton close
-// closeBtn.addEventListener('click', () => {
-//     modal.style.display = 'none';
-//     modalImg.src = ''; // nettoie l'image pour éviter flash d'ancienne image
-//     document.body.style.overflow = ''; // réactive le scroll page
-// });
-
-// // Fermeture modale au clic sur le fond (hors image)
-// modal.addEventListener('click', (e) => {
-//     if (e.target === modal) {
-//         modal.style.display = 'none';
-//         modalImg.src = '';
-//         document.body.style.overflow = '';
-//     }
-// });
-
-// // Optionnel : fermeture au clavier (touche Escape)
-// document.addEventListener('keydown', (e) => {
-//     if (e.key === "Escape" && modal.style.display === 'flex') {
-//         modal.style.display = 'none';
-//         modalImg.src = '';
-//         document.body.style.overflow = '';
-//     }
-// });
 
 
