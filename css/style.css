@@ -220,6 +220,36 @@ a:hover {
         0 0 0.2em rgb(135, 255, 165);
 } */
 
+.competence_fantome{
+    width: 100%;
+    height: auto;
+    display: flex;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    transition: none;
+}
+
+.container_competences{
+    background-image: url(../img/contact.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0.7rem 0.7rem;  
+    position: relative;
+}
+
+.container_competences h2 { 
+    position: absolute; top: 0.7rem; left: 0.7rem;
+    font-weight: 900;
+    font-size: clamp(0.2rem, 1.7cqw, 2.3rem);
+}
+
+.container_competences p{ 
+    position: absolute; top: 7rem; left: 0.7rem;
+    color: rgb(26, 46, 25);
+}
+span {
+    font-weight: 900;
+}
 /* ---------F O O T E R------------- */
 footer {
     display: flex;
@@ -343,9 +373,22 @@ footer {
     .container_contact p {
         padding-top: .1rem;
     }
+
+    .container_competences{
+        padding: 0.4rem 0.7rem;  
+    }
+    
+    .container_competences h2 { 
+        top: 0.3rem; 
+        font-size: clamp(0.2rem, 1.7cqw, 4rem);
+    }
+    
+    .container_competences p{ 
+        font-size: 0.7rem;
+        position: absolute; top: 2.5rem; left: 0.7rem;
+    }
+    
 }
-
-
 
 
 @media screen and (max-width: 767px) {
@@ -393,8 +436,12 @@ footer {
     .merci_mobile_p {
     display: flex;
     }
-
-
+    
+    .container_competences h2 { 
+        position: absolute; top: 0.7rem; left: 0.7rem;
+        font-weight: 900;
+        font-size: clamp(1.2rem, 2.8cqw, 5rem);
+    }
 
     /*  T E X T E   D E F I L A N T   M O B I L E  */
     .marquee_container {
