@@ -6,7 +6,6 @@
     font-family: "League Spartan", sans-serif;
     font-weight: 300;
     font-optical-sizing: auto;
-    /* font-style: light; */
     font-size: 0.85rem;
     line-height: 1.8rem;
     letter-spacing: 0.05rem; 
@@ -33,7 +32,6 @@ main {
     overflow: hidden; /* masque text qui déborde */
     width: 100%; /* largeur de la fenêtre */
     padding: 20rem 0 15rem 0;
-    /* margin: 4% 0 20rem 0; */
     box-sizing: border-box;
 }
 
@@ -50,30 +48,26 @@ main {
         /* 0.015em 0.015em 0.01em rgb(0, 0, 0),  */
         0 0 0.1em rgb(3, 253, 66),
         0 0 0.2em rgb(135, 255, 165);
-
-    /* text-shadow: 0.02em 0.02em 0.03em white,
-        0 0 .5em blue,
-        0 0 0.12em #0000ff; */ 
-        /* text shadow bleu */
     animation: defilement 8.5s linear infinite; 
-    /* Animation qui part de la droite de l'écran et sort complètement à gauche*/
 }
+
 @keyframes defilement {
     0% {
         transform: translateX(50%);
     } /* le text est déjà un peu sur la page et défile dés l'ouverture */
     100% {
-        transform: translateX(-100%); /* Finit totalement hors écran à gauche */
+        transform: translateX(-100%); /* finit totalement hors écran à gauche */
     }
 }
 
 .disparu {
     display: none !important;
-    /* pointer-events: none; */
 }
+
 .marquee_container_mobile {
     display: none;
 }
+
 .marquee_text_mobile {
     animation: none !important;
 }
@@ -93,10 +87,8 @@ main {
     flex-direction: row;
     justify-content: center;
     font-size: 1.2rem;
-    /* padding: 0.8rem 50%; */
     opacity: 0; /* toutes cachées au départ */
     animation: appear-then-blink 3s linear infinite;
-    /* animation: blink 3s linear infinite; */
 }
 @keyframes appear-then-blink {
     0%   { opacity: 1; }
@@ -116,16 +108,12 @@ main {
 
 .container_contact {
     width: 45%;
-    /* align-self: flex-end; */
     min-height: 35rem;
     background-image: url(../img/contact.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    /* min-height: 25rem; */
-    /* container-type: inline-size; */
     margin: 10rem 10rem 20rem auto;
     padding: 0.7rem 0.7rem;  
-    /* align-self: end; */
 }
 
 h1 {
@@ -147,16 +135,6 @@ a:hover {
 #portfolio {
     scroll-margin-top: 10rem; 
 }
-/* .ma-div {
-    position: relative;
-}
-.ma-div a {
-    display: block;
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    width: 100%; height: 100%;
-    z-index: 1;
-} */
 
 .container_work {
     width: 100%;
@@ -180,11 +158,11 @@ a:hover {
     position: relative;
     width: 100%;
 }
+
 .card_img {
     width: 100%;
     height: auto;
     display: flex;
-        /* display: block; */
     transition: opacity 0.3s ease;
 } 
 
@@ -216,16 +194,19 @@ a:hover {
 .merci_mobile {
     display: none;
 }
+
 .card_img_container:hover .merci_mobile {
     opacity: 1;
 }
+
 .merci_mobile_p {
     display: none;
     font-weight: 900;
     color: rgb(26, 46, 25);
 }
-.merci{
-    align-self: center;
+
+/* .merci{
+    margin-left: 0;
     margin: 3rem auto 3rem 0;
     padding-left: 0;
     font-size: 9rem !important;
@@ -235,17 +216,15 @@ a:hover {
     letter-spacing: .15rem;
     text-shadow: 0.02em 0.02em 0.03em white,
         0.015em 0.015em 0.0051em rgb(242, 108, 5),
-        0.015em 0.015em 0.01em rgb(0, 0, 0), 
-        0 0 0.1em rgb(1, 148, 38),
-        0 0 0.2em rgb(5, 252, 66);
-}
+        0 0 0.1em rgb(3, 253, 66),
+        0 0 0.2em rgb(135, 255, 165);
+} */
 
 /* ---------F O O T E R------------- */
 footer {
     display: flex;
     flex-direction: column;
     height: auto;
-    /* border: 1px dotted rgb(255, 0, 81); */
     position: relative;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -267,6 +246,7 @@ footer {
     opacity: 0.3;
     transition: opacity 0.3s ease;
 }
+
 .card_img_container:hover .openModalBtn {
     opacity: 1;
 }
@@ -284,6 +264,7 @@ footer {
     height: 4rem;
     transition: opacity 0.3s ease;    
 }
+
 .modalDetail, .modalCv {
     position: fixed;
     top: 0;
@@ -292,7 +273,6 @@ footer {
     height: 100vh;
     background-color: rgba(255, 253, 246, 0.85); 
     display: none;                     
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     padding-left: 5rem;
@@ -304,16 +284,18 @@ footer {
     max-height: 90vh;
     object-fit: contain;
     box-shadow: 5px 5px 5px rgba(27, 52, 33, 0.7);
-    /* box-shadow: 5px 5px 5px rgb(135, 255, 165, 0.7); */
 }
+
 .cvBtn{
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
+
 .closeModalBtn, .closeModalCvBtn {
     background-image: url(../img/retour.png);
 }
+
 .sendEmail {
     background: url(../img/email.png), white;
     object-fit: contain;
@@ -322,7 +304,6 @@ footer {
 
 .uploadCv {
     background-image: url(../img/telecharger2.png);
-    /* display: inline-block */
 }
 
 .closeModalBtn, .closeModalCvBtn,
@@ -347,11 +328,13 @@ footer {
     .marquee_container{
         padding: 20rem 0 20rem 0;
     }
+
     #arrow{
         transition: opacity 0.3s;
         width: 100%;
         padding-bottom: 8rem;
     }
+
     .container_contact {
         width: 60%;
         margin: 5rem 4rem 20rem auto;
@@ -375,10 +358,10 @@ footer {
 @media screen and (max-width: 767px) {
     .container_contact {
         width: 60%;
-        /* min-height: 23rem; */
         margin: 10rem 4rem 15rem auto;
         padding: 0.15rem 0.7rem 3rem auto; 
     }
+
     .container_contact p, .container_contact a {
         padding-top: 0;
         font-size: small;
@@ -393,24 +376,28 @@ footer {
         gap: O;
         flex-wrap: nowrap;
     }
+
     .card {
         padding-top: 3rem;
         width: 88%;
         margin-left: 0;
         justify-content: start;
     }
+
     .card-content{
         margin-left: 3rem;
     }
+
     .merci{
         display: none;
     }
+
     .merci_mobile{
     display: flex;
-        /* display: block; */    }
+    }
+
     .merci_mobile_p {
     display: flex;
-        /* display: block; */    
     }
 
 
@@ -419,11 +406,12 @@ footer {
     .marquee_container {
         display: none;
     }
+
     .marquee_text {
         animation: none !important;
     }
+
     .marquee_container_mobile {
-        /* overflow: hidden; */
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -431,43 +419,48 @@ footer {
         position: relative;
         container-type: inline-size;
     }
+
     .marquee_text_mobile .text2 {
         opacity: 0;
         font-family: "Doto", sans-serif;    
-        /* font-size: 3.9rem; */
         font-weight: 700;
         position: absolute;
         left: 0; /* Position finale */
         margin: 0;
-        /* white-space: nowrap; */
     }
 
     #portfolio {
         scroll-margin-top: 15rem; 
     }
+
     @container (min-width: 300px) {
         .marquee_text_mobile .text2 { font-size: 3.9rem; }
     }
+
     .ligne1 {
         top: 0rem;
         animation: arrive 1s ease forwards;
         animation-delay: 0s;
     }
+
     .ligne2 {
         top: 4.7rem;
         animation: arrive 1s ease forwards;
         animation-delay: 0.3s;
     }
+
     .ligne3 {
         top: 9.4rem;
         animation: arrive 1s ease forwards;
         animation-delay: 0.6s;
     }
+
     .ligne4 {
         top: 14.1rem;
         animation: arrive 1s ease forwards;
         animation-delay: 0.9s;
     }
+
     @keyframes arrive {
         from {
             opacity: 0;
@@ -488,22 +481,19 @@ footer {
         padding-left: 0;
         margin: 0;
     }
+
     .modalDetail img, .imgCv {
         max-width: 100vw;
         max-height: 80vh;
         margin: 0 0 2.5rem 0;
         padding: 0;
     }
-    
-/* 
-    .sendEmail, .uploadCv {
-        margin-left: 2rem;
-    } */
 
     .cvBtn{
         flex-direction: row;
         gap: 0;
     }
+
     .uploadCv {
         margin-left: 0;
     }
