@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    /* border: 1px dotted rgb(100, 45, 227); */
+    border: 1px dotted rgb(100, 45, 227);
     cursor: crosshair;
     font-family: "League Spartan", sans-serif;
     font-weight: 300;
@@ -580,7 +580,6 @@ footer {
 
     .container_competences{
         min-height: 21rem; 
-        min-height: 35rem;
         max-height: 53rem;
     }
     /* .container_competences{
