@@ -568,14 +568,28 @@ footer {
 }
 
 @media screen and (max-width: 400px){
+    .container_contact {
+        width: 65%;
+        margin: 10rem 4rem 0 auto;
+        padding: 0.15rem 0.7rem 3rem auto; 
+    }
+
     .card {
         width: 93%;
     }
 
     .container_competences{
         min-height: 21rem; 
+        min-height: 35rem;
+        max-height: 53rem;
     }
-
+    /* .container_competences{
+        /* padding: 0.1rem 0.7rem;  
+        width: 100%; 
+        background-image: url(../img/competence.jpg);
+        min-height: 35rem;
+        max-height: 53rem;
+    } */
     .container_competences h2 { 
         top: 0.2rem; 
         font-size: clamp(0.95rem, 1.5cqw, 3rem);
