@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    /* border: 1px dotted rgb(100, 45, 227); */
+    border: 1px dotted rgb(100, 45, 227);
     cursor: crosshair;
     font-family: "League Spartan", sans-serif;
     font-weight: 300;
@@ -220,6 +220,7 @@ a:hover {
         0 0 0.2em rgb(135, 255, 165);
 } */
 
+    /*   C O M P E T E N C E S   */  
 .competence_fantome{
     width: 100%;
     height: auto;
@@ -233,23 +234,25 @@ a:hover {
     background-image: url(../img/contact.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 0.7rem 0.7rem;  
     position: relative;
+    width: 100%;
 }
 
 .container_competences h2 { 
     position: absolute; top: 0.7rem; left: 0.7rem;
     font-weight: 900;
-    font-size: clamp(0.2rem, 1.7cqw, 2.3rem);
+    font-size: clamp(0.2rem, 1.6cqw, 2.3rem);
 }
 
 .container_competences p{ 
     position: absolute; top: 7rem; left: 0.7rem;
     color: rgb(26, 46, 25);
 }
+
 span {
     font-weight: 900;
 }
+
 /* ---------F O O T E R------------- */
 footer {
     display: flex;
@@ -353,8 +356,10 @@ footer {
     z-index:2;
 }
 
+
+
 /* ------------------------  R E S P O N S I V E  ----------------------*/
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     .marquee_container{
         padding: 20rem 0 20rem 0;
     }
@@ -374,18 +379,26 @@ footer {
         padding-top: .1rem;
     }
 
+    .card {
+        width: 45%;
+    }
     .container_competences{
-        padding: 0.4rem 0.7rem;  
+        padding: 0.1rem 0.7rem;  
+        width: 100%;
+        background-image: url(../img/competence.jpg);
+        min-height: 35rem;
+        max-height: 53rem;
     }
     
     .container_competences h2 { 
-        top: 0.3rem; 
-        font-size: clamp(0.2rem, 1.7cqw, 4rem);
+        top: 0; 
+        font-size: clamp(0.1rem, 1.3cqw, 2rem);
     }
     
     .container_competences p{ 
         font-size: 0.7rem;
-        position: absolute; top: 2.5rem; left: 0.7rem;
+        position: absolute; top: 3.5rem; 
+
     }
     
 }
@@ -393,8 +406,7 @@ footer {
 
 @media screen and (max-width: 767px) {
     .container_contact {
-        width: 60%;
-        /* margin: 10rem 4rem 15rem auto; */
+        width: 63%;
         margin: 10rem 4rem 0 auto;
         padding: 0.15rem 0.7rem 3rem auto; 
     }
@@ -437,16 +449,61 @@ footer {
     display: flex;
     }
     
+    /*   C O M P E T E N C E S   */  
+
+    /* .container_competences{
+        width: 100%;
+        aspect-ratio: 91.986 / 3100;
+        min-height: 3rem;  
+        max-height: 50rem;   
+        background-image: url(../img/competence.jpg);
+    } */
+
+    /* .container_competences{
+        padding: 0.1rem 0.7rem;  
+        width: 100%;
+        background-image: url(../img/competence.jpg);
+        min-height: 35rem;
+        max-height: 53rem;
+    } */
+
     .container_competences h2 { 
-        position: absolute; top: 0.7rem; left: 0.7rem;
-        font-weight: 900;
-        font-size: clamp(1.2rem, 2.8cqw, 5rem);
+        position: absolute; top: 0.25rem; left: 0.7rem;
+        font-size: clamp(1.05rem, 2cqw, 5rem);
     }
 
-    .container_competences p{ 
-    top: 2.5rem; 
-    line-height: 1.6rem;
+    .container_competences p{
+        top: 7rem; left: 3rem;
     }
+/* 
+.competence_fantome{
+    width: 100%;
+    height: auto;
+    display: flex;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    transition: none;
+}
+
+.container_competences{
+    background-image: url(../img/contact.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.container_competences h2 { 
+    position: absolute; top: 0.7rem; left: 0.7rem;
+    font-weight: 900;
+    font-size: clamp(0.2rem, 1.6cqw, 2.3rem);
+}
+
+.container_competences p{ 
+    position: absolute; top: 7rem; left: 0.7rem;
+    color: rgb(26, 46, 25);
+}
+
+ */
     /*  T E X T E   D E F I L A N T   M O B I L E  */
     .marquee_container {
         display: none;
@@ -517,6 +574,8 @@ footer {
         }
     }
 
+
+
     /* ------- MODAL ---------- */
     .modalDetail, .modalCv {
         width: 100vw;
@@ -542,8 +601,33 @@ footer {
     .uploadCv {
         margin-left: 0;
     }
+
     /* ----------------------- L O U P E    C V ------------------------- */
     .imgCv:hover {
         transform: none;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .card {
+        width: 93%;
+    }
+
+    .container_competences{
+        min-height: 21rem; 
+    }
+
+    .container_competences h2 { 
+        top: 0.2rem; 
+        font-size: clamp(0.95rem, 1.5cqw, 3rem);
+    }
+
+    .container_competences p{
+    top: 5rem; 
+    font-size: 0.7rem;
+    }
+
+    @container (min-width: 300px) {
+        .marquee_text_mobile .text2 { font-size: 3.5rem; }
     }
 }
