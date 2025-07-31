@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    border: 1px dotted rgb(100, 45, 227);
+    /* border: 1px dotted rgb(100, 45, 227); */
     cursor: crosshair;
     font-family: "League Spartan", sans-serif;
     font-weight: 300;
@@ -45,7 +45,6 @@ main {
     letter-spacing: .15rem;
     text-shadow: 0.02em 0.02em 0.03em white,
         0.015em 0.015em 0.0051em rgb(242, 108, 5),
-        /* 0.015em 0.015em 0.01em rgb(0, 0, 0),  */
         0 0 0.1em rgb(3, 253, 66),
         0 0 0.2em rgb(135, 255, 165);
     animation: defilement 8.5s linear infinite; 
@@ -449,24 +448,6 @@ footer {
     display: flex;
     }
     
-    /*   C O M P E T E N C E S   */  
-
-    /* .container_competences{
-        width: 100%;
-        aspect-ratio: 91.986 / 3100;
-        min-height: 3rem;  
-        max-height: 50rem;   
-        background-image: url(../img/competence.jpg);
-    } */
-
-    /* .container_competences{
-        padding: 0.1rem 0.7rem;  
-        width: 100%;
-        background-image: url(../img/competence.jpg);
-        min-height: 35rem;
-        max-height: 53rem;
-    } */
-
     .container_competences h2 { 
         position: absolute; top: 0.25rem; left: 0.7rem;
         font-size: clamp(1.05rem, 2cqw, 5rem);
@@ -475,35 +456,7 @@ footer {
     .container_competences p{
         top: 7rem; left: 3rem;
     }
-/* 
-.competence_fantome{
-    width: 100%;
-    height: auto;
-    display: flex;
-    transition: opacity 0.3s ease;
-    opacity: 0;
-    transition: none;
-}
 
-.container_competences{
-    background-image: url(../img/contact.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative;
-}
-
-.container_competences h2 { 
-    position: absolute; top: 0.7rem; left: 0.7rem;
-    font-weight: 900;
-    font-size: clamp(0.2rem, 1.6cqw, 2.3rem);
-}
-
-.container_competences p{ 
-    position: absolute; top: 7rem; left: 0.7rem;
-    color: rgb(26, 46, 25);
-}
-
- */
     /*  T E X T E   D E F I L A N T   M O B I L E  */
     .marquee_container {
         display: none;
