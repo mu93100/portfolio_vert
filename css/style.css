@@ -582,7 +582,7 @@ footer {
     }
 
     .container_competences{
-        min-height: 21rem; 
+        min-height: 25rem; 
         max-height: 53rem;
     }
 
@@ -598,5 +598,9 @@ footer {
 
     @container (min-width: 300px) {
         .marquee_text_mobile .text2 { font-size: 3.5rem; }
+    }
+
+    .imgCv {
+        max-height: 70vh; /*  A VERIFIER   */
     }
 }
