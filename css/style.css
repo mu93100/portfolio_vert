@@ -443,6 +443,10 @@ footer {
         font-size: clamp(1.2rem, 2.8cqw, 5rem);
     }
 
+    .container_competences p{ 
+    top: 2.5rem; 
+    line-height: 1.6rem;
+    }
     /*  T E X T E   D E F I L A N T   M O B I L E  */
     .marquee_container {
         display: none;
