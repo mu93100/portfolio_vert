@@ -447,7 +447,13 @@ footer {
     .merci_mobile_p {
     display: flex;
     }
-    
+    .container_competences{
+        /* padding: 0.1rem 0.7rem;  
+        width: 100%; */
+        background-image: url(../img/competence.jpg);
+        min-height: 35rem;
+        max-height: 53rem;
+    }
     .container_competences h2 { 
         position: absolute; top: 0.25rem; left: 0.7rem;
         font-size: clamp(1.05rem, 2cqw, 5rem);
