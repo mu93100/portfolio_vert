@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    border: 1px dotted rgb(100, 45, 227);
+    /* border: 1px dotted rgb(100, 45, 227); */
     cursor: crosshair;
     font-family: "League Spartan", sans-serif;
     font-weight: 300;
@@ -30,7 +30,7 @@ main {
 /* ------------------------- T E X T E   D E F I L A N T --------------------------- */
 .marquee_container {
     overflow: hidden; /* masque text qui déborde */
-    width: 100%; /* largeur de la fenêtre */
+    width: 100%; /* limites : largeur de la fenêtre */
     padding: 20rem 0 15rem 0;
     box-sizing: border-box;
 }
@@ -52,8 +52,8 @@ main {
 
 @keyframes defilement {
     0% {
-        transform: translateX(50%);
-    } /* le text est déjà un peu sur la page et défile dés l'ouverture */
+        transform: translateX(50%); /* le text est déjà un peu sur la page et défile dés l'ouverture */
+    } 
     100% {
         transform: translateX(-100%); /* finit totalement hors écran à gauche */
     }
@@ -86,7 +86,7 @@ main {
     flex-direction: row;
     justify-content: center;
     font-size: 1.2rem;
-    opacity: 0; /* toutes cachées au départ */
+    opacity: 0; /* flèches cachées au départ */
     animation: appear-then-blink 3s linear infinite;
 }
 @keyframes appear-then-blink {
@@ -572,7 +572,7 @@ footer {
 @media screen and (max-width: 400px){
     .container_contact {
         width: 65%;
-        min-height: 25rem;
+        min-height: 29rem;
         margin: 10rem 4rem 0 auto;
         padding: 0.15rem 0.7rem 3rem auto; 
     }
@@ -585,13 +585,7 @@ footer {
         min-height: 21rem; 
         max-height: 53rem;
     }
-    /* .container_competences{
-        /* padding: 0.1rem 0.7rem;  
-        width: 100%; 
-        background-image: url(../img/competence.jpg);
-        min-height: 35rem;
-        max-height: 53rem;
-    } */
+
     .container_competences h2 { 
         top: 0.2rem; 
         font-size: clamp(0.95rem, 1.5cqw, 3rem);
