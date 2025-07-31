@@ -406,9 +406,11 @@ footer {
 @media screen and (max-width: 767px) {
     .container_contact {
         width: 63%;
+        min-height: 35rem;
         margin: 10rem 4rem 0 auto;
         padding: 0.15rem 0.7rem 3rem auto; 
     }
+
 
     .container_contact p, .container_contact a {
         padding-top: 0;
@@ -570,6 +572,7 @@ footer {
 @media screen and (max-width: 400px){
     .container_contact {
         width: 65%;
+        min-height: 25rem;
         margin: 10rem 4rem 0 auto;
         padding: 0.15rem 0.7rem 3rem auto; 
     }
