@@ -413,6 +413,9 @@ footer {
         padding: 0.15rem 0.7rem 3rem auto; 
     }
 
+    h1 {
+        margin-bottom: 4rem;
+    }
 
     .container_contact p, .container_contact a {
         padding-top: 0;
@@ -575,6 +578,10 @@ footer {
         min-height: 29rem;
         margin: 10rem 4rem 0 auto;
         padding: 0.15rem 0.7rem 3rem auto; 
+    }
+
+    h1 {
+        margin-bottom: 2rem;
     }
 
     .card {
