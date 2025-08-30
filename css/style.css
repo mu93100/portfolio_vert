@@ -578,6 +578,7 @@ footer {
         min-height: 29rem;
         margin: 10rem 4rem 0 auto;
         padding: 0.15rem 0.7rem 3rem auto; 
+        background-color: pink;
     }
 
     h1 {
