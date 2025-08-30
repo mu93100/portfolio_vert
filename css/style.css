@@ -272,7 +272,7 @@ footer {
     margin: 0;
     padding: 0;
     z-index: 10;
-    position: absolute; top: 1rem; right: -3rem;
+    position: absolute; top: -1rem; right: -3rem;
 }
 
 
@@ -595,12 +595,12 @@ footer {
     }
 
     .container_competences h2 { 
-        top: 0.2rem; 
+        top: 0.15rem; 
         font-size: clamp(0.95rem, 1.5cqw, 3rem);
     }
 
     .container_competences p{
-    top: 5rem; 
+    top: 3.5rem; 
     font-size: 0.7rem;
     }
 
