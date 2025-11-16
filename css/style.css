@@ -70,8 +70,8 @@ main {
 .marquee_text_mobile {
     animation: none !important;
 }
-/*----------------------- F L E C H E ------------------------  */
 
+/*----------------------- F L E C H E ------------------------  */
 #arrow {
     transition: opacity 0.3s;
     width: 100%;
@@ -99,6 +99,14 @@ main {
 #arrow3{ animation-delay: 2.3s; }
 #arrow4{ animation-delay: 2.7s }
 #arrow5{ animation-delay: 3.1s; }
+
+/* --------------  S T A G E  --------------  */
+.container_stage {
+    width: 45%;
+    min-height: 35rem;
+    margin: 10rem 10rem 20rem auto;
+    padding: 0.7rem;  
+}
 
 /* --------------- C O N T A C T ---------------- */
 #contact {
@@ -130,7 +138,6 @@ h1 {
 a:hover {
     color: rgb(4, 243, 111); 
 }
-
 
 /* --------------- C A R D   W O R K ---------------- */
 #portfolio {
