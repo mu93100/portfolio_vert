@@ -2,7 +2,6 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 0;
-    /* border: 1px dotted rgb(230, 149, 28); */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -14,7 +13,6 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
-
 }
 
 .container_mobile {
@@ -60,7 +58,6 @@ header {
     height: 1.8rem;
     display: none;
 }
-
 /* F I N dégradé */
 
 
@@ -109,7 +106,6 @@ header {
         0.015em 0.015em 0.0051em rgb(255, 255, 255),
         0 0 0.1em rgb(255, 255, 255),
         0 0 0.2em rgb(255, 255, 255);
-    /* 0.015em 0.015em 0.01em rgb(0, 0, 0),  */
     padding: 0.15rem 0 0 0;
     margin: 0;
     text-decoration: none;
@@ -139,7 +135,6 @@ header {
 .nav_link:focus, #cv:hover, #cv:focus {
     border-bottom: 0.1rem solid black;
 }
-
 
 
 /* 
@@ -185,7 +180,5 @@ Grands écrans			≥ 1200	@media (min-width: 1200px) */
 
     .green_mil {
         display: flex;
-        /* display: block; */
     }
-
 }

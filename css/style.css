@@ -101,7 +101,7 @@ main {
 #arrow5{ animation-delay: 3.1s; }
 
 /* --------------  S T A G E  --------------  */
-.container_stage {
+.container_encours {
     width: 45%;
     min-height: 35rem;
     margin: 10rem 10rem 20rem auto;
@@ -203,9 +203,9 @@ a:hover {
     display: none;
 }
 
-.card_img_container:hover .merci_mobile {
+/* .card_img_container:hover .merci_mobile {
     opacity: 1;
-}
+} */
 
 .merci_mobile_p {
     display: none;
@@ -264,7 +264,7 @@ footer {
     margin: 0;
     padding: 0;
     z-index: 10;
-    position: absolute; top: -1rem; right: -1rem;
+    position: absolute; top: -1rem; right: -4.5rem;
 }
 
 
@@ -378,7 +378,7 @@ footer {
     .container_competences {
         padding: 0.1rem 0.7rem;  
         width: 100%;
-        background-image: url(../img/competence.jpg);
+        /* background-image: url(../img/competence.jpg); */
         min-height: 35rem;
         max-height: 53rem;
     }
@@ -447,7 +447,7 @@ footer {
     display: flex;
     }
     .container_competences {
-        background-image: url(../img/competence.jpg);
+        /* background-image: url(../img/competence.jpg); */
         min-height: 35rem;
         max-height: 53rem;
     }
@@ -565,8 +565,11 @@ footer {
 }
 /* ------------------------  R E S P O N S I V E  mobile Iphone8 ----------------------*/
 @media screen and (max-width: 400px) {
-    .container_contact {
+    .container_encours{
         width: 65%;
+    }
+    .container_contact {
+        width: 75%;
         min-height: 29rem;
     }
 
@@ -579,6 +582,7 @@ footer {
     }
 
     .container_competences {
+        width: 100%;
         background-image: url(../img/competence_mobile.jpg);
         min-height: 25rem; 
         max-height: 53rem;
