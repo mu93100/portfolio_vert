@@ -102,10 +102,9 @@ main {
 
 /* --------------  S T A G E  --------------  */
 .container_encours {
-    width: 45%;
+    width: 65%;
     min-height: 35rem;
-    margin: 10rem 10rem 20rem auto;
-    padding: 0.7rem;  
+    margin: 10rem 10rem 20rem auto; 
 }
 
 /* --------------- C O N T A C T ---------------- */
@@ -363,6 +362,11 @@ footer {
         padding-bottom: 8rem;
     }
 
+    .container_encours{
+        width: 60%;
+        margin: 5rem 4rem 20rem auto;
+    }
+    
     .container_contact {
         width: 60%;
         margin: 5rem 4rem 20rem auto;
@@ -378,7 +382,6 @@ footer {
     .container_competences {
         padding: 0.1rem 0.7rem;  
         width: 100%;
-        /* background-image: url(../img/competence.jpg); */
         min-height: 35rem;
         max-height: 53rem;
     }
@@ -398,10 +401,18 @@ footer {
 
 /* ------------------------  R E S P O N S I V E  mobile ----------------------*/
 @media screen and (max-width: 767px) {
+    .container_encours{
+        width: 63%;
+        margin: 10rem 3.5rem 0 auto;
+    }    
+    
+    .container_encours .card-content{
+        margin-left: 0!important;
+    }
     .container_contact {
         width: 63%;
         min-height: 35rem;
-        margin: 10rem 4rem 0 auto;
+        margin: 10rem 3.5rem 0 auto;
         padding: 0.15rem 0.7rem 3rem auto; 
     }
 
@@ -446,18 +457,14 @@ footer {
     .merci_mobile_p {
     display: flex;
     }
-    .container_competences {
-        /* background-image: url(../img/competence.jpg); */
-        min-height: 35rem;
-        max-height: 53rem;
-    }
+    
     h2 { 
         position: absolute; top: 0.7rem; left: 0.7rem;
         font-size: clamp(1.05rem, 2cqw, 5rem);
     }
 
     .container_competences p {
-        top: 7rem; left: 3rem;
+        top: 4.5rem; left: 3rem;
     }
 
     /*  T E X T E   D E F I L A N T   M O B I L E  */
@@ -566,8 +573,9 @@ footer {
 /* ------------------------  R E S P O N S I V E  mobile Iphone8 ----------------------*/
 @media screen and (max-width: 400px) {
     .container_encours{
-        width: 65%;
+        width: 75%;
     }
+
     .container_contact {
         width: 75%;
         min-height: 29rem;
@@ -583,9 +591,8 @@ footer {
 
     .container_competences {
         width: 100%;
+        /* background-image: url(../img/competence.jpg); */
         background-image: url(../img/competence_mobile.jpg);
-        min-height: 25rem; 
-        max-height: 53rem;
     }
 
     h2 { 
