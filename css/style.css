@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    /* border: 1px dotted rgb(100, 45, 227); */
+    border: 1px dotted rgb(100, 45, 227);
     cursor: crosshair;
     font-family: "League Spartan", sans-serif;
     font-weight: 300;
@@ -31,7 +31,7 @@ main {
 .marquee_container {
     overflow: hidden; /* masque text qui déborde */
     width: 100%; /* limites : largeur de la fenêtre */
-    padding: 20rem 0 15rem 0;
+    padding: 15rem 0 10rem 0;
     box-sizing: border-box;
 }
 
@@ -100,11 +100,11 @@ main {
 #arrow4{ animation-delay: 2.7s }
 #arrow5{ animation-delay: 3.1s; }
 
-/* --------------  S T A G E  --------------  */
+/* -------------- E N    C O U R S --------------  */
 .container_encours {
     width: 65%;
-    min-height: 35rem;
-    margin: 10rem 10rem 20rem auto; 
+    /* min-height: 35rem; */
+    /* margin: 10rem 10rem 20rem auto;  */
 }
 
 /* --------------- C O N T A C T ---------------- */
@@ -196,6 +196,10 @@ a:hover {
 
 .container_contact a:hover, .card-content a:hover {
     color: rgb(4, 243, 111);
+}
+
+.merci{
+    display: none;
 }
 
 .merci_mobile {
@@ -403,7 +407,7 @@ footer {
 @media screen and (max-width: 767px) {
     .container_encours{
         width: 63%;
-        margin: 10rem 3.5rem 0 auto;
+        margin: 0 auto 0 3rem;
     }    
     
     .container_encours .card-content{
@@ -411,9 +415,10 @@ footer {
     }
     .container_contact {
         width: 63%;
-        min-height: 35rem;
-        margin: 10rem 3.5rem 0 auto;
-        padding: 0.15rem 0.7rem 3rem auto; 
+        min-height: 20rem;
+        background-size: cover;
+        margin: 10rem auto 0 3rem;
+        padding: 0.15rem 0.7rem 0 auto; 
     }
 
     h1 {
@@ -446,10 +451,9 @@ footer {
         margin-left: 3rem;
     }
 
-    .merci {
-        display: none;
-    }
-
+    .merci{
+    display: block;
+}
     .merci_mobile {
     display: flex;
     }
@@ -578,7 +582,7 @@ footer {
 
     .container_contact {
         width: 75%;
-        min-height: 29rem;
+        /* min-height: 29rem; */
     }
 
     h1 {
