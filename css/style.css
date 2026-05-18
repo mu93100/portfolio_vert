@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    border: 1px dotted rgb(100, 45, 227);
+    /* border: 1px dotted rgb(100, 45, 227); */
     cursor: crosshair;
     font-family: "League Spartan", sans-serif;
     font-weight: 300;
@@ -101,13 +101,14 @@ main {
 #arrow5{ animation-delay: 3.1s; }
 
 /* -------------- E N    C O U R S --------------  */
-.container_encours {
+.container_encours  {
     width: 65%;
     /* min-height: 35rem; */
-    /* margin: 10rem 10rem 20rem auto;  */
+    margin: 10rem 10rem 5rem auto; 
 }
 
 /* --------------- C O N T A C T ---------------- */
+/* --------------- C O M P E T E N C E S -------- */ 
 #contact {
     scroll-margin-top: 19rem; 
 }
@@ -118,7 +119,7 @@ main {
     background-image: url(../img/contact.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    margin: 10rem 10rem 20rem auto;
+    margin: 10rem 10rem 5rem auto;
     padding: 0.7rem;  
 }
 
@@ -137,7 +138,41 @@ h1 {
 a:hover {
     color: rgb(4, 243, 111); 
 }
+/* -------------- C O M P E T E N C E S -------------- */  
+/* .competence_fantome {   T E S T  18/05 SOIR * * * * * * * * 
+    width: 100%;
+    height: auto;
+    display: flex;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    transition: none;
+} */
 
+.container_competences {
+    background-image: url(../img/contact.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    width: 45%;
+    min-height: 35rem;
+    margin: 10rem 10rem 5rem auto;
+}
+
+h2 { 
+    position: absolute; top: 0.7rem; left: 0.7rem;
+    font-weight: 900;
+    font-size: clamp(0.2rem, 1.6cqw, 2.3rem);
+}
+
+.container_competences p { 
+    position: absolute; top: 7rem; left: 0.7rem;
+    color: rgb(26, 46, 25);
+    margin: 0.7rem;
+}
+
+span {
+    font-weight: 900;
+}
 /* --------------- C A R D   W O R K ---------------- */
 #portfolio {
     scroll-margin-top: 10rem; 
@@ -214,39 +249,6 @@ a:hover {
     display: none;
     font-weight: 900;
     color: rgb(26, 46, 25);
-}
-
-    /*   C O M P E T E N C E S   */  
-.competence_fantome {
-    width: 100%;
-    height: auto;
-    display: flex;
-    transition: opacity 0.3s ease;
-    opacity: 0;
-    transition: none;
-}
-
-.container_competences {
-    background-image: url(../img/contact.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative;
-    width: 100%;
-}
-
-h2 { 
-    position: absolute; top: 0.7rem; left: 0.7rem;
-    font-weight: 900;
-    font-size: clamp(0.2rem, 1.6cqw, 2.3rem);
-}
-
-.container_competences p { 
-    position: absolute; top: 7rem; left: 0.7rem;
-    color: rgb(26, 46, 25);
-}
-
-span {
-    font-weight: 900;
 }
 
 /* ---------F O O T E R------------- */
@@ -405,16 +407,15 @@ footer {
 
 /* ------------------------  R E S P O N S I V E  mobile ----------------------*/
 @media screen and (max-width: 767px) {
-    .container_encours{
-        width: 63%;
-        margin: 0 auto 0 3rem;
+    .container_encours, .container_contact, .container_competences {
+        width: 80%;
+        margin: 0 3rem 0 auto;
     }    
     
     .container_encours .card-content{
         margin-left: 0!important;
     }
     .container_contact {
-        width: 63%;
         min-height: 20rem;
         background-size: cover;
         margin: 10rem auto 0 3rem;
@@ -576,14 +577,10 @@ footer {
 }
 /* ------------------------  R E S P O N S I V E  mobile Iphone8 ----------------------*/
 @media screen and (max-width: 400px) {
-    .container_encours{
-        width: 75%;
-    }
-
-    .container_contact {
-        width: 75%;
-        /* min-height: 29rem; */
-    }
+    .container_encours, .container_contact, .container_competences {
+        width: 80%;
+        margin: 0 2rem 5rem auto;
+    } 
 
     h1 {
         margin-bottom: 2rem;
@@ -594,7 +591,7 @@ footer {
     }
 
     .container_competences {
-        width: 100%;
+        /* width: 100%; */
         /* background-image: url(../img/competence.jpg); */
         background-image: url(../img/competence_mobile.jpg);
     }
