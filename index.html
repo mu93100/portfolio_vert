@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M U R I E L E H L I N G E R</title>
-    <link rel="icon" type="image/png" href="img/logoM.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">     -->
-    <link rel="stylesheet" href="./css/style_header.css">
-    <link rel="stylesheet" href="./css/style.css">
-  </head>
 
-  <body>
-    <header>
-      <div class="container_header">
-        <div class="green">
-          <p class="name">muriel ehlinger</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M U R I E L E H L I N G E R</title>
+  <link rel="icon" type="image/png" href="img/logoM.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">     -->
+  <link rel="stylesheet" href="./css/style_header.css">
+  <link rel="stylesheet" href="./css/style_modal.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container_header">
+      <div class="green">
+        <p class="name">muriel ehlinger</p>
+      </div>
+
+      <div class="green1">
+        <a href="#portfolio" class="portfolio nav_link">portfolio</a>
+        <!--#portfolio === scroll jusqu'à id ="portfolio"-->
+      </div>
+
+      <div class="green2">
+        <div>
+          <a href="#contact" class="nav_link contact ">contact</a>
         </div>
 
-        <div class="green1">
+        <!-- <div class="nav">
+            <ul>
+              <li><a href="#portfolio" class="nav_link">portfolio</a></li> 
+              <li><a id="cv" class="nav_link openModalCvBtn" role="button" data-img="./img/cv.jpg">cv</a></li>
+              <li><a href="#contact" class="nav_link">contact</a></li>
+            </ul> -->
+      </div>
+      <!-- <div class="green1">
           <p class="dev">développeuse web</p>
         </div>
 
@@ -30,60 +49,88 @@
           </div>
           <div class="nav">
             <ul>
-              <li><a href="#portfolio" class="nav_link">portfolio</a></li> <!--#truc === scroll jusqu'à id ="truc"-->
+              <li><a href="#portfolio" class="nav_link">portfolio</a></li> 
               <li><a id="cv" class="nav_link openModalCvBtn" role="button" data-img="./img/cv.jpg">cv</a></li>
               <li><a href="#contact" class="nav_link">contact</a></li>
             </ul>
-          </div>
-        </div>
-      </div>
-      <!--------  header m o b i l e  -------->
-      <div class="green_mil"></div>
+          </div> -->
+    </div>
+    </div>
+    <!--------  header m o b i l e  -------->
+    <div class="green_mil"></div>
 
-      <div class="container_mobile">   
-        <div class="nav_mobile">
-            <ul>
-              <li class="portfolio green2"><a href="#portfolio" class="nav_link">portfolio</a></li>
-              <li class="green1"><a id="cv_mobile" class="nav_link openModalCvBtn" role="button" data-img="./img/cv.jpg">cv</a></li>
-              <li class="contact green"><a href="#contact" class="nav_link">contact</a></li>
-            </ul>
-        </div>
+    <div class="container_mobile">
+      <div class="nav_mobile">
+        <ul>
+          <li class="portfolio green2"><a href="#portfolio" class="nav_link">portfolio</a></li>
+          <li class="green1"><a id="cv_mobile" class="nav_link openModalCvBtn" role="button"
+              data-img="./img/cv.jpg">cv</a></li>
+          <li class="contact green"><a href="#contact" class="nav_link">contact</a></li>
+        </ul>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <!-- <div class="mma">
-        <div class="mma_text">Je recherche un stage du 08/09 au 31/10/25</div>
-      </div> -->
-      <!--------------  T E X T   défilant -------------->
+  <main>
+      <!--------------  T E X T   défilant conceptrice UX/UI-------------->
       <div class="marquee_container" id="marqueeContainer">
-        <div class="marquee_text">Dernière réalisation</div>
+        <p class="marquee_text anim">Conceptrice UX/UI</p>
       </div>
 
       <div class="marquee_container_mobile" id="marqueeContainerMobile">
-        <div class="marquee_text_mobile">
-          <div class="text2 ligne1">Dernière</div>
-          <div class="text2 ligne2">réalisation</div>
+        <div class="marquee_text_mobile anim">
+          <p class="text2 ligne1">Conceptrice</p>
+          <p class="text2 ligne2">UX/UI</p>
         </div>
       </div>
+
       <!--------------  F L E C H E S  -------------->
       <div id="arrow">
-        <div id="arrow1">⎣   ⎣   ⎦   ⎦</div>
-        <div id="arrow2">⎣  ⎣  ⎦</div>
-        <div id="arrow3">⎣  ⎦</div>
+        <div id="arrow1">⎣ ⎣ ⎦ ⎦</div>
+        <div id="arrow2">⎣ ⎣ ⎦</div>
+        <div id="arrow3">⎣ ⎦</div>
         <div id="arrow4">⎥</div>
-        <div id="arrow5">⎥</div> 
+        <div id="arrow5">⎥</div>
       </div>
 
-<!--------------  E N   C O U R S  -------------->    
+      <!--------------  T E X T   défilant -------------->
+      <!-- <div class="marquee_container" id="marqueeContainer">
+        <p class="marquee_text anim">Dernière réalisation</p>
+        <p class="marquee_text anim">Conceptrice UX/UI</p>
+      </div> -->
+
+      <!-- <div class="marquee_container_mobile" id="marqueeContainerMobile">
+        <div class="marquee_text_mobile anim">
+          <p class="text2 ligne1">Dernière</p>
+          <p class="text2 ligne2">réalisation</p>
+        </div>
+      </div> -->
+
+    <div class="container_profil">
+      <!--  <div class="mma">
+        <div class="mma_text">Je recherche un stage du 08/09 au 31/10/25</div>
+      </div> -->
+      <h1>mon profil</h1>
+      <div class="accroche">
+        <p>Designeuse de formation et créatrice indépendante,<br>
+          je me forme aujourd'hui à la conception de sites web<br>
+          pour conjuguer sensibilité visuelle et compétences techniques.<br>
+          Je cherche un environnement collaboratif et serein où apporter cette expérience.</p>
+        <span class="doto">conception UX/UI</span> | <span class="doto"> accessibilité </span> | <span class="doto">
+          écoresponsabilité </span><br>
+
+      </div>
+
+      <!--------------  E N   C O U R S  -------------->
       <div>
-        <div class="container_encours"> 
+        <div class="container_encours">
           <div class="card_img_container ">
             <img class="card_img" src="./img/lacour.jpg" alt="La cour des Icônes">
             <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/lacour_img.webp"></div>
           </div>
           <div class="card-content">
-            <p>Création site<br>CMS Squarespace<br>Maquette sur Figma<br>Refonte du logo/ retouche des photos Figma et Photoshop<br>SEO sur Google search console</p>
+            <p>Création site<br>CMS Squarespace<br>Maquette sur Figma<br>Refonte du logo/ retouche des photos Figma et
+              Photoshop<br>SEO sur Google search console</p>
             <a href="https://www.lacourdesicones.eu/">Voir le site</a>
           </div>
         </div>
@@ -91,63 +138,65 @@
         <!------------ c o m p e t e n c e s ---------->
         <div class="container_competences">
           <img class="card_img competence_fantome" src="./img/contact.jpg" alt="Compétences">
-          <h1>compétences</h1>
+          <h2>compétences</h2>
           <p><span>Frontend</span>/ HTML CSS JS Bootstrap Tailwind<br>
             <span>Backend</span>/ PHP Symfony<br>
             <span>CMS</span>/ Wordpress Squarespace Wix<br>
             <span>No-code</span>/ Airtable Softr Zapier<br>
             <span>Base de données</span>/ MongoDB MySQL NoSQL<br>
             <span>DevOps</span>/ Docker Git CI/CD<br>
-            <span>Outils</span>/ Figma Canva Miro Photoshop Illustrator Git GitHub</p>
+            <span>Outils</span>/ Figma Canva Miro Photoshop Illustrator Git GitHub
+          </p>
         </div>
       </div>
-      <!--------------- C A R D   W O R K ----------------> 
-      <div class="container_work" id="portfolio"> 
-        <div class="card">
-          <div class="card_img_container">
-            <img class="card_img" src="./img/zest.jpg" alt="Projet Symfony">
-            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/zest__img.jpeg "></div>
-          </div>
-          <div class="card-content">
-            <p>Projet en cours<br>Wireframe MCD MLD MPD maquette prototypée sur Figma<br>Framework Symfony</p>
-            <!-- <a href="https://muriel.babinux.com/my_animal_3">Voir le site</a>
+    </div>
+    <!--------------- C A R D   W O R K ---------------->
+    <div class="container_work" id="portfolio">
+      <div class="card">
+        <div class="card_img_container">
+          <img class="card_img" src="./img/zest.jpg" alt="Projet Symfony">
+          <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/zest__img.jpeg "></div>
+        </div>
+        <div class="card-content">
+          <p>Projet en cours<br>Wireframe MCD MLD MPD maquette prototypée sur Figma<br>Framework Symfony</p>
+          <!-- <a href="https://muriel.babinux.com/my_animal_3">Voir le site</a>
             <a href="https://github.com/mu93100/my_animal.git">Voir le code</a> -->
-          </div>
         </div>
-        
-        <div class="card">
-          <div class="card_img_container">
-            <img class="card_img" src="./img/php_animal.jpg" alt="Formulaire en PHP">
-            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/animal_img.jpeg"></div>
-          </div>
-          <div class="card-content">
-            <p>PHP<br>HTML CSS<br>JS</p>
-            <a href="https://muriel.babinux.com/my_animal_3">Voir le site</a>
-            <a href="https://github.com/mu93100/my_animal.git">Voir le code</a>
-          </div>
-        </div>
+      </div>
 
-        <div class="card">
-          <div class="card_img_container">
-            <img class="card_img" src="./img/php.jpg" alt="BDD PHP">
-            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/php_img.png"></div>
-          </div>
-          <div class="card-content">
-            <p>Base de données<br>PhpMyAdmin<br>SQL</p>          
-          </div>
+      <div class="card">
+        <div class="card_img_container">
+          <img class="card_img" src="./img/php_animal.jpg" alt="Formulaire en PHP">
+          <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/animal_img.jpeg"></div>
         </div>
-
-        <div class="card">
-          <div class="card_img_container">
-            <img class="card_img" src="./img/portfolio.jpg" alt="html css">
-          </div>
-          <div class="card-content">
-            <p>HTML CSS<br>JS</p>
-            <a href="https://github.com/mu93100/portfolio_vert.git">Voir le code</a>
-          </div>
+        <div class="card-content">
+          <p>PHP<br>HTML CSS<br>JS</p>
+          <a href="https://muriel.babinux.com/my_animal_3">Voir le site</a>
+          <a href="https://github.com/mu93100/my_animal.git">Voir le code</a>
         </div>
+      </div>
 
-        <!-- <div class="card">
+      <div class="card">
+        <div class="card_img_container">
+          <img class="card_img" src="./img/php.jpg" alt="BDD PHP">
+          <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/php_img.png"></div>
+        </div>
+        <div class="card-content">
+          <p>Base de données<br>PhpMyAdmin<br>SQL</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card_img_container">
+          <img class="card_img" src="./img/portfolio.jpg" alt="html css">
+        </div>
+        <div class="card-content">
+          <p>HTML CSS<br>JS</p>
+          <a href="https://github.com/mu93100/portfolio_vert.git">Voir le code</a>
+        </div>
+      </div>
+
+      <!-- <div class="card">
           <div class="card_img_container">
             <img class="card_img" src="./img/bougie.jpg" alt="html css">
             <div class="openModalBtn" aria-label="Voir détail" data-img="./img/bougie_img.png"></div>
@@ -159,133 +208,136 @@
           </div>
         </div> -->
 
-        <div class="card">
-          <div class="card_img_container">
-            <img class="card_img" src="./img/devops.jpg" alt="Projet DevOps">
-            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/devops_img.jpeg"></div>
-          </div>
-          <div class="card-content">
-            <p>DevOps<br>Docker</p>
-            <a href="https://github.com/mu93100/klikFast.git">Voir le code</a>
-          </div>
+      <div class="card">
+        <div class="card_img_container">
+          <img class="card_img" src="./img/devops.jpg" alt="Projet DevOps">
+          <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/devops_img.jpeg"></div>
         </div>
-
-        <div class="card">
-          <div class="card_img_container">
-            <img class="card_img" src="./img/montreuil.jpg" alt="Wordpress">
-            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/montreuil_img.jpeg"></div>
-          </div>  
-          <div class="card-content">
-            <p>WORDPRESS</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card_img_container">
-            <img class="card_img" src="./img/no_code.jpg" alt="No Code">
-            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/airbnzik_img.jpeg"></div>
-          </div>
-          <div class="card-content">
-            <p>No-code<br>AIRTABLE<br>SOFTR </p>
-            <a href="https://airbnzikmu.preview.softr.app/?show-toolbar=true">Voir le site</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card_img_container">
-            <img class="card_img" src="./img/lltv.jpg" alt="Graphisme site LLTV">
-            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/lltv_img.jpeg"></div>
-          </div>  
-          <div class="card-content">
-            <p>GRAPHISME Site LookLikeTV<br>Logo</p>
-            <a href="https://www.lookliketv.com/">Voir le site</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card_img_container">
-            <img class="card_img" src="./img/cucina.jpg" alt="Recherche graphisme site web">
-            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/cucina_img.jpg"></div>
-          </div>
-          <div class="card-content">
-            <p>GRAPHISME web<br>Logo</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card_img_container">
-            <img class="card_img" src="./img/cineffable.jpg" alt="Graphisme print recherche">
-            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/cineffable_img.jpg"></div>
-          </div>
-          <div class="card-content">
-            <p>GRAPHISME print</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card_img_container">
-            <img class="card_img" src="./img/familia.jpg" alt="Graphisme print">
-            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/familia2_img.jpg"></div>
-          </div>
-          <div class="card-content">
-            <p>GRAPHISME print</p>
-
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card_img_container">
-            <img class="card_img" src="./img/voeux.jpg" alt="Graphisme print">
-            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/voeux_img.jpeg"></div>
-          </div>
-          <div class="card-content">
-            <p>GRAPHISME print</p>
-          </div>
-        </div>
-
-        <div class="card merci">
-          <div class="card_img_container">
-            <img class="card_img merci_mobile" src="./img/merci_mobile.jpg" alt="M E R C I">
-          </div>
-          <div class="card-content">
-            <p class="merci_mobile_p">MERCI</p>
-          </div>
-        </div>
-      </div>
-      
-      <!--------------- M O D A L   C A R D S ---------------->
-      <div class="modalDetail" style="display:none;">
-        <img id="modalImg" src="" alt="Détail">
-        <div class="closeModalBtn"></div>
-      </div>
-
-      <!--------------- C O N T A C T ---------------->
-      <div class="container_contact" id="contact">
-          <h1>contact</h1>
-          <a href="mailto:murielehlinger@gmail.com">murielehlinger@gmail.com</a><br>
-          <a href="https://www.linkedin.com/in/muriel-ehlinger-33434010/">linkedIn</a><br>
-          <a href="tel:+33686420135">(+33)6 86 42 01 35</a>
-      </div>
-      
-      <!--------------- M O D A L   C V ---------------->   
-      <div class="modalCv" style="display:none;">
-        <img class="imgCv" src="./img/cv.jpg" alt="CV">
-        <div class="cvBtn">
-          <a class="uploadCv" href="./img/cv_muriel_ehlinger.pdf" download></a>
-          <a class="sendEmail" href="mailto:murielehlinger@gmail.com"></a>
-          <div class="closeModalCvBtn"></div>
+        <div class="card-content">
+          <p>DevOps<br>Docker</p>
+          <a href="https://github.com/mu93100/klikFast.git">Voir le code</a>
         </div>
       </div>
 
-    </main>
-    <!--------------- F O O T E R ---------------->
-    <footer>
-        <div class="green2"></div>
-        <div class="green1"></div>
-        <div class="green"><div class="copyR">Copyright ©2025 muriel ehlinger</div></div>
-    </footer>
+      <div class="card">
+        <div class="card_img_container">
+          <img class="card_img" src="./img/montreuil.jpg" alt="Wordpress">
+          <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/montreuil_img.jpeg"></div>
+        </div>
+        <div class="card-content">
+          <p>WORDPRESS</p>
+        </div>
+      </div>
 
-    <script src="./script.js"></script>
-  </body>
+      <div class="card">
+        <div class="card_img_container">
+          <img class="card_img" src="./img/no_code.jpg" alt="No Code">
+          <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/airbnzik_img.jpeg"></div>
+        </div>
+        <div class="card-content">
+          <p>No-code<br>AIRTABLE<br>SOFTR </p>
+          <a href="https://airbnzikmu.preview.softr.app/?show-toolbar=true">Voir le site</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card_img_container">
+          <img class="card_img" src="./img/lltv.jpg" alt="Graphisme site LLTV">
+          <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/lltv_img.jpeg"></div>
+        </div>
+        <div class="card-content">
+          <p>GRAPHISME Site LookLikeTV<br>Logo</p>
+          <a href="https://www.lookliketv.com/">Voir le site</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card_img_container">
+          <img class="card_img" src="./img/cucina.jpg" alt="Recherche graphisme site web">
+          <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/cucina_img.jpg"></div>
+        </div>
+        <div class="card-content">
+          <p>GRAPHISME web<br>Logo</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card_img_container">
+          <img class="card_img" src="./img/cineffable.jpg" alt="Graphisme print recherche">
+          <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/cineffable_img.jpg"></div>
+        </div>
+        <div class="card-content">
+          <p>GRAPHISME print</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card_img_container">
+          <img class="card_img" src="./img/familia.jpg" alt="Graphisme print">
+          <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/familia2_img.jpg"></div>
+        </div>
+        <div class="card-content">
+          <p>GRAPHISME print</p>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card_img_container">
+          <img class="card_img" src="./img/voeux.jpg" alt="Graphisme print">
+          <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/voeux_img.jpeg"></div>
+        </div>
+        <div class="card-content">
+          <p>GRAPHISME print</p>
+        </div>
+      </div>
+
+      <div class="card merci">
+        <div class="card_img_container">
+          <img class="card_img merci_mobile" src="./img/merci_mobile.jpg" alt="M E R C I">
+        </div>
+        <div class="card-content">
+          <p class="merci_mobile_p">MERCI</p>
+        </div>
+      </div>
+    </div>
+
+    <!--------------- C O N T A C T ---------------->
+    <div class="container_contact card_img_container" id="contact">
+      <h2>contact</h2>
+      <a href="mailto:murielehlinger@gmail.com">murielehlinger@gmail.com</a><br>
+      <a href="https://www.linkedin.com/in/muriel-ehlinger-33434010/">linkedIn</a><br>
+      <a href="tel:+33686420135">(+33)6 86 42 01 35</a>
+      <img src="/img/openCv.png" class="cvBtn openModalCvBtn" alt="Voir mon CV">
+    </div>
+
+    <!--------------- M O D A L   C A R D S ---------------->
+    <div class="modalDetail" style="display:none;">
+      <img id="modalImg" src="" alt="Détail">
+      <div class="closeModalBtn"></div>
+    </div>
+
+    <!--------------- M O D A L   C V ---------------->
+    <div class="modalCv" style="display:none;">
+      <img class="imgCv" src="./img/cv.jpg" alt="CV">
+      <div class="cvBtn">
+        <a class="uploadCv" href="./img/cv_muriel_ehlinger.pdf" download></a>
+        <a class="sendEmail" href="mailto:murielehlinger@gmail.com"></a>
+        <div class="closeModalCvBtn"></div>
+      </div>
+    </div>
+
+  </main>
+  <!--------------- F O O T E R ---------------->
+  <footer>
+    <div class="green2"></div>
+    <div class="green1"></div>
+    <div class="green">
+      <div class="copyR">Copyright ©2025 muriel ehlinger</div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
 
 </html>

@@ -87,8 +87,6 @@ header {
 }
 
 .name,
-.dev,
-.ultra,
 .nav ul li a,
 #cv,
 .contact,
@@ -125,12 +123,8 @@ header {
     /* pour animation fluide */
 }
 
-.nav_link.active, #cv.active {
-    border-bottom: 0.1rem solid black;
-}
-
-.nav_link:hover,
-.nav_link:focus, #cv:hover, #cv:focus {
+.nav_link.active, #cv.active, .nav_link:hover,
+.nav_link:focus, #cv:hover, #cv:focus  {
     border-bottom: 0.1rem solid black;
 }
 
@@ -153,8 +147,6 @@ Grands écrans			≥ 1200	@media (min-width: 1200px) */
     }
 
     .name,
-    .dev,
-    .ultra,
     ul,
     .nav_mobile ul li a {
         font-size: 1rem;
