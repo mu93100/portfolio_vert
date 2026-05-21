@@ -86,6 +86,7 @@ header {
     box-sizing: border-box;
 }
 
+.text, 
 .name,
 .nav ul li a,
 #cv,

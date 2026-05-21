@@ -4,6 +4,7 @@
     /* border: 1px dotted rgb(100, 45, 227); */
     cursor: crosshair;
     font-family: "League Spartan", sans-serif;
+    /* font-family: "Cairo", sans-serif; */
     font-weight: 300;
     font-optical-sizing: auto;
     font-size: 0.85rem;
@@ -25,6 +26,8 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 5rem
+    ;
 }
 
 /* ------------------------- T E X T E   D E F I L A N T --------------------------- */
@@ -74,21 +77,27 @@ main {
 
 /*----------------------- P R O F I L ------------------------  */
 
-.container_profil{
+.container_text{
     width: 55%; 
-    padding: 4rem 8rem 4rem 0;
+    padding: 4rem 3rem 4rem 0;
     align-self: self-end;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.container_profil, .container_competences, .container_contact {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 h1 {
-    font-size: 2rem;
+    font-size: 5rem;
     font-weight: 900;
+    /* font-style: italic; */
+    line-height:0.65;
     /* font-size: clamp(1rem, 2.5cqw, 2.2rem); */
 }
-/*----------------------- A C C R O C H E ------------------------  */
-/* .accroche {
-    align-self: self-end;
-    padding: 4rem 8rem;
-} */
+
 .doto {
     font-size: 3.5rem;
     font-family: "Doto", sans-serif;
@@ -108,7 +117,7 @@ h1 {
         0 0 0.2em rgb(2, 242, 62);*/
         /* 0 0 0.1em rgb(3, 253, 66),
         0 0 0.2em rgb(135, 255, 165); 
-} */*/
+} */
 /*----------------------- F L E C H E ------------------------  */
 #arrow {
     transition: opacity 0.3s;
@@ -138,8 +147,6 @@ h1 {
 #arrow4{ animation-delay: 2.7s }
 #arrow5{ animation-delay: 3.1s; }
 
-/* -------------- E N    C O U R S --------------  */
-
 
 /* --------------- C O N T A C T ---------------- */
 /* --------------- C O M P E T E N C E S -------- */ 
@@ -147,27 +154,31 @@ h1 {
     scroll-margin-top: 19rem; 
 }
 
-.container_contact {
-    /* width: 55%; */
-    min-height: 35rem;
-    background-image: url(../img/contact.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    /* margin: 10rem 10rem 5rem auto; */
-    padding: 0.7rem;  
-}
-
 h2 {
+    font-weight: 900;
+    font-size: 12rem;
+    margin-bottom: 6rem;
+}
+/* h2 {
     font-weight: 900;
     font-size: clamp(1rem, 2.5cqw, 2.2rem);
     margin-bottom: 6rem;
-}
-
-.container_contact a, p {
-    font-size: clamp(.8rem, 2.5cqw, 0.95rem);
-    padding-top: .3rem;
+} */
+/*compétences h2 { 
+    position: absolute; top: 0.7rem; left: 0.7rem;
+    font-weight: 900;
+    font-size: clamp(0.2rem, 1.6cqw, 2.3rem);
+} */
+.container_contact a, p { /* POUR FONT -PROFIL COMPÉTENCES CONTACT  */
+    font-size: 1.2rem;
+    /* padding-top: .3rem; */
     color: rgb(26, 46, 25);
 }
+/* .container_contact a, p {
+    font-size: clamp(.8rem, 2.5cqw, 0.95rem);
+    /* padding-top: .3rem; */
+/*     color: rgb(26, 46, 25);
+} */
 
 /* -------------- C O M P E T E N C E S -------------- */  
 /* .competence_fantome {   T E S T  18/05 SOIR * * * * * * * * 
@@ -179,30 +190,14 @@ h2 {
     transition: none;
 } */
 
-.container_competences {
-    background-image: url(../img/contact.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative;
-    /* width: 55%; */
-    min-height: 35rem;
-    /* margin: 10rem 8rem 5rem auto; */
-}
-
-h2 { 
-    position: absolute; top: 0.7rem; left: 0.7rem;
-    font-weight: 900;
-    font-size: clamp(0.2rem, 1.6cqw, 2.3rem);
-}
-
-.container_competences p { 
-    position: absolute; top: 7rem; left: 0.7rem;
-    color: rgb(26, 46, 25);
-    margin: 0.7rem;
-}
 
 span {
-    font-weight: 900;
+    font-weight: 700;
+}
+hr {
+    height: 1px ;
+    color: black;
+    margin-bottom: -1.5rem;
 }
 /* --------------- C A R D   W O R K ---------------- */
 #portfolio {
@@ -324,11 +319,6 @@ footer {
         width: 100%;
         padding-bottom: 8rem;
     }
-
-    .container_encours{
-        width: 60%;
-        margin: 5rem 4rem 20rem auto;
-    }
     
     .container_contact {
         width: 60%;
@@ -356,7 +346,7 @@ footer {
     
     .container_competences p { 
         font-size: 0.7rem;
-        position: absolute; top: 3.5rem; 
+        /* position: absolute; top: 3.5rem;  */
 
     }
     
@@ -364,14 +354,11 @@ footer {
 
 /* ------------------------  R E S P O N S I V E  mobile ----------------------*/
 @media screen and (max-width: 767px) {
-    .container_encours, .container_contact, .container_competences {
+    .container_contact, .container_competences {
         width: 80%;
         margin: 0 3rem 0 auto;
     }    
     
-    .container_encours .card-content{
-        margin-left: 0!important;
-    }
     .container_contact {
         min-height: 20rem;
         background-size: cover;
@@ -501,7 +488,7 @@ footer {
 }
 /* ------------------------  R E S P O N S I V E  mobile Iphone8 ----------------------*/
 @media screen and (max-width: 400px) {
-    .container_encours, .container_contact, .container_competences {
+    .container_contact, .container_competences {
         width: 80%;
         margin: 0 2rem 5rem auto;
     } 
