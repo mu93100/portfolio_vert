@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    border: 1px dotted rgb(100, 45, 227);
+    /* border: 1px dotted rgb(100, 45, 227); */
     cursor: crosshair;
     font-family: "League Spartan", sans-serif;
     font-weight: 300;
@@ -102,24 +102,19 @@ main {
 
 /* -------------- E N    C O U R S --------------  */
 .container_encours {
-    width: 65%;
+    width: 45%;
     /* min-height: 35rem; */
-    /* margin: 10rem 10rem 20rem auto;  */
+    margin: 6rem 10rem 4rem auto; 
 }
 
 /* --------------- C O N T A C T ---------------- */
 #contact {
-    scroll-margin-top: 19rem; 
+    scroll-margin-top: 9rem; 
 }
 
 .container_contact {
-    width: 45%;
-    min-height: 35rem;
-    background-image: url(../img/contact.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 10rem 10rem 20rem auto;
-    padding: 0.7rem;  
+    width: 100%;
+    margin-top: 4rem;
 }
 
 h1 {
@@ -142,15 +137,18 @@ a:hover {
 #portfolio {
     scroll-margin-top: 10rem; 
 }
+#accueil{
+    scroll-margin-top: 9rem;
+}
 
 .container_work {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    justify-content: space-around;
+    justify-content: space-between;
     height: auto;
-    padding: 0 3rem;    
+    padding: 0 10rem;    
 }
 
 .card {
@@ -405,9 +403,21 @@ footer {
 
 /* ------------------------  R E S P O N S I V E  mobile ----------------------*/
 @media screen and (max-width: 767px) {
+    #contact{
+        scroll-margin-top: 1rem;
+    }
+    #portfolio {
+        scroll-margin-top: 10
+        rem; 
+    }
+
+    #accueil{
+        scroll-margin-top: 25rem;
+    }
+
     .container_encours{
         width: 63%;
-        margin: 0 auto 0 3rem;
+        margin: 10 auto 0 3rem;
     }    
     
     .container_encours .card-content{
@@ -425,10 +435,10 @@ footer {
         margin-bottom: 4rem;
     }
 
-    .container_contact p, .container_contact a {
-        padding-top: 0;
+    .container_contact p, .container_contact div p a {
+        padding: 0 auto auto 0.7rem;
         font-size: small;
-    }
+    } 
 
     .container_work {
         padding: 3rem auto 1.5rem 0;
@@ -436,7 +446,7 @@ footer {
         margin-left: 0;
         flex-direction: column;
         justify-content: start;
-        gap: O;
+        gap: 0;
         flex-wrap: nowrap;
     }
 
@@ -451,9 +461,10 @@ footer {
         margin-left: 3rem;
     }
 
-    .merci{
+    .merci {
     display: block;
-}
+    }
+
     .merci_mobile {
     display: flex;
     }
@@ -496,10 +507,6 @@ footer {
         position: absolute;
         left: 3rem; /* Position finale */
         margin: 0;
-    }
-
-    #portfolio {
-        scroll-margin-top: 15rem; 
     }
 
     @container (min-width: 300px) {
