@@ -27,110 +27,10 @@ main {
     flex-direction: column;
 }
 
-/* ------------------------- T E X T E   D E F I L A N T --------------------------- */
-.marquee_container {
-    overflow: hidden; /* masque text qui déborde */
-    width: 100%; /* limites : largeur de la fenêtre */
-    padding: 15rem 0 10rem 0;
-    box-sizing: border-box;
-}
-
-.marquee_text, .marquee_text_mobile {
-    display: inline-block;
-    white-space: nowrap;
-    font-size: 6rem;
-    font-family: "Doto", sans-serif;
-    font-weight: 700;
-    color: white;
-    letter-spacing: .15rem;
-    text-shadow: 0.02em 0.02em 0.03em white,
-        0.015em 0.015em 0.0051em rgb(242, 108, 5),
-        0 0 0.1em rgb(3, 253, 66),
-        0 0 0.2em rgb(135, 255, 165);
-    animation: defilement 8.5s linear infinite; 
-}
-
-@keyframes defilement {
-    0% {
-        transform: translateX(50%); /* le text est déjà un peu sur la page et défile dés l'ouverture */
-    } 
-    100% {
-        transform: translateX(-100%); /* finit totalement hors écran à gauche */
-    }
-}
-
-.disparu {
-    display: none !important;
-}
-
-.marquee_container_mobile {
-    display: none;
-}
-
-.marquee_text_mobile {
-    animation: none !important;
-}
-
-/*----------------------- F L E C H E ------------------------  */
-#arrow {
-    transition: opacity 0.3s;
-    width: 100%;
-    padding-bottom: 15rem;
-}
-#arrow.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-#arrow1, #arrow2, #arrow3, #arrow4, #arrow5 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 1.2rem;
-    opacity: 0; /* flèches cachées au départ */
-    animation: appear-then-blink 3s linear infinite;
-}
-@keyframes appear-then-blink {
-    0%   { opacity: 1; }
-    50%  { opacity: 0; }
-    100% { opacity: 0; }  
-}
-#arrow1{ animation-delay: 1.5s; }
-#arrow2{ animation-delay: 1.9s; }
-#arrow3{ animation-delay: 2.3s; }
-#arrow4{ animation-delay: 2.7s }
-#arrow5{ animation-delay: 3.1s; }
-
 /* -------------- E N    C O U R S --------------  */
 .container_encours {
     width: 45%;
-    /* min-height: 35rem; */
     margin: 6rem 10rem 4rem auto; 
-}
-
-/* --------------- C O N T A C T ---------------- */
-#contact {
-    scroll-margin-top: 9rem; 
-}
-
-.container_contact {
-    width: 100%;
-    margin-top: 4rem;
-}
-
-h1 {
-    font-weight: 900;
-    font-size: clamp(1rem, 2.5cqw, 2.2rem);
-    margin-bottom: 6rem;
-}
-
-.container_contact a, p {
-    font-size: clamp(.8rem, 2.5cqw, 0.95rem);
-    padding-top: .3rem;
-    color: rgb(26, 46, 25);
-}
-
-a:hover {
-    color: rgb(4, 243, 111); 
 }
 
 /* --------------- C A R D   W O R K ---------------- */
@@ -192,7 +92,7 @@ a:hover {
     transition: color 0.2s;
 }
 
-.container_contact a:hover, .card-content a:hover {
+.card-content a:hover {
     color: rgb(4, 243, 111);
 }
 
@@ -214,33 +114,58 @@ a:hover {
     color: rgb(26, 46, 25);
 }
 
-    /*   C O M P E T E N C E S   */  
-.competence_fantome {
-    width: 100%;
-    height: auto;
-    display: flex;
-    transition: opacity 0.3s ease;
-    opacity: 0;
-    transition: none;
+/* ----------------  C O M P E T E N C E S  ---------------- */  
+/* --------------- C O N T A C T ---------------- */
+#contact {
+    scroll-margin-top: 9rem; 
 }
 
-.container_competences {
+.container_fantome_desk {
     background-image: url(../img/contact.jpg);
+}
+
+.container_fantome_mob  {
+    background-image: url(../img/competence.jpg);
+    display: none;
+}
+
+.container_fantome_desk, .container_fantome_mob {
+    width: 100%;
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
-    width: 100%;
+    height: auto;
+    display: flex;
+    opacity: 1;
+}
+
+.container_fantome_mob {
+    display: none;
 }
 
 h2 { 
-    position: absolute; top: 0.7rem; left: 0.7rem;
+    position: absolute; top: 0.7rem; left: 1rem;
     font-weight: 900;
-    font-size: clamp(0.2rem, 1.6cqw, 2.3rem);
+    font-size: clamp(1.1rem, 2.5cqw, 2.2rem);
 }
 
-.container_competences p { 
-    position: absolute; top: 7rem; left: 0.7rem;
+.container_fantome_desk p, .container_fantome_mob p { 
+    position: absolute; top: 7rem; left: 1rem;
     color: rgb(26, 46, 25);
+    font-size: 1rem;
+    padding-right: 0.3rem;
+}
+
+.container_fantome_desk a { 
+    font-size: 1rem;
+}
+
+#contact a {
+    color: rgb(26, 46, 25);
+}
+
+a:hover {
+    color: rgb(4, 243, 111); 
 }
 
 span {
@@ -352,6 +277,7 @@ footer {
 
 
 
+/* ------------------------  R E S P O N S I V E  ----------------------*/
 /* ------------------------  R E S P O N S I V E  tablet ----------------------*/
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .marquee_container {
@@ -369,79 +295,70 @@ footer {
         margin: 5rem 4rem 20rem auto;
     }
     
-    .container_contact {
+    #contact {
         width: 60%;
         margin: 5rem 4rem 20rem auto;
     }
 
-    .container_contact p {
+    #contact p {
         padding-top: .1rem;
     }
 
     .card {
         width: 45%;
-    }
-    .container_competences {
-        padding: 0.1rem 0.7rem;  
-        width: 100%;
-        min-height: 35rem;
-        max-height: 53rem;
-    }
-    
-    h2 { 
-        top: 0; 
-        font-size: clamp(0.1rem, 1.3cqw, 2rem);
-    }
-    
-    .container_competences p { 
-        font-size: 0.7rem;
-        position: absolute; top: 3.5rem; 
-
-    }
-    
+    }    
 }
 
 /* ------------------------  R E S P O N S I V E  mobile ----------------------*/
 @media screen and (max-width: 767px) {
     #contact{
-        scroll-margin-top: 1rem;
+        scroll-margin-top: 10rem;
     }
     #portfolio {
-        scroll-margin-top: 10
-        rem; 
+        scroll-margin-top: 14rem; 
     }
 
     #accueil{
         scroll-margin-top: 25rem;
     }
 
+    main {
+        gap: 3rem;
+    }
+
     .container_encours{
-        width: 63%;
-        margin: 10 auto 0 3rem;
+        width: 70%;
+        height: auto;
+        margin-right: 3rem;
+        padding-right: 0;
     }    
     
     .container_encours .card-content{
         margin-left: 0!important;
     }
-    .container_contact {
-        width: 63%;
-        min-height: 20rem;
-        background-size: cover;
-        margin: 10rem auto 0 3rem;
-        padding: 0.15rem 0.7rem 0 auto; 
+
+    #contact .container_fantome_desk {
+        display: block;
     }
 
     h1 {
         margin-bottom: 4rem;
     }
 
-    .container_contact p, .container_contact div p a {
-        padding: 0 auto auto 0.7rem;
-        font-size: small;
+    h2 { 
+    position: absolute; top: 1rem;
+    }
+
+    .container_fantome_mob p, #contact a {
+        font-size: 0.9rem; 
+        top: 4.7rem;
+        padding-right: 0.3rem;
     } 
 
+
     .container_work {
-        padding: 3rem auto 1.5rem 0;
+        width: 85%;
+        padding: 0;
         padding-left: 0;
         margin-left: 0;
         flex-direction: column;
@@ -473,82 +390,52 @@ footer {
     display: flex;
     }
     
-    h2 { 
-        position: absolute; top: 0.7rem; left: 0.7rem;
-        font-size: clamp(1.05rem, 2cqw, 5rem);
-    }
-
-    .container_competences p {
-        top: 4.5rem; left: 3rem;
-    }
-
-    /*  T E X T E   D E F I L A N T   M O B I L E  */
-    .marquee_container {
+    .container_fantome_desk {
         display: none;
     }
-
-    .marquee_text {
-        animation: none !important;
+    .container_fantome_mob {
+        display: block;
+    }
+}
+/* ------------------------  R E S P O N S I V E  mobile Iphone8 ----------------------*/
+@media screen and (max-width: 400px) {
+    .container_encours{
+        width: 75%;
+        margin-right: 2.5rem;
     }
 
-    .marquee_container_mobile {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        margin: 2rem 0 22rem 0;
-        position: relative;
-        container-type: inline-size;
+    h1 {
+        margin-bottom: 2rem;
     }
 
-    .marquee_text_mobile .text2 {
-        opacity: 0;
-        font-family: "Doto", sans-serif;    
-        font-weight: 700;
-        position: absolute;
-        left: 3rem; /* Position finale */
-        margin: 0;
+    /* h2 { 
+    position: absolute; top: 0.1rem;
+    } */
+
+    h2, .container_fantome_mob p { 
+        left: 0.7rem;
+    }
+
+    .container_fantome_mob p { 
+        padding-right: 0.3rem;
+    }
+    .card {
+        width: 93%;
     }
 
     @container (min-width: 300px) {
-        .marquee_text_mobile .text2 { font-size: 3.9rem; }
+        .marquee_text_mobile .text2 { font-size: 3.5rem; }
     }
 
-    .ligne1 {
-        top: 0rem;
-        animation: arrive 1s ease forwards;
-        animation-delay: 0s;
+    .imgCv {
+        max-height: 70vh; /*  A VERIFIER   */
     }
 
-    .ligne2 {
-        top: 4.7rem;
-        animation: arrive 1s ease forwards;
-        animation-delay: 0.3s;
-    }
-
-    .ligne3 {
-        top: 9.4rem;
-        animation: arrive 1s ease forwards;
-        animation-delay: 0.6s;
-    }
-
-    .ligne4 {
-        top: 14.1rem;
-        animation: arrive 1s ease forwards;
-        animation-delay: 0.9s;
-    }
-
-    @keyframes arrive {
-        from {
-            opacity: 0;
-            left: 120%;
-        }
-        to {
-            opacity: 1;
-            left: 0px;
-        }
-    }
-
-
+    /* ----------------------- L O U P E    C V ------------------------- */
+    /* .imgCv:hover {
+        transform: none;
+    } loupe qui ne marche pas en desktop */
+}
 
     /* ------- MODAL ---------- */
     .modalDetail, .modalCv {
@@ -575,51 +462,3 @@ footer {
     .uploadCv {
         margin-left: 0;
     }
-
-    /* ----------------------- L O U P E    C V ------------------------- */
-    /* .imgCv:hover {
-        transform: none;
-    } loupe qui ne marche pas en desktop */
-}
-/* ------------------------  R E S P O N S I V E  mobile Iphone8 ----------------------*/
-@media screen and (max-width: 400px) {
-    .container_encours{
-        width: 75%;
-    }
-
-    .container_contact {
-        width: 75%;
-        /* min-height: 29rem; */
-    }
-
-    h1 {
-        margin-bottom: 2rem;
-    }
-
-    .card {
-        width: 93%;
-    }
-
-    .container_competences {
-        width: 100%;
-        /* background-image: url(../img/competence.jpg); */
-        background-image: url(../img/competence_mobile.jpg);
-    }
-
-    h2 { 
-        font-size: clamp(0.95rem, 1.5cqw, 3rem);
-    }
-
-    .container_competences p {
-    top: 3.5rem; 
-    font-size: 0.7rem;
-    }
-
-    @container (min-width: 300px) {
-        .marquee_text_mobile .text2 { font-size: 3.5rem; }
-    }
-
-    .imgCv {
-        max-height: 70vh; /*  A VERIFIER   */
-    }
-}
