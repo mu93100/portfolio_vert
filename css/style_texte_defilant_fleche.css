@@ -43,6 +43,7 @@
 }
 
     /*  T E X T E   D E F I L A N T   M O B I L E  */
+@media (max-width: 768px) {
     .marquee_container {
         display: none;
     }
@@ -69,7 +70,7 @@
         margin: 0;
     }
 
-    @container (min-width: 300px) {
+@container (min-width: 300px) {
         .marquee_text_mobile .text2 { font-size: 3.9rem; }
     }
 
@@ -107,7 +108,7 @@
             left: 0px;
         }
     }
-
+}
 /*----------------------- F L E C H E ------------------------  */
 #arrow {
     transition: opacity 0.3s;

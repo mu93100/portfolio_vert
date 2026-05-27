@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">     -->
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="./css/style_header.css">
     <link rel="stylesheet" href="./css/style_texte_defilant_fleche.css">
     <link rel="stylesheet" href="./css/style_modal.css">
@@ -17,7 +17,7 @@
 
   <body>
     <header>
-      <div class="container_header">
+      <div class="container_header_desktop">
         <div class="green">
           <p class="name"><a href="#accueil">muriel ehlinger</a></p>
         </div>
@@ -29,7 +29,7 @@
           </div>
           <div class="nav">
             <ul>
-              <li><a href="#portfolio" class="nav_link">portfolio</a></li> <!--#truc === scroll jusqu'à id ="truc"-->
+              <li><a href="#portfolio_card" class="nav_link">portfolio</a></li> <!--#truc === scroll jusqu'à id ="truc"-->
               <li><a id="cv" class="nav_link openModalCvBtn" role="button" data-img="./img/cv.jpg">cv</a></li>
               <li><a href="#contact" class="nav_link">contact</a></li>
             </ul>
@@ -37,15 +37,15 @@
         </div>
       </div>
 
-
+      <!--------------  H E A D E R   mobile -------------->
       <div class="green_mil"></div>
 
-      <div class="container_mobile">   
+      <div class="container_header_mobile">   
         <div class="nav_mobile">
             <ul>
-              <li class="portfolio green2"><a href="#portfolio" class="nav_link">portfolio</a></li>
+              <li class="green2"><a href="#portfolio_card" class="nav_link">portfolio</a></li>
               <li class="green1"><a id="cv_mobile" class="nav_link openModalCvBtn" role="button" data-img="./img/cv.jpg">cv</a></li>
-              <li class="contact green"><a href="#contact" class="nav_link">contact</a></li>
+              <li class="green"><a href="#contact" class="nav_link">contact</a></li>
             </ul>
         </div>
       </div>
@@ -53,9 +53,6 @@
 
     
     <main id="accueil">
-      <!-- <div class="mma">
-        <div class="mma_text">Je recherche un stage du 08/09 au 31/10/25</div>
-      </div> -->
       <!--------------  T E X T   défilant -------------->
       <div class="marquee_container" id="marqueeContainer">
         <div class="marquee_text">Dernière réalisation</div>
@@ -79,9 +76,9 @@
       </div>
       <!--------------  E N   C O U R S  -------------->    
       <div class="container_encours"> 
-          <div >
+          <div class="card_img_container">
             <img class="card_img" src="./img/lacour.jpg" alt="La cour des Icônes">
-            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/lacour_img.jpg"></div>
+            <div class="openModalBtn" role="button" aria-label="Voir détail" data-img="./img/lacour_img.webp"></div>
           </div>
           <div class="card-content">
             <p>Création site<br>CMS Squarespace<br>Maquette sur Figma<br>Refonte du logo/ retouche des photos Figma et Photoshop<br>SEO sur Google search console</p>
@@ -101,9 +98,7 @@
             <span>DevOps</span>/ Docker Git CI/CD<br>
             <span>Outils</span>/ Figma Canva Miro Photoshop Illustrator Git GitHub</p>
         </div>
-      </div>
 
-      <div class="container_encours ">
         <div class="container_fantome_mob">
           <img class="card_img" src="./img/competence_mobile.jpg" alt="Compétences">
           <h2>compétences</h2>
@@ -118,7 +113,7 @@
       </div>
 
       <!--------------- C A R D   W O R K ----------------> 
-      <div class="container_work" id="portfolio"> 
+      <div class="container_work" id="portfolio_card"> 
 
         <div class="card">
           <div class="card_img_container">

@@ -7,7 +7,7 @@
     font-weight: 300;
     font-optical-sizing: auto;
     font-size: 0.85rem;
-    line-height: 1.8rem;
+    line-height: 1.7rem;
     letter-spacing: 0.05rem; 
 }
 
@@ -29,14 +29,14 @@ main {
 
 /* -------------- E N    C O U R S --------------  */
 .container_encours {
-    width: 45%;
+    width: 40%;
     margin: 6rem 10rem 4rem auto; 
 }
 
 /* ----------------  C O M P E T E N C E S  ---------------- */  
 /* --------------- C O N T A C T ---------------- */
 #contact {
-    scroll-margin-top: 9rem; 
+    scroll-margin-top: 11rem; 
 }
 
 .container_fantome_desk {
@@ -65,7 +65,7 @@ main {
 h2 { 
     position: absolute; top: 0.7rem; left: 1rem;
     font-weight: 900;
-    font-size: clamp(1.1rem, 2.5cqw, 2.2rem);
+    font-size: clamp(1.1rem, 2.5cqw, 1.9rem);
 }
 
 .container_fantome_desk p, .container_fantome_mob p { 
@@ -92,7 +92,7 @@ span {
 }
 
 /* --------------- C A R D   W O R K ---------------- */
-#portfolio {
+#portfolio_card {
     scroll-margin-top: 10rem; 
 }
 #accueil{
@@ -240,7 +240,7 @@ footer {
     #contact{
         scroll-margin-top: 10rem;
     }
-    #portfolio {
+    #portfolio_card {
         scroll-margin-top: 14rem; 
     }
 
@@ -272,7 +272,7 @@ footer {
     }
 
     h2 { 
-    position: absolute; top: 1rem;
+        position: absolute; top: 1rem;
     }
 
     .container_fantome_mob p, #contact a {
@@ -357,5 +357,3 @@ footer {
         max-height: 70vh; /*  A VERIFIER   */
     }
 }
-
-

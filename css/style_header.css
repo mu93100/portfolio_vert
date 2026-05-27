@@ -9,25 +9,28 @@ header {
     width: 100%;
 }
 
-.container_header {
+.container_header_desktop {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.container_mobile {
+.container_header_mobile {
     display: none;
 }
 
-/* dégradé */
+/* -------------- dégradé -------------- */
+.green, .green1, .green2 {
+    height: 2rem !important;
+    padding: 0 3rem;
+    margin: 0;
+}
+
 .green {
     background: linear-gradient(rgba(255, 255, 255), 0.5%,
             rgba(135, 255, 165, 0.3) 3%,
             rgba(135, 255, 165, 0.7) 40%,
             rgba(135, 255, 165, 0.9));
-    height: 2rem;
-    padding: 0 3rem;
-    margin: 0;
 }
 
 .green1 {
@@ -35,22 +38,16 @@ header {
             rgba(135, 255, 165, 0.07) 1%,
             rgba(135, 255, 165, 0.3) 40%,
             rgb(135, 255, 165, 0.5));
-    height: 2rem;
-    padding: 0 3rem;
-    margin: 0;
 }
 
 .green2 {
     background: linear-gradient(to bottom, rgba(255, 255, 255) 10%,
             rgb(135, 255, 165, 0.2));
-    height: 2rem !important;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    padding: 0 3rem;
-    margin: 0;
 }
 
 .green_mil {
@@ -58,10 +55,7 @@ header {
     height: 1.8rem;
     display: none;
 }
-/* F I N dégradé */
-
-
-/* Style N A V */
+/* --------------  N A V -------------- */
 .nav ul {
     list-style-type: none;
     margin: 0;
@@ -89,11 +83,7 @@ header {
 .name a,
 .conceptrice a,
 .uxui a,
-.nav ul li a,
-#cv,
-.contact,
-.portfolio,
-.nav_mobile ul li a {
+.nav_link {
     width: 100%;
     font-family: "Doto", sans-serif;
     font-size: 1.1rem;
@@ -107,37 +97,28 @@ header {
     padding: 0.15rem 0 0 0;
     margin: 0;
     text-decoration: none;
-    border-bottom: 0.1rem solid transparent;
-    /* lien qui ne bougent pas */
-    transition: border-color 0.3s;
-    /* pour animation fluide */
-    height: 2rem;
-    /* border: 1px dotted lightpink;  */
+    border-bottom: 0.1rem solid transparent; /* POUR lien qui ne bougent pas */
+    transition: border-color 0.3s; /* POUR pour animation fluide */
+    height: 2rem; 
 }
 
-.nav_mobile ul li a {
-    padding-top: 0.1rem;
-    display: flex;
-    /* display et justify === border sur toute la div et non pas que sur le mot */
-    justify-content: start;
-    text-decoration: none;
-    transition: border-color 0.3s;
-    /* pour animation fluide */
+/* .nav_link_mobile {
+    display: none;
+} */
+
+.nav_link.active, .nav_link:hover, .nav_link:focus {
+    border-bottom : 0.1rem solid black;
+    color : black !important;
 }
 
-.nav_link.active, #cv.active {
-    border-bottom: 0.1rem solid black;
+.nav ul li {
+    width: fit-content;
 }
 
-.nav_link:hover,
-.nav_link:focus, #cv:hover, #cv:focus {
-    border-bottom: 0.1rem solid black;
-}
-
-.name a,
-.conceptrice a,
-.uxui a {
-    color: black !important;
+.name a:hover, .name a:focus, 
+.conceptrice a:hover, .conceptrice a:focus, 
+.uxui a:hover, .uxui a:focus {
+    color : black !important;
 }
 
 /* 
@@ -153,19 +134,23 @@ Grands écrans			≥ 1200	@media (min-width: 1200px) */
         flex-direction: column;
     }
 
-    .container_header .nav {
+    .container_header_desktop .nav {
         display: none;
     }
 
     .name a,
     .conceptrice a,
     .uxui a,
-    ul,
-    .nav_mobile ul li a {
+    ul {
         font-size: 1rem;
     }
 
-    .container_mobile {
+    /* .nav_link_mobile:hover, .nav_link_mobile:focus {
+        border-bottom : 0.1rem solid black;
+        color : black !important;
+    } */
+
+    .container_header_mobile {
         display: flex;
         flex-direction: column;
         width: 100%;
